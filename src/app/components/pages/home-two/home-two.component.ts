@@ -25,7 +25,7 @@ export class HomeTwoComponent implements OnInit {
         mouseDrag: false,
         autoplayHoverPause: true,
         navText: [
-            "<i class='flaticon-left-arrow'></i>", 
+            "<i class='flaticon-left-arrow'></i>",
             "<i class='flaticon-next-1'></i>"
         ],
         responsive: {
@@ -102,7 +102,7 @@ export class HomeTwoComponent implements OnInit {
 			}
 		}
     }
-    
+
     // Tabs
     currentTab = 'tab1';
     switchTab(event: MouseEvent, tab: string) {

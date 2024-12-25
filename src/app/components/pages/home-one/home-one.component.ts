@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -8,9 +9,18 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeOneComponent implements OnInit {
 
-    constructor() { }
+    constructor(private http: HttpClient) { }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.loadAccordionItems();
+    }
+
+    private loadAccordionItems(): void {
+        this.http.get<{accordionItems: any[]}>('assets/data/accordion-items.json')
+            .subscribe(data => {
+                this.accordionItems = data.accordionItems;
+            });
+    }
 
     teamSlides: OwlOptions = {
 		loop: true,
@@ -73,28 +83,7 @@ export class HomeOneComponent implements OnInit {
     }
 
     // Accordion
-    accordionItems = [
-        {
-            title: 'Great Understanding',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
-            open: false
-        },
-        {
-            title: 'Update Technology',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
-            open: false
-        },
-        {
-            title: 'Experienced Team',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
-            open: false
-        },
-        {
-            title: 'Best Quality Service',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
-            open: false
-        }
-    ];
+    accordionItems: any[] = [];
     selectedItem : any = null;
     toggleAccordionItem(item:any) {
         item.open = !item.open;
@@ -103,12 +92,30 @@ export class HomeOneComponent implements OnInit {
         }
         this.selectedItem = item;
     }
-    
+
     // Tabs
     currentTab = 'tab1';
     switchTab(event: MouseEvent, tab: string) {
         event.preventDefault();
         this.currentTab = tab;
+    }
+
+    currentPage: number = 1;
+    itemsPerPage: number = 4;
+
+    get paginatedItems() {
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        return this.accordionItems.slice(startIndex, startIndex + this.itemsPerPage);
+    }
+
+    get totalPages() {
+        return Math.ceil(this.accordionItems.length / this.itemsPerPage);
+    }
+
+    changePage(page: number) {
+        if (page >= 1 && page <= this.totalPages) {
+            this.currentPage = page;
+        }
     }
 
 }

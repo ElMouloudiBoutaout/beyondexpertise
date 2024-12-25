@@ -1,0 +1,29 @@
+{
+    "accordionItems": [
+        {
+            "title": "Great Understanding",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.",
+            "open": false
+        },
+        {
+            "title": "Update Technology",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.",
+            "open": false
+        },
+        {
+            "title": "Experienced Team",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.",
+            "open": false
+        },
+        {
+            "title": "Best Quality Service",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.",
+            "open": false
+        },
+        {
+            "title": "Best Quality Service",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.",
+            "open": false
+        }
+    ]
+}
