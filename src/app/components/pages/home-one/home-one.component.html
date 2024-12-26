@@ -407,7 +407,7 @@
             <div class="col-lg-6 col-md-6">
                 <div class="content">
                     <h3 class="form-title">{{contactData?.formTitle}}</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" (ngSubmit)="onSubmit($event)">
                         <div class="row">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
@@ -417,6 +417,7 @@
                                         id="name"
                                         class="form-control"
                                         required
+                                        [(ngModel)]="formData.name"
                                         [placeholder]="contactData?.form.name.placeholder"
                                     />
                                 </div>
@@ -430,6 +431,7 @@
                                         id="email"
                                         class="form-control"
                                         required
+                                        [(ngModel)]="formData.email"
                                         [placeholder]="contactData?.form.email.placeholder"
                                     />
                                 </div>
@@ -443,6 +445,7 @@
                                         id="phone_number"
                                         required
                                         class="form-control"
+                                        [(ngModel)]="formData.phone_number"
                                         [placeholder]="contactData?.form.phone.placeholder"
                                     />
                                 </div>
@@ -456,6 +459,7 @@
                                         id="msg_subject"
                                         class="form-control"
                                         required
+                                        [(ngModel)]="formData.msg_subject"
                                         [placeholder]="contactData?.form.subject.placeholder"
                                     />
                                 </div>
@@ -470,14 +474,19 @@
                                         cols="30"
                                         rows="5"
                                         required
+                                        [(ngModel)]="formData.message"
                                         [placeholder]="contactData?.form.message.placeholder"
                                     ></textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn page-btn box-btn">
-                                    {{contactData?.form.submitButton}}
+                                <button
+                                    type="submit"
+                                    class="default-btn page-btn box-btn"
+                                    [disabled]="isSubmitting"
+                                >
+                                    {{isSubmitting ? 'Envoi en cours...' : contactData?.form.submitButton}}
                                 </button>
                             </div>
                         </div>

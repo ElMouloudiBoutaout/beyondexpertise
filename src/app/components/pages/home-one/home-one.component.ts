@@ -2,6 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { EmailService } from 'src/app/services/email.service';
 
 @Component({
     selector: 'app-home-one',
@@ -10,9 +11,20 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeOneComponent implements OnInit {
 
+    // Add form properties
+    formData = {
+        name: '',
+        email: '',
+        phone_number: '',
+        msg_subject: '',
+        message: ''
+    };
+    isSubmitting = false;
+
     constructor(
         private http: HttpClient,
-        private viewportScroller: ViewportScroller
+        private viewportScroller: ViewportScroller,
+        private emailService: EmailService
     ) { }
 
     ngOnInit(): void {
@@ -296,6 +308,33 @@ export class HomeOneComponent implements OnInit {
                 return `/development/${service.id}`;
             default:
                 return service.link || '/';
+        }
+    }
+
+    // Add submit method
+    async onSubmit(event: Event) {
+        event.preventDefault();
+
+        if (this.isSubmitting) return;
+
+        this.isSubmitting = true;
+
+        try {
+            await this.emailService.sendEmail(this.formData);
+            alert('Message envoyé avec succès!');
+            // Reset form
+            this.formData = {
+                name: '',
+                email: '',
+                phone_number: '',
+                msg_subject: '',
+                message: ''
+            };
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+        } finally {
+            this.isSubmitting = false;
         }
     }
 
