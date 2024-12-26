@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -9,7 +10,10 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeOneComponent implements OnInit {
 
-    constructor(private http: HttpClient) { }
+    constructor(
+        private http: HttpClient,
+        private viewportScroller: ViewportScroller
+    ) { }
 
     ngOnInit(): void {
         this.loadAllServices();
@@ -20,12 +24,18 @@ export class HomeOneComponent implements OnInit {
         this.loadTeamData();
         this.loadClientsData();
         this.loadRecentBlogs();
+        this.loadContactData();
     }
 
     private loadAccordionItems(): void {
-        this.http.get<{accordionItems: any[]}>('assets/data/courses-items.json')
+        this.http.get<any>('assets/data/formations/formations-index.json')
             .subscribe(data => {
-                this.accordionItems = data.accordionItems;
+                // Transform the services array into accordion items
+                this.accordionItems = data.services.map(service => ({
+                    title: service.title,
+                    content: service.description,
+                    open: false // All items closed by default
+                }));
             });
     }
 
@@ -37,7 +47,7 @@ export class HomeOneComponent implements OnInit {
     }
 
     private loadCommonTexts(): void {
-        this.http.get<any>('assets/data/common-texts.json')
+        this.http.get<any>('assets/data/common-services-texts.json')
             .subscribe(data => {
                 this.servicesData = data.servicesSection;
             });
@@ -45,19 +55,19 @@ export class HomeOneComponent implements OnInit {
 
     private loadAllServices(): void {
         // Charger les services de consulting
-        this.http.get<any>('assets/data/consulting-services.json').subscribe(data => {
+        this.http.get<any>('assets/data/consulting/consulting-index.json').subscribe(data => {
             this.consultingServices = data.services;
             this.updateAllServices();
         });
 
         // Charger les services de formation
-        this.http.get<any>('assets/data/formation-services.json').subscribe(data => {
+        this.http.get<any>('assets/data/formations/formations-index.json').subscribe(data => {
             this.formationServices = data.services;
             this.updateAllServices();
         });
 
         // Charger les services de développement
-        this.http.get<any>('assets/data/development-services.json').subscribe(data => {
+        this.http.get<any>('assets/data/development/development-index.json').subscribe(data => {
             this.developmentServices = data.services;
             this.updateAllServices();
         });
@@ -152,19 +162,22 @@ export class HomeOneComponent implements OnInit {
     // Accordion
     accordionItems: any[] = [];
     selectedItem : any = null;
-    toggleAccordionItem(item:any) {
-        item.open = !item.open;
+    toggleAccordionItem(item: any) {
+        // Close previously opened item
         if (this.selectedItem && this.selectedItem !== item) {
             this.selectedItem.open = false;
         }
-        this.selectedItem = item;
+
+        // Toggle current item
+        item.open = !item.open;
+        this.selectedItem = item.open ? item : null;
     }
 
     // Tabs
     currentTab = 'all';
 
     currentPage: number = 1;
-    itemsPerPage: number = 4;
+    itemsPerPage: number = 3;
 
     get paginatedItems() {
         const startIndex = (this.currentPage - 1) * this.itemsPerPage;
@@ -252,6 +265,38 @@ export class HomeOneComponent implements OnInit {
                 // Get the 3 most recent blogs
                 this.recentBlogs = data.blogs.slice(0, 3);
             });
+    }
+
+    contactData: any;
+
+    private loadContactData(): void {
+        this.http.get<any>('assets/data/contact-section.json')
+            .subscribe(data => {
+                this.contactData = data.contactSection;
+            });
+    }
+
+    scrollToServiceTab(tabId: string): void {
+        // First scroll to services section
+        this.viewportScroller.scrollToAnchor('services');
+
+        // Then switch to the corresponding tab
+        setTimeout(() => {
+            this.currentTab = tabId;
+        }, 100);
+    }
+
+    getServiceRoute(service: any): string {
+        switch(this.currentTab) {
+            case 'consulting':
+                return `/consulting/${service.id}`;
+            case 'formation':
+                return `/formation/${service.id}`;
+            case 'development':
+                return `/development/${service.id}`;
+            default:
+                return service.link || '/';
+        }
     }
 
 }

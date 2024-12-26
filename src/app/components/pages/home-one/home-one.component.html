@@ -10,7 +10,7 @@
                                 <strong>Your satisfaction is our starting point</strong>.
                                 <p>Que vous soyez une entreprise ou un professionnel, nous vous accompagnons à chaque étape pour atteindre vos objectifs de transformation, d'innovation et de montée en compétences.</p>
                             <div class="banner-btn">
-                                <a routerLink="/contact" class="box-btn">Découvrez nos parcours </a>
+                                <a routerLink="/" fragment="formations" class="box-btn">Découvrez nos parcours </a>
                                 <a routerLink="/about" class="box-btn border-btn">Contactez-nous</a>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                     <div class="service-content">
                         <h3>Consulting</h3>
                         <p>Nous offrons un accompagnement stratégique pour optimiser vos projets et garantir leur succès. Bénéficiez de solutions adaptées à vos besoins pour relever vos défis professionnels.</p>
-                        <a routerLink="/solutions-details" class="line-bnt">En savoir plus</a>
+                        <a class="line-bnt" (click)="scrollToServiceTab('consulting')">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -67,8 +67,8 @@
 
                     <div class="service-content">
                         <h3>Formation</h3>
-                        <p>Nous proposons des formations sur mesure pour développer les compétences de vos équipes. Bénéficiez d’un accompagnement pédagogique et d’un contenu adapté à vos enjeux professionnels.</p>
-                        <a routerLink="/solutions-details" class="line-bnt">En savoir plus</a>
+                        <p>Nous proposons des formations sur mesure pour développer les compétences de vos équipes. Bénéficiez d'un accompagnement pédagogique et d'un contenu adapté à vos enjeux professionnels.</p>
+                        <a class="line-bnt" (click)="scrollToServiceTab('formation')">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <div class="service-content">
                         <h3>Dévelopment</h3>
                         <p>Nous concevons et développons des solutions technologiques performantes et innovantes. De la conception à la maintenance, nous sommes votre partenaire pour vos projets numériques.</p>
-                        <a routerLink="/solutions-details" class="line-bnt">En savoir plus</a>
+                        <a class="line-bnt" (click)="scrollToServiceTab('development')">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
     </div>
 </section>
 
-<section class="home-company-area bg-color">
+<section class="home-company-area bg-color" id="about">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
@@ -114,15 +114,14 @@
     </div>
 </section>
 
-<section class="choose-area ptb-100">
+<section class="choose-area ptb-100" id="formations">
     <div class="container">
         <div class="section-title">
-            <span>Choose Aiva</span>
-            <h2>We Achieved People’s Trust by Our Great Service</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+            <h2>Nos Formations</h2>
+            <p>Nous avons gagné la confiance de nos clients grâce à la qualité de nos services et de nos formations professionnelles.</p>
         </div>
 
-        <div class="row align-items-center">
+        <div style="margin-top: -20px;"  class="row align-items-center">
             <div class="col-lg-6">
                 <div class="choose-img">
                     <img src="assets/images/choose-img.png" alt="choose" />
@@ -196,7 +195,7 @@
     </div>
 </section>
 
-<section class="home-case ptb-100">
+<section class="home-case ptb-100" id="services">
     <div class="container">
         <div class="section-title">
             <span>{{servicesData?.title}}</span>
@@ -218,17 +217,17 @@
                         <div class="col-lg-4 col-sm-6" *ngFor="let service of currentServices">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a [routerLink]="service.link">
+                                    <a [routerLink]="[getServiceRoute(service)]">
                                         <img [src]="service.image" [alt]="service.title"/>
                                     </a>
                                 </div>
 
                                 <div class="content">
-                                    <a [routerLink]="service.link">
+                                    <a [routerLink]="[getServiceRoute(service)]">
                                         <h3>{{service.title}}</h3>
                                     </a>
                                     <p>{{service.description}}</p>
-                                    <a [routerLink]="service.link" class="line-bnt">En savoir plus</a>
+                                    <a [routerLink]="[getServiceRoute(service)]" class="line-bnt">En savoir plus</a>
                                 </div>
                             </div>
                         </div>
@@ -390,12 +389,12 @@
     </div>
 </section>
 
-<section class="home-contact-area bg-color ptb-100">
+<section class="home-contact-area bg-color ptb-100" id="contact">
     <div class="container">
         <div class="section-title">
-            <span>Contact Us</span>
-            <h2>Let Us Know About Your Project Idea!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+            <span>{{contactData?.title}}</span>
+            <h2>{{contactData?.subtitle}}</h2>
+            <p>{{contactData?.description}}</p>
         </div>
 
         <div class="row align-items-center">
@@ -407,40 +406,79 @@
 
             <div class="col-lg-6 col-md-6">
                 <div class="content">
+                    <h3 class="form-title">{{contactData?.formTitle}}</h3>
                     <form id="contactForm">
                         <div class="row">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name" />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        class="form-control"
+                                        required
+                                        [placeholder]="contactData?.form.name.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control" required placeholder="Your Email" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        class="form-control"
+                                        required
+                                        [placeholder]="contactData?.form.email.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="phone_number" id="phone_number" required class="form-control" placeholder="Your Phone" />
+                                    <input
+                                        type="text"
+                                        name="phone_number"
+                                        id="phone_number"
+                                        required
+                                        class="form-control"
+                                        [placeholder]="contactData?.form.phone.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required placeholder="Subject" />
+                                    <input
+                                        type="text"
+                                        name="msg_subject"
+                                        id="msg_subject"
+                                        class="form-control"
+                                        required
+                                        [placeholder]="contactData?.form.subject.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"></textarea>
+                                    <textarea
+                                        name="message"
+                                        class="form-control"
+                                        id="message"
+                                        cols="30"
+                                        rows="5"
+                                        required
+                                        [placeholder]="contactData?.form.message.placeholder"
+                                    ></textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn page-btn box-btn">Submit</button>
+                                <button type="submit" class="default-btn page-btn box-btn">
+                                    {{contactData?.form.submitButton}}
+                                </button>
                             </div>
                         </div>
                     </form>

@@ -7,7 +7,7 @@
         "contactText": "Vous avez un besoin spécifique ? ",
         "contactLinkText": "Contactez-nous",
         "contactSuffix": " pour un accompagnement sur mesure !",
-        "contactLink": "#contact-form",
+        "contactLink": "#contact",
         "tabs": [
             {
                 "id": "all",

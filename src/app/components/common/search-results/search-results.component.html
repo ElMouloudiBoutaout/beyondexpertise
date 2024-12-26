@@ -1,1 +1,26 @@
- 
+<section class="widget widget-peru-posts-thumb">
+    <h3 class="widget-title">Résultats de recherche pour "{{searchQuery}}"</h3>
+
+    <div class="post-wrap">
+        <ng-container *ngIf="searchResults.length > 0; else noResults">
+            <article class="item" *ngFor="let article of searchResults">
+                <a [routerLink]="['/blog-details', article.id]" class="thumb">
+                    <img [src]="article.image" [alt]="article.title">
+                </a>
+                <div class="info">
+                    <time>{{article.meta.date}}</time>
+                    <h4 class="title usmall">
+                        <a [routerLink]="['/blog-details', article.id]">{{article.title}}</a>
+                    </h4>
+                    <p>{{article.excerpt}}</p>
+                </div>
+                <div class="clear"></div>
+            </article>
+        </ng-container>
+        <ng-template #noResults>
+            <div class="no-results">
+                <p>Aucun résultat trouvé pour "{{searchQuery}}"</p>
+            </div>
+        </ng-template>
+    </div>
+</section>

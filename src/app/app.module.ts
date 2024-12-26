@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
+import { SearchResultsComponent } from './components/common/search-results/search-results.component';
 import { SimilarArticlesComponent } from './components/common/similar-articles/similar-articles.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { BlogDetailsComponent } from './components/pages/blog-details/blog-details.component';
@@ -19,6 +21,7 @@ import { CaseStudiesComponent } from './components/pages/case-studies/case-studi
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
+import { FormationComponent } from './components/pages/formation/formation.component';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { HomeThreeComponent } from './components/pages/home-three/home-three.component';
@@ -59,7 +62,9 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     TermsConditionsComponent,
     PrivacyPolicyComponent,
     ContactComponent,
-    SimilarArticlesComponent
+    SimilarArticlesComponent,
+    SearchResultsComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,8 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     BrowserAnimationsModule,
     NgxScrollTopModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location, LocationStrategy, PathLocationStrategy, ViewportScroller } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -25,7 +25,8 @@ export class NavbarComponent implements OnInit {
 
     constructor(
         private router: Router,
-        location: Location
+        location: Location,
+        private viewportScroller: ViewportScroller
     ) {
         this.router.events
         .subscribe((event) => {
@@ -35,6 +36,14 @@ export class NavbarComponent implements OnInit {
                     this.navbarClass = 'navbar-area three';
                 } else {
                     this.navbarClass = 'navbar-area';
+                }
+
+                // Handle fragment navigation
+                const fragment = this.router.parseUrl(this.router.url).fragment;
+                if (fragment) {
+                    setTimeout(() => {
+                        this.viewportScroller.scrollToAnchor(fragment);
+                    }, 100);
                 }
             }
         });
@@ -51,6 +60,15 @@ export class NavbarComponent implements OnInit {
             this.isSticky = true;
         } else {
             this.isSticky = false;
+        }
+    }
+
+    // Method to handle navigation when already on home page
+    scrollToSection(sectionId: string): void {
+        if (this.router.url === '/') {
+            this.viewportScroller.scrollToAnchor(sectionId);
+        } else {
+            this.router.navigate(['/'], { fragment: sectionId });
         }
     }
 

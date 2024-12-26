@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  contactData: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.loadContactData();
   }
 
+  private loadContactData(): void {
+    this.http.get<any>('assets/data/contact-section.json')
+      .subscribe(data => {
+        this.contactData = data.contactSection;
+      });
+  }
 }

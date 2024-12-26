@@ -1,0 +1,118 @@
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>{{formationData?.title}}</h2>
+            <p class="duration">Durée : {{formationData?.duration.days}} jours ({{formationData?.duration.hours}} heures)</p>
+        </div>
+    </div>
+</div>
+
+<!-- Add Navigation Bar -->
+<div class="formation-nav">
+    <div class="container">
+        <nav class="formation-tabs">
+            <ul>
+                <li>
+                    <a (click)="scrollToSection('target')" [class.active]="activeSection === 'target'">
+                        Public visé
+                    </a>
+                </li>
+                <li>
+                    <a (click)="scrollToSection('prerequisites')" [class.active]="activeSection === 'prerequisites'">
+                        Prérequis
+                    </a>
+                </li>
+                <li>
+                    <a (click)="scrollToSection('objectives')" [class.active]="activeSection === 'objectives'">
+                        Objectifs
+                    </a>
+                </li>
+                <li>
+                    <a (click)="scrollToSection('program')" [class.active]="activeSection === 'program'">
+                        Programme
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<section class="formation-details-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Target Audience -->
+                <div class="formation-section" id="target">
+                    <h3>{{formationData?.target.title}}</h3>
+                    <ul>
+                        <li *ngFor="let audience of formationData?.target.audience">
+                            {{audience}}
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Prerequisites -->
+                <div class="formation-section" id="prerequisites">
+                    <h3>{{formationData?.prerequisites.title}}</h3>
+                    <ul>
+                        <li *ngFor="let req of formationData?.prerequisites.requirements">
+                            {{req}}
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Objectives -->
+                <div class="formation-section" id="objectives">
+                    <h3>{{formationData?.objectives.title}}</h3>
+                    <ul>
+                        <li *ngFor="let goal of formationData?.objectives.goals">
+                            {{goal}}
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Detailed Program -->
+                <div class="formation-section" id="program">
+                    <h3>{{formationData?.program.title}}</h3>
+                    <div class="program-module" *ngFor="let module of formationData?.program.modules">
+                        <h4>{{module.title}}</h4>
+                        <ul>
+                            <li *ngFor="let topic of module.topics">
+                                {{topic}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="formation-sidebar">
+                    <!-- Practical Information -->
+                    <div class="sidebar-widget">
+                        <h3>{{formationData?.practical.title}}</h3>
+                        <ul>
+                            <li *ngFor="let detail of formationData?.practical.details">
+                                {{detail}}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Registration -->
+                    <div class="sidebar-widget">
+                        <h3>{{formationData?.registration.title}}</h3>
+                        <ul>
+                            <li *ngFor="let method of formationData?.registration.methods">
+                                {{method}}
+                            </li>
+                        </ul>
+                        <div class="registration-btn">
+                            <a routerLink="/contact" class="default-btn">
+                                S'inscrire maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

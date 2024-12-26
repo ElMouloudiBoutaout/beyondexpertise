@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/pages/about/about.component';
 import { BlogDetailsComponent } from './components/pages/blog-details/blog-details.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
@@ -8,6 +8,7 @@ import { CaseStudiesComponent } from './components/pages/case-studies/case-studi
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
+import { FormationComponent } from './components/pages/formation/formation.component';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { HomeThreeComponent } from './components/pages/home-three/home-three.component';
@@ -44,14 +45,22 @@ const routes: Routes = [
     {path: 'terms-condition', component: TermsConditionsComponent},
     {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: 'contact', component: ContactComponent},
+    { path: 'formation/:id', component: FormationComponent },
+    { path: 'formation', component: FormationComponent },
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 
 ];
 
+const routerOptions: ExtraOptions = {
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 64] // Adjust this value based on your header height
+};
+
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {})],
+    imports: [RouterModule.forRoot(routes, routerOptions)],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

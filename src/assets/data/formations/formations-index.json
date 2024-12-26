@@ -1,11 +1,11 @@
 {
     "services": [
         {
-            "id": 1,
+            "id": "deep-learning",
             "image": "assets/images/case/c4.jpg",
-            "title": "Formation Management Agile",
-            "description": "Programmes de formation complets pour maîtriser les méthodologies agiles et développer vos compétences en gestion de projet moderne.",
-            "link": "/services/formation-agile"
+            "title": "Deep learning",
+            "description": "Programmes de formation approfondis pour comprendre et maîtriser les concepts avancés de Deep Learning, incluant les réseaux neuronaux, l'apprentissage supervisé et non supervisé, et les frameworks comme TensorFlow et PyTorch.",
+            "link": "/formation/deep-learning"
         },
         {
             "id": 2,
@@ -16,6 +16,13 @@
         },
         {
             "id": 3,
+            "image": "assets/images/case/c5.jpg",
+            "title": "Data Science & Analytics",
+            "description": "Formations pratiques en analyse de données, visualisation et exploitation des données pour la prise de décision.",
+            "link": "/services/data-science"
+        },
+        {
+            "id": "jira",
             "image": "assets/images/case/c6.jpg",
             "title": "Leadership & Management",
             "description": "Développez vos compétences en leadership et management d'équipe pour maximiser le potentiel de vos collaborateurs.",

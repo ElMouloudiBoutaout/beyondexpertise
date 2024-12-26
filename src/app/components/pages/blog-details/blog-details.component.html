@@ -30,8 +30,8 @@
                     <div class="article-content">
                         <div class="entry-meta">
                             <ul>
-                                <li><span>Posted On:</span> <a routerLink="/blog">{{blogData?.article.meta.date}}</a></li>
-                                <li><span>Posted By:</span> <a routerLink="/blog">{{blogData?.article.meta.author}}</a></li>
+                                <li><span>Publié le :</span> <a routerLink="/blog">{{blogData?.article.meta.date}}</a></li>
+                                <li><span>Publié par :</span> <a routerLink="/blog">{{blogData?.article.meta.author}}</a></li>
                             </ul>
                         </div>
                         <h3>{{blogData?.article.title}}</h3>
@@ -53,15 +53,27 @@
                         <div class="post-wrap">
                             <form class="search-form">
                                 <label>
-                                    <span class="screen-reader-text">Search for:</span>
-                                    <input type="search" class="search-field" [placeholder]="">
+                                    <span class="screen-reader-text">Rechercher:</span>
+                                    <input
+                                        type="search"
+                                        class="search-field"
+                                        [(ngModel)]="searchQuery"
+                                        (input)="searchBlogs()"
+                                        name="search"
+                                        placeholder="Rechercher un article...">
                                 </label>
-
-                                <button type="submit"><i class='bx bx-search'></i></button>
                             </form>
                         </div>
                     </div>
 
+                    <!-- Show search results if available -->
+                    <app-search-results
+                        *ngIf="showSearchResults"
+                        [searchResults]="searchResults"
+                        [searchQuery]="searchQuery">
+                    </app-search-results>
+
+                    <!-- Show similar articles if no search is active -->
                     <app-similar-articles
                         [articleIds]="blogData?.similarArticles">
                     </app-similar-articles>

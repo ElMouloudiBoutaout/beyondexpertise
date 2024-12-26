@@ -1,0 +1,24 @@
+@import "../../../../assets/scss/logo";
+
+.slogan {
+    font-style: italic;
+    color: #007bff;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.logo {
+    @extend .brand-logo;
+    margin-bottom: 15px;
+
+    img {
+        background-color: transparent;
+        border-color: rgba(255,255,255,0.2);
+        width: 150px;
+        height: 50px;
+
+        &:hover {
+            border-color: #007bff;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { debounceTime, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-blog-details',
@@ -10,13 +11,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class BlogDetailsComponent implements OnInit {
   blogData: any;
   blogs: any[] = [];
-  searchQuery: string = '';
+  private _searchQuery: string = '';
+  searchResults: any[] = [];
+  showSearchResults: boolean = false;
+  private searchSubject = new Subject<string>();
+
+  get searchQuery(): string {
+    return this._searchQuery;
+  }
+
+  set searchQuery(value: string) {
+    this._searchQuery = value;
+    this.searchSubject.next(value);
+  }
 
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+    // Setup debounced search
+    this.searchSubject.pipe(
+      debounceTime(300) // Wait 300ms after last input before searching
+    ).subscribe(() => {
+      this.performSearch();
+    });
+  }
 
   ngOnInit(): void {
     this.loadBlogs();
@@ -43,15 +63,31 @@ export class BlogDetailsComponent implements OnInit {
     });
   }
 
-  searchBlogs(event: Event): void {
-    event.preventDefault();
+  searchBlogs(): void {
+    this.searchSubject.next(this.searchQuery);
+  }
+
+  private performSearch(): void {
     if (this.searchQuery.trim()) {
-      const searchResults = this.blogs.filter(blog =>
-        blog.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        blog.excerpt.toLowerCase().includes(this.searchQuery.toLowerCase())
+      const query = this.searchQuery.toLowerCase();
+      this.searchResults = this.blogs.filter(blog =>
+        blog.title.toLowerCase().includes(query) ||
+        blog.excerpt.toLowerCase().includes(query)
       );
-      // Handle search results (you could emit an event, navigate to search results page, etc.)
-      console.log('Search results:', searchResults);
+      this.showSearchResults = true;
+    } else {
+      this.searchResults = [];
+      this.showSearchResults = false;
     }
+  }
+
+  clearSearch(): void {
+    this.searchQuery = '';
+    this.searchResults = [];
+    this.showSearchResults = false;
+  }
+
+  ngOnDestroy(): void {
+    this.searchSubject.complete();
   }
 }

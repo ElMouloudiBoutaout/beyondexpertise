@@ -5208,3 +5208,12 @@ Banner Area Three Style
         }
 	}
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+// Add offset for section anchors to account for fixed header
+section[id] {
+    scroll-margin-top: 100px; // Adjust this value based on your header height
+}

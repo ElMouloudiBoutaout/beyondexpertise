@@ -66,48 +66,87 @@
 <section class="home-contact-area home-2-contact pb-100">
     <div class="container">
         <div class="section-title">
-            <span>Contact Us</span>
-            <h2>Let Us Know About Your Project Idea!</h2>
-            <p>It is a long established fact that a reader will be distracted by the rea dable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more.</p>
+            <span>{{contactData?.title}}</span>
+            <h2>{{contactData?.subtitle}}</h2>
+            <p>{{contactData?.description}}</p>
         </div>
 
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="content">
+                    <h3 class="form-title">{{contactData?.formTitle}}</h3>
                     <form id="contactForm">
                         <div class="row">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name" />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        class="form-control"
+                                        required
+                                        [placeholder]="contactData?.form.name.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control" required placeholder="Your Email" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        class="form-control"
+                                        required
+                                        [placeholder]="contactData?.form.email.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="phone_number" id="phone_number" required class="form-control" placeholder="Your Phone" />
+                                    <input
+                                        type="text"
+                                        name="phone_number"
+                                        id="phone_number"
+                                        required
+                                        class="form-control"
+                                        [placeholder]="contactData?.form.phone.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required placeholder="Subject" />
+                                    <input
+                                        type="text"
+                                        name="msg_subject"
+                                        id="msg_subject"
+                                        class="form-control"
+                                        required
+                                        [placeholder]="contactData?.form.subject.placeholder"
+                                    />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"></textarea>
+                                    <textarea
+                                        name="message"
+                                        class="form-control"
+                                        id="message"
+                                        cols="30"
+                                        rows="5"
+                                        required
+                                        [placeholder]="contactData?.form.message.placeholder"
+                                    ></textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn page-btn box-btn">Submit</button>
+                                <button type="submit" class="default-btn page-btn box-btn">
+                                    {{contactData?.form.submitButton}}
+                                </button>
                             </div>
                         </div>
                     </form>

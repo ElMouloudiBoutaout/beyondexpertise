@@ -1,0 +1,88 @@
+{
+    "footer": {
+        "logo": {
+            "image": "assets/images/beyond-expertise-logo.jpg",
+            "description": "Beyond Expertise vous accompagne dans votre transformation digitale, la formation professionnelle et le développement de solutions adaptées à vos besoins.",
+            "slogan": "Your satisfaction is our starting point"
+        },
+        "social": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#",
+            "linkedin": "#"
+        },
+        "sections": [
+            {
+                "title": "Nos services",
+                "links": [
+                    {
+                        "text": "Formation Continue",
+                        "url": "/services/formation"
+                    },
+                    {
+                        "text": "Consulting IT",
+                        "url": "/services/consulting"
+                    },
+                    {
+                        "text": "Développement Web & Mobile",
+                        "url": "/services/dev-web-mobile"
+                    },
+                    {
+                        "text": "Intelligence Artificielle",
+                        "url": "/services/ia"
+                    },
+                    {
+                        "text": "Cybersécurité",
+                        "url": "/services/cybersecurite"
+                    },
+                    {
+                        "text": "Cloud Computing",
+                        "url": "/services/cloud"
+                    }
+                ]
+            },
+            {
+                "title": "Liens utiles",
+                "links": [
+                    {
+                        "text": "Politique de Confidentialité",
+                        "url": "/privacy-policy"
+                    },
+                    {
+                        "text": "Conditions Générales d'Utilisation",
+                        "url": "/terms"
+                    }
+                ]
+            }
+        ],
+        "mainMenu": [
+            {
+                "text": "Accueil",
+                "url": "/"
+            },
+            {
+                "text": "À propos",
+                "url": "/about"
+            },
+            {
+                "text": "Services",
+                "url": "/services"
+            },
+            {
+                "text": "Réalisations",
+                "url": "/case-studies"
+            },
+            {
+                "text": "Blog",
+                "url": "/blog"
+            },
+            {
+                "text": "Contact",
+                "url": "/contact"
+            }
+        ],
+        "copyright": {
+            "text": "© Beyond Expertise - Tous droits réservés"
+        }
+    }
+}

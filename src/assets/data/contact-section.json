@@ -1,0 +1,26 @@
+{
+    "contactSection": {
+        "title": "Contactez-nous",
+        "subtitle": "Parlons de votre projet !",
+        "description": "Vous avez une idée, un besoin spécifique ou un projet en tête ? Notre équipe est là pour vous écouter et vous accompagner dans sa réalisation. Que ce soit pour des formations, des solutions digitales ou un accompagnement stratégique, nous adaptons nos services pour répondre à vos attentes.",
+        "formTitle": "Transformons vos idées en réalité dès aujourd'hui",
+        "form": {
+            "name": {
+                "placeholder": "Votre nom"
+            },
+            "email": {
+                "placeholder": "Votre email"
+            },
+            "phone": {
+                "placeholder": "Votre téléphone"
+            },
+            "subject": {
+                "placeholder": "Objet"
+            },
+            "message": {
+                "placeholder": "Votre message"
+            },
+            "submitButton": "Démarrons ensemble"
+        }
+    }
+}
