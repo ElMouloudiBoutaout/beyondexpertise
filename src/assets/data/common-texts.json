@@ -1,0 +1,30 @@
+{
+    "servicesSection": {
+        "title": "Nos Services",
+        "subtitle": "Nos services personnalisés",
+        "description": "Découvrez comment nous pouvons vous accompagner à travers des solutions sur mesure pour vos besoins professionnels.",
+        "viewMoreLink": "/services",
+        "contactText": "Vous avez un besoin spécifique ? ",
+        "contactLinkText": "Contactez-nous",
+        "contactSuffix": " pour un accompagnement sur mesure !",
+        "contactLink": "#contact-form",
+        "tabs": [
+            {
+                "id": "all",
+                "label": "Tous nos services"
+            },
+            {
+                "id": "consulting",
+                "label": "Consulting"
+            },
+            {
+                "id": "formation",
+                "label": "Formation"
+            },
+            {
+                "id": "development",
+                "label": "Développement"
+            }
+        ]
+    }
+}

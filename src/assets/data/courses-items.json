@@ -1,0 +1,34 @@
+{
+    "accordionItems": [
+        {
+            "title": "Management de projet",
+            "content": "SCRUM Master : Devenez un leader Agile en maîtrisant le rôle de SCRUM Master. Apprenez à gérer des équipes pluridisciplinaires, à faciliter les sprints, à résoudre les obstacles et à améliorer la collaboration dans un environnement Agile. Cette formation vous permet de conduire efficacement des projets SCRUM tout en optimisant la productivité.\n\nProduct Owner : Cette formation vous prépare à devenir un Product Owner compétent, responsable de maximiser la valeur du produit. Vous apprendrez à gérer le backlog, à définir des priorités et à assurer une communication claire avec les parties prenantes tout en alignant les besoins clients avec les objectifs de l'équipe.",
+            "open": false
+        },
+        {
+            "title": "Data visualisation",
+            "content": "Maîtrisez les outils et techniques de visualisation des données pour transformer des chiffres complexes en informations claires et compréhensibles. Apprenez à utiliser des logiciels comme Tableau, Power BI ou des bibliothèques Python pour créer des graphiques, des tableaux de bord interactifs et raconter des histoires basées sur les données.",
+            "open": false
+        },
+        {
+            "title": "Atlassian JIRA",
+            "content": "Apprenez à utiliser JIRA pour la gestion de projets Agile. Cette formation couvre la création de workflows, la planification de sprints, le suivi des tâches et des rapports de performance. Vous deviendrez un expert dans la configuration et l'utilisation de JIRA pour améliorer la productivité et la collaboration au sein de vos équipes.",
+            "open": false
+        },
+        {
+            "title": "SQL & Base de données",
+            "content": "Maîtrisez les fondamentaux de SQL pour interroger, manipuler et analyser des bases de données relationnelles. Apprenez à créer des tables, optimiser des requêtes et gérer des jeux de données complexes tout en utilisant des systèmes tels que MySQL, PostgreSQL ou Oracle.",
+            "open": false
+        },
+        {
+            "title": "Machine Learning",
+            "content": "Découvrez les principes fondamentaux du Machine Learning pour créer des modèles prédictifs basés sur les données. Cette formation vous introduit aux algorithmes supervisés, non supervisés, à l'entraînement et à l'évaluation des modèles en utilisant Python et des bibliothèques telles que Scikit-learn.",
+            "open": false
+        },
+        {
+            "title": "Intelligence Artificielle (IA)",
+            "content": "Explorez les concepts avancés de l'IA, notamment les réseaux neuronaux et l'apprentissage profond. Apprenez à construire et déployer des modèles d'IA pour automatiser des tâches, résoudre des problèmes complexes et développer des solutions innovantes dans divers secteurs.",
+            "open": false
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "image": "assets/images/case/c7.jpg",
+            "title": "Développement Web & Mobile",
+            "description": "Création d'applications web et mobiles sur mesure, avec les dernières technologies et les meilleures pratiques du marché.",
+            "link": "/services/dev-web-mobile"
+        },
+        {
+            "id": 2,
+            "image": "assets/images/case/c7.jpg",
+            "title": "Solutions Cloud",
+            "description": "Développement et déploiement de solutions cloud scalables et sécurisées pour optimiser vos opérations.",
+            "link": "/services/cloud"
+        },
+        {
+            "id": 3,
+            "image": "assets/images/case/c7.jpg",
+            "title": "Intelligence Artificielle",
+            "description": "Développement de solutions IA innovantes pour automatiser vos processus et améliorer votre prise de décision.",
+            "link": "/services/ia"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+<section class="widget widget-peru-posts-thumb">
+    <h3 class="widget-title">Articles similaires</h3>
+
+    <div class="post-wrap">
+        <article class="item" *ngFor="let article of similarArticles">
+            <a [routerLink]="['/blog-details', article.id]" class="thumb">
+                <img [src]="article.image" [alt]="article.title">
+            </a>
+            <div class="info">
+                <time>{{article.meta.date}}</time>
+                <h4 class="title usmall">
+                    <a [routerLink]="['/blog-details', article.id]">{{article.title}}</a>
+                </h4>
+            </div>
+            <div class="clear"></div>
+        </article>
+    </div>
+</section>

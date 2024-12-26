@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -9,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
+import { SimilarArticlesComponent } from './components/common/similar-articles/similar-articles.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { BlogDetailsComponent } from './components/pages/blog-details/blog-details.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
@@ -56,7 +58,8 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     FaqComponent,
     TermsConditionsComponent,
     PrivacyPolicyComponent,
-    ContactComponent
+    ContactComponent,
+    SimilarArticlesComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     CarouselModule,
     BrowserAnimationsModule,
     NgxScrollTopModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

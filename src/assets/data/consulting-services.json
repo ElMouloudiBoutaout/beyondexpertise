@@ -1,0 +1,25 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "image": "assets/images/case/c1.jpg",
+            "title": "Conseil en Transformation Digitale",
+            "description": "Accompagnement stratégique pour votre transformation numérique. Analyse de vos besoins, élaboration de feuille de route et mise en œuvre de solutions adaptées.",
+            "link": "/services/transformation-digitale"
+        },
+        {
+            "id": 2,
+            "image": "assets/images/case/c2.jpg",
+            "title": "Audit & Optimisation",
+            "description": "Évaluation approfondie de vos processus et systèmes existants pour identifier les opportunités d'amélioration et recommander des solutions optimales.",
+            "link": "/services/audit-optimisation"
+        },
+        {
+            "id": 3,
+            "image": "assets/images/case/c3.jpg",
+            "title": "Gestion de Projet Agile",
+            "description": "Expertise en méthodologies agiles pour piloter vos projets avec efficacité, flexibilité et transparence.",
+            "link": "/services/gestion-projet-agile"
+        }
+    ]
+}

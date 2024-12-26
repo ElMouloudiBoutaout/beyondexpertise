@@ -1,0 +1,33 @@
+{
+    "processSection": {
+        "title": "Notre processus de travail",
+        "subtitle": "Découvrez Notre Processus Collaboratif",
+        "description": "Des solutions pensées pour vous accompagner à chaque étape, avec une méthodologie éprouvée pour garantir votre réussite.",
+        "steps": [
+            {
+                "title": "Analyse des besoins",
+                "content": "Nous commençons par comprendre vos objectifs et besoins spécifiques afin de proposer une solution adaptée. Cette étape comprend des échanges approfondis pour identifier les défis et les opportunités.",
+                "icon": "assets/images/process/p1.png",
+                "hasNext": true
+            },
+            {
+                "title": "Recherche & planification",
+                "content": "Nos experts élaborent une stratégie sur mesure en s'appuyant sur une analyse rigoureuse des données et des meilleures pratiques du secteur. Nous définissons un plan d'action clair pour garantir le succès du projet.",
+                "icon": "assets/images/process/p2.png",
+                "hasNext": true
+            },
+            {
+                "title": "Développement & exécution",
+                "content": "Nous passons à la phase de réalisation avec une approche itérative et collaborative. Le projet est mis en œuvre avec une attention particulière à la qualité et aux délais.",
+                "icon": "assets/images/process/p3.png",
+                "hasNext": true
+            },
+            {
+                "title": "Livraison & accompagnement",
+                "content": "Nous livrons la solution finale et assurons un suivi continu pour garantir une intégration optimale. Notre équipe reste à votre disposition pour toute assistance ou amélioration future.",
+                "icon": "assets/images/process/p4.png",
+                "hasNext": false
+            }
+        ]
+    }
+}

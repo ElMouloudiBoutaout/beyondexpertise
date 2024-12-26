@@ -7,7 +7,7 @@ Default Style
 :root {
     --bodyFontFamily: "Open Sans", sans-serif;
     --headingFontFamily: "Catamaran", sans-serif;
-    --mainColor: #1d42d9; 
+    --mainColor: #1d42d9;
     --bodyColor: #7a7e9a;
     --headingColor: #293a5c;
     --whiteColor: #ffffff;
@@ -39,7 +39,7 @@ a {
 	}
 }
 button {
-    outline: 0 !important; 
+    outline: 0 !important;
 	box-shadow: none;
 	border: none;
     &:focus {
@@ -68,7 +68,7 @@ p {
 	&:last-child {
         margin-bottom: 0;
     }
-} 
+}
 img {
     max-width: 100%;
     height: auto;
@@ -105,7 +105,7 @@ ul {
         box-shadow: unset;
     }
 }
-textarea {   
+textarea {
     &.form-control {
         height: auto;
 		height: 250px;
@@ -1763,17 +1763,14 @@ Client Area Css
 	}
 }
 .single-client {
-	background-color: var(--whiteColor);
 	padding: 30px;
     position: relative;
     text-align: center;
     margin-top: 30px;
 	img {
-		position: absolute;
 		top: -30px;
         left: 0;
         right: 0;
-		border: 1px solid var(--mainColor);
         border-radius: var(--borderRadius);
         margin: auto;
 	}
@@ -2834,7 +2831,7 @@ Blog Details Area Style
 				margin-bottom: -10px;
 				ul {
 					padding-left: 0;
-					margin-bottom: 0; 
+					margin-bottom: 0;
 					list-style-type: none;
 					li {
 						position: relative;
@@ -3038,7 +3035,7 @@ Blog Details Area Style
 					i {
 						margin-left: 0;
 						font-size: 20px;
-						position: relative; 
+						position: relative;
 						top: 4px;
 					}
 				}
@@ -3198,7 +3195,7 @@ Blog Details Area Style
 				color: var(--headingColor);
 				margin-bottom: 5px;
 			}
-			
+
 			input[type="datetime-local"] {
 				display: block;
 				width: 100%;
@@ -3214,7 +3211,7 @@ Blog Details Area Style
 			input[type="week"] {
 				display: block;
 				width: 100%;
-				background-color: #f7f7f7;  
+				background-color: #f7f7f7;
 				border: 1px solid #eeeeee;
 				padding: 0.625em 0.7375em;
 				outline: 0;
@@ -3322,7 +3319,7 @@ Blog Details Area Style
 			textarea {
 				display: block;
 				width: 100%;
-				background-color: #f7f7f7; 
+				background-color: #f7f7f7;
 				border: 1px solid #eeeeee;
 				padding: 0.625em 0.7375em;
 				outline: 0;
@@ -3388,13 +3385,13 @@ Blog Details Area Style
 					}
 					&:focus {
 						color: var(--whiteColor);
-						background-color: var(--mainColor);  
+						background-color: var(--mainColor);
 					}
 				}
 			}
 		}
 	}
-	
+
 	/*
 	Sidebar Widget Area Style
 	================================*/
@@ -3822,7 +3819,7 @@ Blog Details Area Style
 			display: block;
 			margin-bottom: 4px;
 		}
-	} 
+	}
 }
 
 /*
@@ -4260,7 +4257,7 @@ Error Area Css
         font-size: 30px;
     }
 }
- 
+
 /*
 Contact Area Css
 ======================================================*/
@@ -4647,7 +4644,7 @@ Footer Area Css
     }
 }
 
-/* 
+/*
 Page Title Area Css
 =====================================================*/
 .page-title-area {
@@ -4704,7 +4701,7 @@ Page Title Area Css
 				color: #70a1ff;
 			}
 		}
-	}	
+	}
 	.page-shape {
         .shape1 {
             position: absolute;
@@ -4739,7 +4736,7 @@ Page Title Area Css
     }
 }
 
-/* 
+/*
 Pagenavigation Area Css
 =====================================================*/
 .page-navigation-area {
@@ -4802,7 +4799,7 @@ Pagenavigation Area Css
 
 /*
 Project Area Six Style
-======================================================*/ 
+======================================================*/
 .project-area-six {
 	text-align: center;
 	.single-project {
@@ -4837,7 +4834,7 @@ Project Area Six Style
 			}
 		}
 		.project-content {
-			position: absolute; 
+			position: absolute;
 			top: 0;
 			bottom: 0;
 			left: 0;
@@ -4867,7 +4864,7 @@ Project Area Six Style
 					a {
 						text-decoration: underline;
 					}
-						
+
 				}
 				a {
 					color: var(--whiteColor);
@@ -4876,7 +4873,7 @@ Project Area Six Style
 					a {
 						color: var(--whiteColor);
 					}
-						
+
 				}
 			}
 			.read-more {
@@ -4886,7 +4883,7 @@ Project Area Six Style
 			}
 		}
 		&:hover {
-			.project-content { 
+			.project-content {
 				transform: scaleY(1);
 			}
 			.project-image {
@@ -5080,7 +5077,7 @@ Services Details Area Style
 
 /*
 Banner Area Three Style
-======================================================*/ 
+======================================================*/
 .main-banner-three {
 	background-color: #f5faff;
 	position: relative;

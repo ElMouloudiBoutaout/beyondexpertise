@@ -1,0 +1,22 @@
+{
+    "blogs": [
+        {
+            "id": "blog1",
+            "title": "Temperature App UX Studies & Development Case",
+            "image": "assets/images/blog/1.jpg",
+            "meta": {
+                "date": "April 10, 2024",
+                "author": "John Anderson"
+            },
+            "excerpt": "Creating a user-friendly temperature monitoring app requires a deep understanding of user behavior, needs, and challenges."        },
+        {
+            "id": "blog2",
+            "title": "Restaurant Management System Development",
+            "image": "assets/images/blog/2.jpg",
+            "meta": {
+                "date": "April 15, 2024",
+                "author": "Sarah Miller"
+            },
+            "excerpt": "How we developed a comprehensive restaurant management system that streamlines operations and improves efficiency."        }
+    ]
+}
