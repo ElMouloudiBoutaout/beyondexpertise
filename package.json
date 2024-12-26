@@ -22,6 +22,7 @@
     "boxicons": "^2.1.4",
     "ngx-owl-carousel-o": "^17.0.0",
     "ngx-scrolltop": "^7.0.0",
+    "nodemailer": "^6.9.16",
     "rxjs": "~7.8.1",
     "tslib": "^2.3.0",
     "wowjs": "^1.1.3",
