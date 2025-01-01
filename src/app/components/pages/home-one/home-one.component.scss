@@ -186,7 +186,35 @@
 }
 
 .line-bnt {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--darkBlueColor);
+    color: white;
+    border-radius: 25px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        animation: none;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(29, 66, 217, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(29, 66, 217, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(29, 66, 217, 0);
+        }
+    }
 }
 
 .default-btn {
@@ -210,7 +238,7 @@
 
     .formation-header {
         padding: 20px;
-        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        background: var(--darkBlueColor);
         border-radius: 8px 8px 0 0;
 
         h3 {
@@ -223,7 +251,6 @@
 
     .formation-subheader {
         padding: 10px 20px;
-        background: rgba(52, 152, 219, 0.1);
         border-bottom: 1px solid #eee;
 
         .formation-type {
@@ -269,11 +296,29 @@
         }
 
         .formation-footer {
-            text-align: center;
+            padding: 20px;
+            text-align: left;
 
-            .default-btn {
-                padding: 10px 25px;
-                font-size: 0.9rem;
+            .line-bnt {
+                display: inline-block;
+                padding: 12px 25px;
+                background: var(--darkBlueColor);
+                color: white;
+                border-radius: 25px;
+                font-weight: 500;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                animation: pulse 2s infinite;
+                text-decoration: none;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    animation: none;
+                    color: white;
+                }
             }
         }
     }
@@ -337,7 +382,7 @@
             }
 
             &.active span {
-                background: var(--mainColor);
+                background:var(--darkBlueColor);
                 color: #fff;
             }
 
@@ -360,5 +405,108 @@
                 font-size: 14px;
             }
         }
+    }
+}
+
+.banner-btn {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-btn {
+        min-width: 220px;
+        text-align: center;
+        font-weight: 600;
+        padding: 15px 30px;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        &.border-btn {
+            background: transparent;
+            border: 2px solid #fff;
+
+            &:hover {
+                background: rgba(255,255,255,0.1);
+            }
+        }
+    }
+}
+
+.single-service {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-img {
+        margin-bottom: 25px;
+    }
+
+    .service-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0 20px 25px;
+
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .line-bnt {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--darkBlueColor);
+            color: white;
+            border-radius: 25px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            align-self: flex-start;
+            margin-top: auto;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                animation: none;
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(29, 66, 217, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(29, 66, 217, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(29, 66, 217, 0);
     }
 }

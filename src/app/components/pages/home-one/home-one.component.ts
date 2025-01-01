@@ -287,7 +287,7 @@ export class HomeOneComponent implements OnInit {
 
     scrollToServiceTab(tabId: string): void {
         // First scroll to services section
-        this.viewportScroller.scrollToAnchor('services');
+        this.viewportScroller.scrollToAnchor('formations');
 
         // Then switch to the corresponding tab
         setTimeout(() => {
