@@ -1,32 +1,24 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>Blog</h2>
+            <h2>Notre Blog</h2>
             <ul>
-                <li><a routerLink="/">Home </a></li>
+                <li><a routerLink="/">Accueil</a></li>
                 <li class="active">Blog</li>
             </ul>
         </div>
     </div>
-
-    <div class="page-shape">
-        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
-        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape" /></div>
-        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape" /></div>
-        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
-        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
-    </div>
 </div>
 
-<section class="home-blog-area ptb-100">
+<section class="blog-area ptb-100">
     <div class="container">
         <div class="section-title">
-            <span>Article de Blog</span>
-            <h2>Nos articles réguliers</h2>
+            <h2>Derniers Articles</h2>
+            <p>Découvrez nos dernières actualités, conseils et analyses sur les tendances du secteur.</p>
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6" *ngFor="let blog of paginatedBlogs">
+            <div class="col-lg-4 col-md-6" *ngFor="let blog of blogs">
                 <div class="single-blog">
                     <div class="blog-img">
                         <a [routerLink]="['/blog-details', blog.id]">
@@ -34,41 +26,28 @@
                         </a>
                     </div>
 
-                    <div class="content">
-                        <ul>
-                            <li>{{blog.meta.date}}</li>
-                            <li><a href="#">By {{blog.meta.author}}</a></li>
+                    <div class="blog-content">
+                        <ul class="blog-meta">
+                            <li>
+                                <i class="bx bx-calendar"></i>
+                                {{blog.meta.date}}
+                            </li>
+                            <li>
+                                <i class="bx bx-user"></i>
+                                {{blog.meta.author}}
+                            </li>
                         </ul>
-                        <a [routerLink]="['/blog-details', blog.id]">
-                            <h3>{{blog.title}}</h3>
-                        </a>
-                        <p>{{blog.excerpt}}</p>
-                        <a [routerLink]="['/blog-details', blog.id]" class="line-bnt">Read More</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Pagination -->
-            <div class="col-lg-12" *ngIf="totalPages > 1">
-                <div class="page-navigation-area">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            <li class="page-item" [class.disabled]="currentPage === 1">
-                                <a class="page-link" (click)="changePage(currentPage - 1)">
-                                    <i class='bx bx-chevrons-left'></i>
-                                </a>
-                            </li>
-                            <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
-                                [class.active]="currentPage === i + 1">
-                                <a class="page-link" (click)="changePage(i + 1)">{{i + 1}}</a>
-                            </li>
-                            <li class="page-item" [class.disabled]="currentPage === totalPages">
-                                <a class="page-link" (click)="changePage(currentPage + 1)">
-                                    <i class='bx bx-chevrons-right'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                        <h3>
+                            <a [routerLink]="['/blog-details', blog.id]">{{blog.title}}</a>
+                        </h3>
+                        <p>{{blog.excerpt}}</p>
+
+                        <a [routerLink]="['/blog-details', blog.id]" class="read-more">
+                            Lire la suite
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

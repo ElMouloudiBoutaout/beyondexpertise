@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-12 col-sm-12">
                 <div class="logo">
-                    <a routerLink="/"><img src="assets/images/logo.png" alt="logo" /></a>
+                    <a routerLink="/"><img style="height: 30px;width: 120px;"  src="assets/images/logo.png" alt="logo" /></a>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light" [class.active]="classApplied">
                 <a class="navbar-brand d-none" routerLink="/">
-                    <img src="assets/images/logo2.png" alt="logo">
+                    <img style="height: 30px;width: 120px;"  src="assets/images/logo2.png" alt="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" (click)="toggleClass()">
                     <span class="burger-menu">
@@ -47,6 +47,10 @@
 
                         <li class="nav-item">
                             <a routerLink="/" fragment="contact" class="nav-link">Nous contacter</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a routerLink="/blog" class="nav-link">Blog</a>
                         </li>
                     </ul>
                 </div>

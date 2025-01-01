@@ -1,0 +1,32 @@
+{
+    "formations": [
+        {
+            "id": "sql-nosql",
+            "title": "SQL/NoSQL & Bases de données",
+            "type": "Base de données",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "À distance ou sur site",
+            "duree": {
+                "heures": 28,
+                "mois": 0.5
+            },
+            "prochaine_rentree": "Consultez le calendrier",
+            "niveau_requis": "Notions en programmation",
+            "description": "Maîtrisez les bases de données relationnelles et non relationnelles pour vos projets."
+        },
+        {
+            "id": "scrum-master",
+            "title": "Scrum Master",
+            "type": "Agile",
+            "modalite": "Distanciel",
+            "localisation": "En ligne",
+            "duree": {
+                "heures": 21,
+                "mois": 1
+            },
+            "prochaine_rentree": "10 juin 2025",
+            "niveau_requis": "Débutant accepté",
+            "description": "Maîtrisez les fondamentaux de la méthode Scrum et du rôle de Scrum Master."
+        }
+    ]
+}

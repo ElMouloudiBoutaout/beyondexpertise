@@ -1,118 +1,131 @@
-<div class="page-title-area">
+<div class="formation-hero">
     <div class="container">
-        <div class="page-title-content">
-            <h2>{{formationData?.title}}</h2>
-            <p class="duration">Durée : {{formationData?.duration.days}} jours ({{formationData?.duration.hours}} heures)</p>
+        <div class="hero-content">
+            <h1>{{formationData?.title}}</h1>
+            <div class="formation-highlights">
+                <div class="highlight-item">
+                    <i class="bx bx-time"></i>
+                    <span>{{formationData?.duree?.jours}} jours ({{formationData?.duree?.heures}} heures)</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="bx bx-map"></i>
+                    <span>{{formationData?.modalite}}</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="bx bx-certification"></i>
+                    <span>{{formationData?.certification}}</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Add Navigation Bar -->
-<div class="formation-nav">
-    <div class="container">
-        <nav class="formation-tabs">
-            <ul>
-                <li>
-                    <a (click)="scrollToSection('target')" [class.active]="activeSection === 'target'">
-                        Public visé
-                    </a>
-                </li>
-                <li>
-                    <a (click)="scrollToSection('prerequisites')" [class.active]="activeSection === 'prerequisites'">
-                        Prérequis
-                    </a>
-                </li>
-                <li>
-                    <a (click)="scrollToSection('objectives')" [class.active]="activeSection === 'objectives'">
-                        Objectifs
-                    </a>
-                </li>
-                <li>
-                    <a (click)="scrollToSection('program')" [class.active]="activeSection === 'program'">
-                        Programme
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
-
-<section class="formation-details-area ptb-100">
+<div class="formation-content">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <!-- Target Audience -->
-                <div class="formation-section" id="target">
-                    <h3>{{formationData?.target.title}}</h3>
-                    <ul>
-                        <li *ngFor="let audience of formationData?.target.audience">
-                            {{audience}}
-                        </li>
-                    </ul>
-                </div>
+                <div class="content-wrapper">
+                    <div class="formation-nav sticky-top">
+                        <nav class="formation-tabs">
+                            <ul>
+                                <li>
+                                    <a (click)="scrollToSection('section-target')" [class.active]="activeSection === 'section-target'">
+                                        Public visé
+                                    </a>
+                                </li>
+                                <li>
+                                    <a (click)="scrollToSection('section-prerequisites')" [class.active]="activeSection === 'section-prerequisites'">
+                                        Prérequis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a (click)="scrollToSection('section-objectives')" [class.active]="activeSection === 'section-objectives'">
+                                        Objectifs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a (click)="scrollToSection('section-program')" [class.active]="activeSection === 'section-program'">
+                                        Programme
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
-                <!-- Prerequisites -->
-                <div class="formation-section" id="prerequisites">
-                    <h3>{{formationData?.prerequisites.title}}</h3>
-                    <ul>
-                        <li *ngFor="let req of formationData?.prerequisites.requirements">
-                            {{req}}
-                        </li>
-                    </ul>
-                </div>
+                    <div class="formation-sections">
+                        <!-- Target Section -->
+                        <section id="section-target" class="content-section">
+                            <h2>{{formationData?.target?.title}}</h2>
+                            <ul>
+                                <li *ngFor="let item of formationData?.target?.audience">
+                                    <i class="bx bx-check"></i>
+                                    {{item}}
+                                </li>
+                            </ul>
+                        </section>
 
-                <!-- Objectives -->
-                <div class="formation-section" id="objectives">
-                    <h3>{{formationData?.objectives.title}}</h3>
-                    <ul>
-                        <li *ngFor="let goal of formationData?.objectives.goals">
-                            {{goal}}
-                        </li>
-                    </ul>
-                </div>
+                        <!-- Prerequisites Section -->
+                        <section id="section-prerequisites" class="content-section">
+                            <h2>{{formationData?.prerequisites?.title}}</h2>
+                            <ul>
+                                <li *ngFor="let item of formationData?.prerequisites?.requirements">
+                                    <i class="bx bx-check"></i>
+                                    {{item}}
+                                </li>
+                            </ul>
+                        </section>
 
-                <!-- Detailed Program -->
-                <div class="formation-section" id="program">
-                    <h3>{{formationData?.program.title}}</h3>
-                    <div class="program-module" *ngFor="let module of formationData?.program.modules">
-                        <h4>{{module.title}}</h4>
-                        <ul>
-                            <li *ngFor="let topic of module.topics">
-                                {{topic}}
-                            </li>
-                        </ul>
+                        <!-- Objectives Section -->
+                        <section id="section-objectives" class="content-section">
+                            <h2>{{formationData?.objectives?.title}}</h2>
+                            <ul>
+                                <li *ngFor="let item of formationData?.objectives?.goals">
+                                    <i class="bx bx-check"></i>
+                                    {{item}}
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Program Section -->
+                        <section id="section-program" class="content-section">
+                            <h2>{{formationData?.program?.title}}</h2>
+                            <!-- ... rest of program content ... -->
+                        </section>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="formation-sidebar">
-                    <!-- Practical Information -->
-                    <div class="sidebar-widget">
-                        <h3>{{formationData?.practical.title}}</h3>
-                        <ul>
-                            <li *ngFor="let detail of formationData?.practical.details">
-                                {{detail}}
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Registration -->
-                    <div class="sidebar-widget">
-                        <h3>{{formationData?.registration.title}}</h3>
-                        <ul>
-                            <li *ngFor="let method of formationData?.registration.methods">
-                                {{method}}
-                            </li>
-                        </ul>
-                        <div class="registration-btn">
-                            <a routerLink="/contact" class="default-btn">
-                                S'inscrire maintenant
-                            </a>
+                    <div class="sidebar-card">
+                        <div class="card-header">
+                            <h3>{{formationData?.practical?.title}}</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="session-info">
+                                <div class="info-item">
+                                    <i class="bx bx-calendar"></i>
+                                    <span>{{formationData?.practical?.nextSession}}</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bx bx-euro"></i>
+                                    <span>{{formationData?.practical?.price}} € HT</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bx bx-map-pin"></i>
+                                    <span>{{formationData?.practical?.location}}</span>
+                                </div>
+                            </div>
+                            <button class="btn-register" routerLink="/#contact">
+                                Je m'inscris
+                            </button>
+                            <button class="btn-contact" routerLink="/contact">
+                                Contactez-nous
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

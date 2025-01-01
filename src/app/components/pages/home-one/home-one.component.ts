@@ -37,6 +37,7 @@ export class HomeOneComponent implements OnInit {
         this.loadClientsData();
         this.loadRecentBlogs();
         this.loadContactData();
+        this.loadAllFormations();
     }
 
     private loadAccordionItems(): void {
@@ -106,10 +107,6 @@ export class HomeOneComponent implements OnInit {
         }
     }
 
-    switchTab(event: MouseEvent, tab: string) {
-        event.preventDefault();
-        this.currentTab = tab;
-    }
 
     teamSlides: OwlOptions = {
 		loop: true,
@@ -186,7 +183,7 @@ export class HomeOneComponent implements OnInit {
     }
 
     // Tabs
-    currentTab = 'all';
+    currentTab: string = 'formation_certifiante';
 
     currentPage: number = 1;
     itemsPerPage: number = 3;
@@ -335,6 +332,55 @@ export class HomeOneComponent implements OnInit {
             alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
         } finally {
             this.isSubmitting = false;
+        }
+    }
+
+    formationsCertifiantes: any[] = [];
+    formationsLongues: any[] = [];
+    formationsCourtes: any[] = [];
+    currentFormations: any[] = [];
+
+    private loadAllFormations(): void {
+        // Load certifying formations
+        this.http.get<any>('assets/data/formations/formations-certifiantes.json')
+            .subscribe(data => {
+                this.formationsCertifiantes = data.formations;
+                // Initialize with certifying formations since it's the default tab
+                if (this.currentTab === 'formation_certifiante') {
+                    this.currentFormations = this.formationsCertifiantes;
+                }
+            });
+
+        // Load long formations
+        this.http.get<any>('assets/data/formations/formations-longues.json')
+            .subscribe(data => {
+                this.formationsLongues = data.formations;
+            });
+
+        // Load short formations
+        this.http.get<any>('assets/data/formations/formations-courtes.json')
+            .subscribe(data => {
+                this.formationsCourtes = data.formations;
+            });
+    }
+
+    switchTab(event: MouseEvent, tabId: string): void {
+        event.preventDefault();
+        this.currentTab = tabId;
+
+        // Update current formations based on selected tab
+        switch(tabId) {
+            case 'formation_certifiante':
+                this.currentFormations = this.formationsCertifiantes;
+                break;
+            case 'formation_longue':
+                this.currentFormations = this.formationsLongues;
+                break;
+            case 'formation_courte':
+                this.currentFormations = this.formationsCourtes;
+                break;
+            default:
+                this.currentFormations = [];
         }
     }
 

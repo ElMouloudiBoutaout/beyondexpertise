@@ -91,13 +91,87 @@
     </div>
 </section>
 
-<section class="home-company-area bg-color" id="about">
+<section style="background-color: #f5faff;" class="home-case pt-70 pb-70" id="formations">
+    <div class="container">
+        <div class="section-title">
+            <span>{{servicesData?.title}}</span>
+            <h2>{{servicesData?.subtitle}}</h2>
+            <p>{{servicesData?.description}}</p>
+            <div class="nav-tabset-wrapper">
+                <ul class="nav-tabset">
+                    <li class="nav-tab" *ngFor="let tab of servicesData?.tabs"
+                        [ngClass]="{'active': currentTab === tab.id}">
+                        <span (click)="switchTab($event, tab.id)">
+                            {{tab.label}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="case">
+            <div class="tabs-container">
+                <div class="pane" [id]="currentTab" *ngIf="currentFormations.length > 0">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6" *ngFor="let formation of currentFormations">
+                            <div class="formation-card">
+                                <div class="formation-header">
+                                    <h3>{{formation.title}}</h3>
+                                    <div class="formation-subheader">
+                                        <span class="formation-type">{{formation.type}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="formation-body">
+                                    <div class="formation-info">
+                                        <div class="info-item">
+                                            <i class="bx bx-time"></i>
+                                            <span>{{formation.duree.heures}} heures / {{formation.duree.mois}} mois</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="bx bx-map"></i>
+                                            <span>{{formation.modalite}} - {{formation.localisation}}</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="bx bx-calendar"></i>
+                                            <span>Prochaine rentrée : {{formation.prochaine_rentree}}</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="formation-description">{{formation.description}}</p>
+
+                                    <div class="formation-footer">
+                                        <a [routerLink]="['/formation', formation.id]" class="default-btn">
+                                            En savoir plus
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-formations" *ngIf="currentFormations.length === 0">
+                    <p>Aucune formation disponible pour cette catégorie.</p>
+                </div>
+            </div>
+        </div>
+        <div class="case-btn text-center">
+            <p>{{servicesData?.viewMoreText}} <a [routerLink]="servicesData?.viewMoreLink"></a></p>
+            <p class="mt-4">
+                {{servicesData?.contactText}}
+                <a [href]="servicesData?.contactLink">{{servicesData?.contactLinkText}}</a>
+                {{servicesData?.contactSuffix}}
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section style="background-color: #ffffff;" class="home-company-area bg-color pt-70 pb-70" id="about">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="company-content">
                     <div class="company-tittle">
-                        <span>Notre entreprise</span>
                         <h2>Une expertise innovante au service de votre croissance</h2>
                         <p>Depuis des années,<strong> Beyond Expertise </strong> accompagne les entreprises et les particuliers dans leur développement à travers des solutions de formation sur mesure et une expertise de pointe. Que vous soyez une TPE/PME, un grand groupe ou à titre personnel, nous vous offrons des outils pratiques et concrets pour relever vos défis d'aujourd'hui et anticiper ceux de demain.</p>
                         <p>Grâce à notre approche personnalisée, nous plaçons votre satisfaction au cœur de nos priorités, car "Your satisfaction is our starting point".</p>
@@ -114,65 +188,10 @@
     </div>
 </section>
 
-<section class="choose-area ptb-100" id="formations">
+
+<section class="home-process-area pt-70 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2>Nos Formations</h2>
-            <p>Nous avons gagné la confiance de nos clients grâce à la qualité de nos services et de nos formations professionnelles.</p>
-        </div>
-
-        <div style="margin-top: -20px;"  class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="choose-img">
-                    <img src="assets/images/choose-img.png" alt="choose" />
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="choose-content">
-                    <div class="faq-accordion">
-                        <div class="faq-item" *ngFor="let item of paginatedItems; let i = index;">
-                            <div class="faq-header" (click)="toggleAccordionItem(item)">
-                                {{item.title}}
-                                <i class='bx' [ngClass]="{'bx-plus': !item.open, 'bx-x': item.open}"></i>
-                            </div>
-                            <div class="faq-content" [hidden]="!item.open">
-                                <p>{{item.content}}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="pagination-wrapper" *ngIf="accordionItems.length > itemsPerPage">
-                        <ul class="pagination">
-                            <li class="page-item" [class.disabled]="currentPage === 1">
-                                <a class="page-link" (click)="changePage(currentPage - 1)">
-                                    <i class="bx bx-chevron-left"></i>
-                                </a>
-                            </li>
-
-                            <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
-                                [class.active]="currentPage === i + 1">
-                                <a class="page-link" (click)="changePage(i + 1)">{{i + 1}}</a>
-                            </li>
-
-                            <li class="page-item" [class.disabled]="currentPage === totalPages">
-                                <a class="page-link" (click)="changePage(currentPage + 1)">
-                                    <i class="bx bx-chevron-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="home-process-area pt-100 pb-70">
-    <div class="container">
-        <div class="section-title">
-            <span>{{processData?.title}}</span>
             <h2>{{processData?.subtitle}}</h2>
             <p>{{processData?.description}}</p>
         </div>
@@ -195,58 +214,7 @@
     </div>
 </section>
 
-<section class="home-case ptb-100" id="services">
-    <div class="container">
-        <div class="section-title">
-            <span>{{servicesData?.title}}</span>
-            <h2>{{servicesData?.subtitle}}</h2>
-            <p>{{servicesData?.description}}</p>
-        </div>
-        <div class="case">
-            <ul class="nav-tabset">
-                <li class="nav-tab" *ngFor="let tab of servicesData?.tabs"
-                    [ngClass]="{'active': currentTab === tab.id}">
-                    <span (click)="switchTab($event, tab.id)">
-                        {{tab.label}}
-                    </span>
-                </li>
-            </ul>
-            <div class="tabs-container">
-                <div class="pane" [id]="currentTab" *ngIf="currentServices.length > 0">
-                    <div class="row case-list">
-                        <div class="col-lg-4 col-sm-6" *ngFor="let service of currentServices">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a [routerLink]="[getServiceRoute(service)]">
-                                        <img [src]="service.image" [alt]="service.title"/>
-                                    </a>
-                                </div>
-
-                                <div class="content">
-                                    <a [routerLink]="[getServiceRoute(service)]">
-                                        <h3>{{service.title}}</h3>
-                                    </a>
-                                    <p>{{service.description}}</p>
-                                    <a [routerLink]="[getServiceRoute(service)]" class="line-bnt">En savoir plus</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="case-btn text-center">
-            <p>{{servicesData?.viewMoreText}} <a [routerLink]="servicesData?.viewMoreLink"></a></p>
-            <p class="mt-4">
-                {{servicesData?.contactText}}
-                <a [href]="servicesData?.contactLink">{{servicesData?.contactLinkText}}</a>
-                {{servicesData?.contactSuffix}}
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="feature-area bg-color ptb-100">
+<section class="feature-area bg-color pt-70 pb-70">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -281,7 +249,7 @@
     </div>
 </section>
 
-<section class="home-team-area ptb-100">
+<section class="home-team-area pt-70 pb-70">
     <div class="container">
         <div class="section-title">
             <span>{{teamData?.title}}</span>
@@ -331,7 +299,7 @@
     </div>
 </section>
 
-<section class="client-area ptb-100 bg-color">
+<section class="client-area pt-70 pb-70 bg-color">
     <div class="container">
         <div class="section-title">
             <span>{{clientsData?.title}}</span>
@@ -352,44 +320,7 @@
     </div>
 </section>
 
-<section class="home-blog-area ptb-100">
-    <div class="container">
-        <div class="section-title">
-            <span>Article de Blog</span>
-            <h2>Nos articles réguliers</h2>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4 col-md-6" *ngFor="let blog of recentBlogs">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a [routerLink]="['/blog-details', blog.id]">
-                            <img [src]="blog.image" [alt]="blog.title">
-                        </a>
-                    </div>
-
-                    <div class="content">
-                        <ul>
-                            <li>{{blog.meta.date}}</li>
-                            <li><a [routerLink]="['/blog']">By {{blog.meta.author}}</a></li>
-                        </ul>
-                        <a [routerLink]="['/blog-details', blog.id]">
-                            <h3>{{blog.title}}</h3>
-                        </a>
-                        <p>{{blog.excerpt}}</p>
-                        <a [routerLink]="['/blog-details', blog.id]" class="line-bnt">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="blog-btn text-center">
-            <p>Découvrez tous nos articles. <a routerLink="/blog">Voir plus</a></p>
-        </div>
-    </div>
-</section>
-
-<section class="home-contact-area bg-color ptb-100" id="contact">
+<section style="background-color: #ffffff;" class="home-contact-area bg-color pt-70 pb-70" id="contact">
     <div class="container">
         <div class="section-title">
             <span>{{contactData?.title}}</span>

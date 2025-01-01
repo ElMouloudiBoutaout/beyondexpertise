@@ -1,0 +1,114 @@
+{
+    "formation": {
+        "id": "sql-nosql",
+        "title": "Formation SQL/NoSQL & Bases de données",
+        "type": "Formation technique",
+        "modalite": "Distanciel/Présentiel",
+        "localisation": "À distance ou sur site",
+        "duree": {
+            "jours": 4,
+            "heures": 28
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Développeurs",
+                "Administrateurs de bases de données",
+                "Analystes de données",
+                "Toute personne souhaitant acquérir des compétences en gestion de bases de données relationnelles et non relationnelles"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissances de base en informatique",
+                "Notions en programmation recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les concepts fondamentaux des bases de données relationnelles (SQL) et non relationnelles (NoSQL)",
+                "Maîtriser le langage SQL pour interroger et manipuler des bases de données",
+                "Découvrir les différentes technologies NoSQL et leurs cas d'utilisation",
+                "Savoir choisir la solution de base de données adaptée aux besoins spécifiques d'un projet"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction aux bases de données",
+                    "topics": [
+                        "Historique et évolution des systèmes de gestion de bases de données",
+                        "Différences entre bases de données relationnelles et non relationnelles",
+                        "Cas d'utilisation typiques pour SQL et NoSQL"
+                    ]
+                },
+                {
+                    "title": "Langage SQL et bases de données relationnelles",
+                    "topics": [
+                        "Modélisation des données : schémas, tables, relations",
+                        "Requêtes SQL de base : SELECT, INSERT, UPDATE, DELETE",
+                        "Fonctions avancées : jointures, sous-requêtes, agrégations",
+                        "Gestion des transactions et intégrité des données"
+                    ]
+                },
+                {
+                    "title": "Introduction aux bases de données NoSQL",
+                    "topics": [
+                        "Présentation des différents types de bases NoSQL : clé-valeur, document, colonne, graphe",
+                        "Avantages et inconvénients des solutions NoSQL",
+                        "Critères de choix entre SQL et NoSQL en fonction des besoins"
+                    ]
+                },
+                {
+                    "title": "Mise en œuvre de MongoDB (Base de données documentaire)",
+                    "topics": [
+                        "Installation et configuration de MongoDB",
+                        "Modélisation des données avec des documents JSON",
+                        "Opérations CRUD avec MongoDB",
+                        "Indexation et optimisation des performances"
+                    ]
+                },
+                {
+                    "title": "Mise en œuvre de Cassandra (Base de données en colonnes)",
+                    "topics": [
+                        "Présentation et architecture de Cassandra",
+                        "Modélisation des données et création de tables",
+                        "Requêtes avec CQL (Cassandra Query Language)",
+                        "Gestion de la réplication et tolérance aux pannes"
+                    ]
+                },
+                {
+                    "title": "Comparaison et intégration des solutions SQL et NoSQL",
+                    "topics": [
+                        "Scénarios d'utilisation combinée de bases SQL et NoSQL",
+                        "Stratégies de migration et intégration des données",
+                        "Considérations sur la scalabilité et la performance"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance ou sur site",
+            "nextSession": "Consultez le calendrier",
+            "price": "2 400",
+            "details": [
+                "Sessions disponibles en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 2 400 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}

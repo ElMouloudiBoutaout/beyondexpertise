@@ -1,29 +1,23 @@
 {
     "servicesSection": {
-        "title": "Nos Services",
-        "subtitle": "Nos services personnalisés",
-        "description": "Découvrez comment nous pouvons vous accompagner à travers des solutions sur mesure pour vos besoins professionnels.",
-        "viewMoreLink": "/services",
-        "contactText": "Vous avez un besoin spécifique ? ",
-        "contactLinkText": "Contactez-nous",
-        "contactSuffix": " pour un accompagnement sur mesure !",
-        "contactLink": "#contact",
+        "title": "   ",
+        "subtitle": "Développez vos compétences",
+        "description": "Découvrez nos parcours de formation adaptés à vos objectifs professionnels",
         "tabs": [
             {
-                "id": "all",
-                "label": "Tous nos services"
+                "id": "formation_certifiante",
+                "label": "Formations certifiantes",
+                "description": "Obtenez une certification reconnue"
             },
             {
-                "id": "consulting",
-                "label": "Consulting"
+                "id": "formation_longue",
+                "label": "Formations longues",
+                "description": "Parcours complets de reconversion"
             },
             {
-                "id": "formation",
-                "label": "Formation"
-            },
-            {
-                "id": "development",
-                "label": "Développement"
+                "id": "formation_courte",
+                "label": "Formations courtes",
+                "description": "Montée en compétences rapide"
             }
         ]
     }
