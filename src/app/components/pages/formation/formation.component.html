@@ -1,7 +1,7 @@
-<div class="formation-hero">
+<div class="page-title-area">
     <div class="container">
-        <div class="hero-content">
-            <h1>{{formationData?.title}}</h1>
+        <div class="page-title-content">
+            <h2>{{formationData?.title}}</h2>
             <div class="formation-highlights">
                 <div class="highlight-item">
                     <i class="bx bx-time"></i>
@@ -13,10 +13,18 @@
                 </div>
                 <div class="highlight-item">
                     <i class="bx bx-certification"></i>
-                    <span>{{formationData?.certification}}</span>
+                    <span>{{formationData?.format}}</span>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="page-shape">
+        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
+        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape" /></div>
+        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape" /></div>
+        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
+        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
     </div>
 </div>
 
@@ -30,22 +38,22 @@
                             <ul>
                                 <li>
                                     <a (click)="scrollToSection('section-target')" [class.active]="activeSection === 'section-target'">
-                                        Public visé
+                                       <h3> Public visé</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a (click)="scrollToSection('section-prerequisites')" [class.active]="activeSection === 'section-prerequisites'">
-                                        Prérequis
+                                        <h3>Prérequis</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a (click)="scrollToSection('section-objectives')" [class.active]="activeSection === 'section-objectives'">
-                                        Objectifs
+                                        <h3>Objectifs</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a (click)="scrollToSection('section-program')" [class.active]="activeSection === 'section-program'">
-                                        Programme
+                                        <h3>Programme</h3>
                                     </a>
                                 </li>
                             </ul>
@@ -53,43 +61,50 @@
                     </div>
 
                     <div class="formation-sections">
-                        <!-- Target Section -->
-                        <section id="section-target" class="content-section">
-                            <h2>{{formationData?.target?.title}}</h2>
+                        <section id="section-target" class="content-section" [class.active]="activeSection === 'section-target'">
                             <ul>
                                 <li *ngFor="let item of formationData?.target?.audience">
-                                    <i class="bx bx-check"></i>
-                                    {{item}}
+                                    <i class="flaticon-correct"></i>
+                                    <span>{{item}}</span>
                                 </li>
                             </ul>
                         </section>
 
-                        <!-- Prerequisites Section -->
-                        <section id="section-prerequisites" class="content-section">
-                            <h2>{{formationData?.prerequisites?.title}}</h2>
+                        <section id="section-prerequisites" class="content-section" [class.active]="activeSection === 'section-prerequisites'">
                             <ul>
                                 <li *ngFor="let item of formationData?.prerequisites?.requirements">
-                                    <i class="bx bx-check"></i>
-                                    {{item}}
+                                    <i class="flaticon-correct"></i>
+                                    <span>{{item}}</span>
                                 </li>
                             </ul>
                         </section>
 
-                        <!-- Objectives Section -->
-                        <section id="section-objectives" class="content-section">
-                            <h2>{{formationData?.objectives?.title}}</h2>
+                        <section id="section-objectives" class="content-section" [class.active]="activeSection === 'section-objectives'">
                             <ul>
                                 <li *ngFor="let item of formationData?.objectives?.goals">
-                                    <i class="bx bx-check"></i>
-                                    {{item}}
+                                    <i class="flaticon-correct"></i>
+                                    <span>{{item}}</span>
                                 </li>
                             </ul>
                         </section>
 
-                        <!-- Program Section -->
-                        <section id="section-program" class="content-section">
-                            <h2>{{formationData?.program?.title}}</h2>
-                            <!-- ... rest of program content ... -->
+                        <section id="section-program" class="content-section" [class.active]="activeSection === 'section-program'">
+                            <div class="program-modules">
+                                <div class="module" *ngFor="let module of formationData?.program?.modules; let i = index">
+                                    <div class="module-header" (click)="toggleModule(i)">
+                                        <h3>{{module.title}}</h3>
+                                        <i class="bx" [class.bx-chevron-down]="!module.isOpen" [class.bx-chevron-up]="module.isOpen"></i>
+                                    </div>
+                                    <div class="module-content" [class.open]="module.isOpen">
+                                        <ul>
+                                            <li *ngFor="let topic of module.topics">
+                                                <i class="flaticon-correct"></i>
+                                                <span>{{topic}}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -99,27 +114,24 @@
                 <div class="formation-sidebar">
                     <div class="sidebar-card">
                         <div class="card-header">
-                            <h3>{{formationData?.practical?.title}}</h3>
+                            <h3 style="color: aliceblue;">{{formationData?.practical?.title}}</h3>
                         </div>
                         <div class="card-body">
                             <div class="session-info">
                                 <div class="info-item">
-                                    <i class="bx bx-calendar"></i>
-                                    <span>{{formationData?.practical?.nextSession}}</span>
-                                </div>
-                                <div class="info-item">
                                     <i class="bx bx-euro"></i>
-                                    <span>{{formationData?.practical?.price}} € HT</span>
+                                    <span><strong>{{formationData?.practical?.price}} € HT</strong></span>
                                 </div>
                                 <div class="info-item">
                                     <i class="bx bx-map-pin"></i>
-                                    <span>{{formationData?.practical?.location}}</span>
+                                    <span><strong>{{formationData?.practical?.location}}</strong></span>
                                 </div>
                             </div>
-                            <button class="btn-register" routerLink="/#contact">
+                            <!--<button class="btn-register" routerLink="/#contact">
                                 Je m'inscris
-                            </button>
-                            <button class="btn-contact" routerLink="/contact">
+                            </button>-->
+                            <button
+                            class="btn-register" routerLink="/contact">
                                 Contactez-nous
                             </button>
                         </div>

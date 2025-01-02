@@ -18,6 +18,7 @@ export class FormationComponent implements OnInit {
 
     ngOnInit(): void {
         this.loadFormationData();
+        this.activeSection = 'section-target';
     }
 
     private loadFormationData(): void {
@@ -37,42 +38,12 @@ export class FormationComponent implements OnInit {
     }
 
     scrollToSection(sectionId: string): void {
-        const element = document.getElementById(sectionId);
-        const headerOffset = 70; // Adjust this value based on your header height
-
-        if (element) {
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-
-            this.activeSection = sectionId;
-        }
+        this.activeSection = sectionId;
     }
 
     @HostListener('window:scroll', ['$event'])
     onScroll(): void {
-        const sections = [
-            'section-target',
-            'section-prerequisites',
-            'section-objectives',
-            'section-program'
-        ];
-        const headerOffset = 70;
-
-        for (const section of sections) {
-            const element = document.getElementById(section);
-            if (element) {
-                const rect = element.getBoundingClientRect();
-                if (rect.top <= headerOffset && rect.bottom > headerOffset) {
-                    this.activeSection = section;
-                    break;
-                }
-            }
-        }
+        // Remove this method or leave it empty
     }
 
     toggleModule(index: number): void {
