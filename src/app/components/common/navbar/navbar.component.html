@@ -3,7 +3,9 @@
         <div class="row align-items-center">
             <div class="col-lg-12 col-sm-12">
                 <div class="logo">
-                    <a routerLink="/"><img style="height: 30px;width: 120px;"  src="assets/images/logo.png" alt="logo" /></a>
+                    <a routerLink="/">
+                        <img src="assets/images/logo.jpeg" alt="logo" class="navbar-logo" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -18,7 +20,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light" [class.active]="classApplied">
                 <a class="navbar-brand d-none" routerLink="/">
-                    <img style="height: 30px;width: 120px;"  src="assets/images/logo2.png" alt="logo" />
+                    <img src="assets/images/logo2.jpeg" alt="logo" class="navbar-logo-sticky" />
                 </a>
                 <button class="navbar-toggler" type="button" (click)="toggleClass()">
                     <span class="burger-menu">
@@ -30,31 +32,47 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav text-left">
                         <li class="nav-item">
-                            <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+                            <a routerLink="/"
+                               class="nav-link"
+                               routerLinkActive="active"
+                               [routerLinkActiveOptions]="{exact: true}"
+                               [routerLinkActive]="['active']">Accueil</a>
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/formations-list" class="nav-link">Formations</a>
+                            <a routerLink="/formations-list"
+                               class="nav-link"
+                               routerLinkActive="active">Formations</a>
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/consulting" class="nav-link">Consulting</a>
+                            <a routerLink="/consulting"
+                               class="nav-link"
+                               routerLinkActive="active">Consulting</a>
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/development" class="nav-link">Développement</a>
+                            <a routerLink="/development"
+                               class="nav-link"
+                               routerLinkActive="active">Développement</a>
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/" fragment="about" class="nav-link">À propos</a>
+                            <a routerLink="/"
+                               [fragment]="'about'"
+                               class="nav-link">À propos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/" fragment="contact" class="nav-link">Nous contacter</a>
+                            <a routerLink="/"
+                               [fragment]="'contact'"
+                               class="nav-link">Nous contacter</a>
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/blog" class="nav-link">Blog</a>
+                            <a routerLink="/blog"
+                               class="nav-link"
+                               routerLinkActive="active">Blog</a>
                         </li>
                     </ul>
                 </div>

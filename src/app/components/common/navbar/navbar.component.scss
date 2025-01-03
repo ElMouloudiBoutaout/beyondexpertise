@@ -1,0 +1,52 @@
+.logo {
+    padding: 10px 0;
+
+    img.navbar-logo {
+        height: 40px; // Smaller default height
+        width: auto; // Maintain aspect ratio
+        object-fit: contain; // Ensure the logo fits without distortion
+        max-width: 160px; // Maximum width
+    }
+}
+
+.navbar-brand {
+    img.navbar-logo-sticky {
+        height: 35px;
+        width: auto;
+        object-fit: contain;
+        max-width: 140px;
+    }
+}
+
+// Responsive adjustments
+@media only screen and (max-width: 768px) {
+    .logo {
+        img.navbar-logo {
+            height: 35px; // Even smaller on mobile
+            max-width: 140px;
+        }
+    }
+
+    .navbar-brand {
+        img.navbar-logo-sticky {
+            height: 30px;
+            max-width: 120px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .logo {
+        img.navbar-logo {
+            height: 30px; // Smallest size for very small screens
+            max-width: 120px;
+        }
+    }
+
+    .navbar-brand {
+        img.navbar-logo-sticky {
+            height: 25px;
+            max-width: 100px;
+        }
+    }
+}
