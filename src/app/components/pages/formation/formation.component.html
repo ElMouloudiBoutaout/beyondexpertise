@@ -8,12 +8,16 @@
                     <span>{{formationData?.duree?.jours}} jours ({{formationData?.duree?.heures}} heures)</span>
                 </div>
                 <div class="highlight-item">
-                    <i class="bx bx-map"></i>
-                    <span>{{formationData?.modalite}}</span>
-                </div>
-                <div class="highlight-item">
                     <i class="bx bx-certification"></i>
                     <span>{{formationData?.format}}</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="bx bx-euro"></i>
+                    <span>{{formationData?.practical?.price}}</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="bx bx-map-pin"></i>
+                    <span>{{formationData?.practical?.location}}</span>
                 </div>
             </div>
         </div>
@@ -28,10 +32,10 @@
     </div>
 </div>
 
-<div class="formation-content">
+<div style="background-color: #f5faff;" class="formation-content">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="content-wrapper">
                     <div class="formation-nav sticky-top">
                         <nav class="formation-tabs">
@@ -61,7 +65,10 @@
                     </div>
 
                     <div class="formation-sections">
-                        <section id="section-target" class="content-section" [class.active]="activeSection === 'section-target'">
+                        <section id="section-target"
+                            class="content-section"
+                            [class.active]="activeSection === 'section-target'"
+                            [@sectionAnimation]="activeSection === 'section-target' ? 'in' : 'void'">
                             <ul>
                                 <li *ngFor="let item of formationData?.target?.audience">
                                     <i class="flaticon-correct"></i>
@@ -70,7 +77,10 @@
                             </ul>
                         </section>
 
-                        <section id="section-prerequisites" class="content-section" [class.active]="activeSection === 'section-prerequisites'">
+                        <section id="section-prerequisites"
+                            class="content-section"
+                            [class.active]="activeSection === 'section-prerequisites'"
+                            [@sectionAnimation]="activeSection === 'section-prerequisites' ? 'in' : 'void'">
                             <ul>
                                 <li *ngFor="let item of formationData?.prerequisites?.requirements">
                                     <i class="flaticon-correct"></i>
@@ -79,7 +89,10 @@
                             </ul>
                         </section>
 
-                        <section id="section-objectives" class="content-section" [class.active]="activeSection === 'section-objectives'">
+                        <section id="section-objectives"
+                            class="content-section"
+                            [class.active]="activeSection === 'section-objectives'"
+                            [@sectionAnimation]="activeSection === 'section-objectives' ? 'in' : 'void'">
                             <ul>
                                 <li *ngFor="let item of formationData?.objectives?.goals">
                                     <i class="flaticon-correct"></i>
@@ -88,7 +101,10 @@
                             </ul>
                         </section>
 
-                        <section id="section-program" class="content-section" [class.active]="activeSection === 'section-program'">
+                        <section id="section-program"
+                            class="content-section"
+                            [class.active]="activeSection === 'section-program'"
+                            [@sectionAnimation]="activeSection === 'section-program' ? 'in' : 'void'">
                             <div class="program-modules">
                                 <div class="module" *ngFor="let module of formationData?.program?.modules; let i = index">
                                     <div class="module-header" (click)="toggleModule(i)">
@@ -109,35 +125,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="formation-sidebar">
-                    <div class="sidebar-card">
-                        <div class="card-header">
-                            <h3 style="color: aliceblue;">{{formationData?.practical?.title}}</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="session-info">
-                                <div class="info-item">
-                                    <i class="bx bx-euro"></i>
-                                    <span><strong>{{formationData?.practical?.price}}</strong></span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="bx bx-map-pin"></i>
-                                    <span><strong>{{formationData?.practical?.location}}</strong></span>
-                                </div>
-                            </div>
-                            <!--<button class="btn-register" routerLink="/#contact">
-                                Je m'inscris
-                            </button>-->
-                            <button
-                            class="btn-register" routerLink="/contact">
-                                Contactez-nous
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
+
+<app-sticky-contact></app-sticky-contact>

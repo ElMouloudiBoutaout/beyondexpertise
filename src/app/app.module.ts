@@ -14,12 +14,14 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 import { SearchResultsComponent } from './components/common/search-results/search-results.component';
 import { SimilarArticlesComponent } from './components/common/similar-articles/similar-articles.component';
+import { StickyContactComponent } from './components/common/sticky-contact/sticky-contact.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { BlogDetailsComponent } from './components/pages/blog-details/blog-details.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { CaseStudiesDetailsComponent } from './components/pages/case-studies-details/case-studies-details.component';
 import { CaseStudiesComponent } from './components/pages/case-studies/case-studies.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { DevelopmentComponent } from './components/pages/development/development.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { FormationComponent } from './components/pages/formation/formation.component';
@@ -67,7 +69,9 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     SimilarArticlesComponent,
     SearchResultsComponent,
     FormationComponent,
-    FormationsListComponent
+    FormationsListComponent,
+    StickyContactComponent,
+    DevelopmentComponent
   ],
   imports: [
     BrowserModule,
