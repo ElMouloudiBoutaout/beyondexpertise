@@ -2,6 +2,7 @@
     "formation": {
         "id": "power-bi",
         "title": "Formation Power BI",
+        "image": "https://learn.microsoft.com/fr-fr/training/media/products/power-platform/power%20bi/power-bi-overview.png",
         "type": "Formation technique",
         "modalite": "Distanciel/Présentiel",
         "localisation": "À distance ou sur site",

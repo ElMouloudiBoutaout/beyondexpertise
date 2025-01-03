@@ -29,6 +29,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class FormationComponent implements OnInit {
     formationData: any;
     activeSection: string = 'section-target';
+    showContactModal = false;
 
     constructor(
         private http: HttpClient,
@@ -83,5 +84,13 @@ export class FormationComponent implements OnInit {
                 }
             }, 100);
         });
+    }
+
+    openContactModal() {
+        this.showContactModal = true;
+    }
+
+    closeContactModal() {
+        this.showContactModal = false;
     }
 }

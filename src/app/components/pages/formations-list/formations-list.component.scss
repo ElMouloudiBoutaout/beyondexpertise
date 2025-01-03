@@ -1,4 +1,8 @@
 .formations-list {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #f5faff;
+
     .section-title {
         text-align: center;
         margin-bottom: 25px;
@@ -116,6 +120,21 @@
                 }
             }
         }
+
+        &.search-results {
+            text-align: center;
+            margin-bottom: 30px;
+
+            h2 {
+                color: var(--darkBlueColor);
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: #666;
+                font-size: 1.1rem;
+            }
+        }
     }
 
     .formation-card {
@@ -169,17 +188,76 @@
             flex: 1;
 
             .description {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
+            }
+
+            .details {
+                .detail-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    padding: 5px 0;
+
+                    i {
+                        min-width: 24px;
+                    }
+
+                    strong {
+                        flex: 1;
+                    }
+                }
+
+                .detail-item:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
 
         .card-footer {
             margin-top: auto;
-            padding: 0 25px 25px;
+            padding: 15px 25px;
+            text-align: center;
 
             .box-btn {
-                width: 100%;
-                text-align: center;
+                display: inline-block;
+                margin: 0 auto;
+                min-width: 180px;
+                padding: 12px 40px;
+                background-color: white;
+                color: var(--darkBlueColor);
+                border-radius: 25px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                cursor: pointer;
+                border: 1px solid var(--darkBlueColor);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--darkBlueColor);
+                    transition: 0.5s;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    color: white;
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    border: 1px solid var(--darkBlueColor);
+
+                    &:before {
+                        left: 0;
+                    }
+                }
             }
         }
     }
@@ -219,6 +297,50 @@
             }
         }
     }
+
+    .search-wrapper {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+
+            i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+                font-size: 18px;
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #e0e0e0;
+                border-radius: 20px;
+                font-size: 14px;
+                transition: all 0.3s ease;
+                background-color: white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+                &:focus {
+                    outline: none;
+                    border-color: var(--darkBlueColor);
+                    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+                }
+
+                &::placeholder {
+                    color: #999;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
 
 .row {
@@ -228,5 +350,24 @@
 
     [class*="col-"] {
         padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-wrapper {
+        .search-box {
+            max-width: 100%;
+            padding: 0 15px;
+
+            .search-input {
+                padding: 10px 15px 10px 35px;
+                font-size: 13px;
+            }
+
+            i {
+                font-size: 16px;
+                left: 25px;
+            }
+        }
     }
 }

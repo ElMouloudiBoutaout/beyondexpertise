@@ -3,6 +3,7 @@
         "id": "integration-donnees-etl",
         "title": "Formation Intégration des données (ETL)",
         "type": "Formation technique",
+        "image": "https://www.informatica.com/content/dam/informatica-com/en/images/misc/etl-process-explained-diagram.png",
         "modalite": "Distanciel",
         "localisation": "À distance",
         "duree": {

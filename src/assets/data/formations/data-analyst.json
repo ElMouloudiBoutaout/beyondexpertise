@@ -2,6 +2,7 @@
     "formation": {
         "id": "data-analyst",
         "title": "Parcours Data Analyst",
+        "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/free-hero?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3840&hei=930&qlt=95&fmt=png-alpha&fit=constrain",
         "type": "Formation technique",
         "modalite": "Distanciel/Présentiel",
         "localisation": "À distance ou sur site",

@@ -16,9 +16,24 @@
     </div>
 </div>
 
+<div style="height: 40px; background-color: #f5faff;"></div>
+
 <section style="background-color: #f5faff;" class="formations-list pt-40 pb-40">
     <div class="container">
-        <div class="section-title">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <i class="bx bx-search"></i>
+                <input
+                    type="text"
+                    [(ngModel)]="searchTerm"
+                    (input)="onSearch()"
+                    placeholder="Rechercher une formation..."
+                    class="search-input"
+                >
+            </div>
+        </div>
+
+        <div class="section-title" *ngIf="!isSearching">
             <div class="nav-tabset-wrapper">
                 <ul class="nav-tabset" [class.mobile-tabs]="isMobile">
                     <li class="nav-tab" *ngFor="let tab of servicesData?.tabs"
@@ -30,14 +45,22 @@
                 </ul>
             </div>
         </div>
+
+        <div class="section-title" *ngIf="isSearching">
+            <h2>Résultats de recherche</h2>
+            <p *ngIf="filteredFormations.length > 0">
+                {{filteredFormations.length}} formation(s) trouvée(s) pour "{{searchTerm}}"
+            </p>
+        </div>
+
         <div class="case">
             <div class="tabs-container">
-                <div class="loading" *ngIf="isLoading">
+                <div class="loading" *ngIf="isLoading && !currentTab">
                     <p>Chargement des formations...</p>
                 </div>
-                <div class="pane" [id]="currentTab" *ngIf="currentFormations.length > 0">
+                <div class="pane" [id]="currentTab" *ngIf="filteredFormations.length > 0">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 d-flex" *ngFor="let formation of currentFormations">
+                        <div class="col-lg-4 col-md-6 d-flex" *ngFor="let formation of filteredFormations">
                             <div class="formation-card">
                                 <div class="card-image">
                                     <img src="{{formation.image}}" alt="{{formation.title}}" />
@@ -72,8 +95,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="no-formations" *ngIf="!isLoading && currentFormations.length === 0">
-                    <p>Aucune formation disponible pour cette catégorie.</p>
+                <div class="no-formations" *ngIf="!isLoading && filteredFormations.length === 0">
+                    <p *ngIf="isSearching">Aucune formation trouvée pour "{{searchTerm}}"</p>
+                    <p *ngIf="!isSearching">Aucune formation disponible pour cette catégorie.</p>
                 </div>
             </div>
         </div>

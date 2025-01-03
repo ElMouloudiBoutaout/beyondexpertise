@@ -39,6 +39,7 @@ import { SolutionsComponent } from './components/pages/solutions/solutions.compo
 import { TeamComponent } from './components/pages/team/team.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
+import { ContactModalComponent } from './components/common/contact-modal/contact-modal.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     FormationComponent,
     FormationsListComponent,
     StickyContactComponent,
-    DevelopmentComponent
+    DevelopmentComponent,
+    ContactModalComponent
   ],
   imports: [
     BrowserModule,

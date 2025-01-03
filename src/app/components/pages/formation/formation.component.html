@@ -35,7 +35,7 @@
 <div style="background-color: #f5faff;" class="formation-content">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 <div class="content-wrapper">
                     <div class="formation-nav sticky-top">
                         <nav class="formation-tabs">
@@ -125,8 +125,52 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-4">
+                <div class="formation-card sticky-top">
+                    <div class="card-image">
+                        <img [src]="formationData?.image" [alt]="formationData?.title" />
+                    </div>
+                    <div class="card-header">
+                        <h3>{{formationData?.title}}</h3>
+                        <hr style="border: 1px solid; margin: 0;color: darkblue;">
+                    </div>
+                    <div class="card-body">
+                        <div class="description">
+                            <p>{{formationData?.description}}</p>
+                        </div>
+                        <div class="details">
+                            <div class="detail-item">
+                                <i class="bx bx-time"></i>
+                                <strong style="color: var(--darkBlueColor);">{{formationData?.duree?.heures}} heures / {{formationData?.duree?.mois}} mois</strong>
+                            </div>
+                            <div class="detail-item">
+                                <i class="bx bx-map"></i>
+                                <strong style="color: var(--darkBlueColor);">{{formationData?.practical?.location}}</strong>
+                            </div>
+                            <div class="detail-item">
+                                <i class="bx bx-euro"></i>
+                                <strong style="color: var(--darkBlueColor);">{{formationData?.practical?.price}}</strong>
+                            </div>
+                            <div class="detail-item">
+                                <i class="bx bx-calendar"></i>
+                                <strong style="color: var(--darkBlueColor);">Prochaine rentrée : {{formationData?.prochaine_rentree}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a (click)="openContactModal()" class="box-btn">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <app-sticky-contact></app-sticky-contact>
+
+<app-contact-modal
+  *ngIf="showContactModal"
+  [formationTitle]="formationData?.title"
+  (closeModal)="closeContactModal()"
+></app-contact-modal>

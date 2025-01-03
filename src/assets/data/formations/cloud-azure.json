@@ -1,6 +1,7 @@
 {
     "formation": {
         "id": "cloud-azure",
+        "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/free-hero?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3840&hei=930&qlt=95&fmt=png-alpha&fit=constrain",
         "title": "Formation Cloud Azure",
         "type": "Formation technique",
         "modalite": "Distanciel/Présentiel",

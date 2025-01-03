@@ -2,6 +2,7 @@
     "formation": {
         "id": "machine-learning",
         "title": "Formation Machine Learning",
+        "image": "https://db0dce98.rocketcdn.me/wp-content/uploads/2020/11/Machine-learning-def-.png",
         "type": "Formation technique",
         "modalite": "Distanciel/Présentiel",
         "localisation": "À distance ou sur site",

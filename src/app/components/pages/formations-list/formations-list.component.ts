@@ -31,13 +31,19 @@ export class FormationsListComponent implements OnInit, OnDestroy {
     currentFormations: any[] = [];
     isLoading: boolean = true;
     isMobile: boolean = false;
+    searchTerm: string = '';
+    allFormations: any[] = [];
+    filteredFormations: any[] = [];
+    isSearching: boolean = false;
+    allFormationsGlobal: any[] = [];
 
     constructor(private http: HttpClient, private route: ActivatedRoute) {
         this.checkScreenSize();
     }
 
     ngOnInit(): void {
-        this.loadFormations(this.currentTab);
+        this.currentTab = 'formations-courtes';
+        this.loadAllFormations();
         this.route.queryParams.subscribe(params => {
             if (params['type']) {
                 this.currentTab = params['type'];
@@ -58,37 +64,87 @@ export class FormationsListComponent implements OnInit, OnDestroy {
     switchTab(event: Event, tabId: string): void {
         event.preventDefault();
         this.currentTab = tabId;
-        this.loadFormations(tabId);
-    }
 
-    private loadFormations(tabId: string): void {
-        this.isLoading = true;
         let filename: string;
-
         switch(tabId) {
-            case 'formation_longue':
-                filename = 'formations-longues';
-                break;
             case 'formation_courte':
                 filename = 'formations-courtes';
                 break;
-            default:
+            case 'formation_longue':
+                filename = 'formations-longues';
+                break;
+            case 'formation_certifiante':
                 filename = 'formation_certifiante';
+                break;
+            default:
+                filename = 'formations-courtes';
         }
 
-        console.log('Loading formations from:', filename);
-        this.http.get<any>(`assets/data/formations/${filename}.json`)
-            .subscribe(
-                data => {
-                    console.log('Loaded formations:', data);
-                    this.currentFormations = data.formations;
-                    this.isLoading = false;
-                },
-                error => {
-                    console.error('Error loading formations:', error);
-                    this.isLoading = false;
-                    this.currentFormations = [];
-                }
-            );
+        this.http.get<any>(`assets/data/formations/${filename}.json`).subscribe(data => {
+            this.allFormations = data.formations;
+            this.filteredFormations = [...this.allFormations];
+            this.currentFormations = [...this.allFormations];
+            this.applySearch();
+        });
+    }
+
+    loadAllFormations() {
+        this.isLoading = true;
+        // Load all formation types
+        Promise.all([
+            this.http.get<any>('assets/data/formations/formations-courtes.json').toPromise(),
+            this.http.get<any>('assets/data/formations/formations-longues.json').toPromise(),
+            this.http.get<any>('assets/data/formations/formation_certifiante.json').toPromise()
+        ]).then(([courtes, longues, certifiantes]) => {
+            this.allFormationsGlobal = [
+                ...courtes.formations,
+                ...longues.formations,
+                ...certifiantes.formations
+            ];
+            // Load initial tab
+            this.loadFormations();
+            this.isLoading = false;
+        });
+    }
+
+    loadFormations() {
+        this.isLoading = true;
+        this.http.get<any>('assets/data/formations/formations-courtes.json').subscribe(data => {
+            this.allFormations = data.formations;
+            this.filteredFormations = [...this.allFormations];
+            this.currentFormations = [...this.allFormations];
+            this.isLoading = false;
+        });
+    }
+
+    onSearch() {
+        if (!this.searchTerm.trim()) {
+            this.isSearching = false;
+            this.loadFormations(); // Reset to current tab view
+            return;
+        }
+
+        this.isSearching = true;
+        const searchTermLower = this.searchTerm.toLowerCase().trim();
+        this.filteredFormations = this.allFormationsGlobal.filter(formation =>
+            formation.title.toLowerCase().includes(searchTermLower) ||
+            formation.description.toLowerCase().includes(searchTermLower)
+        );
+        this.currentFormations = [...this.filteredFormations];
+    }
+
+    private applySearch() {
+        if (!this.searchTerm.trim()) {
+            this.filteredFormations = [...this.allFormations];
+            this.currentFormations = [...this.allFormations];
+            return;
+        }
+
+        const searchTermLower = this.searchTerm.toLowerCase().trim();
+        this.filteredFormations = this.allFormations.filter(formation =>
+            formation.title.toLowerCase().includes(searchTermLower) ||
+            formation.description.toLowerCase().includes(searchTermLower)
+        );
+        this.currentFormations = [...this.filteredFormations];
     }
 }

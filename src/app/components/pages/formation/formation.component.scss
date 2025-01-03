@@ -575,3 +575,138 @@
         }
     }
 }
+
+.formation-card {
+    max-width: 350px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &.sticky-top {
+        top: 30px;
+        z-index: 99;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-header {
+        padding: 15px;
+
+        h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: var(--darkBlueColor);
+        }
+    }
+
+    .card-body {
+        padding: 15px;
+
+        .description {
+            margin-bottom: 15px;
+
+            p {
+                color: #666;
+                line-height: 1.5;
+                font-size: 0.9rem;
+            }
+        }
+
+        .details {
+            .detail-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                font-size: 0.9rem;
+
+                i {
+                    font-size: 1.1rem;
+                    margin-right: 8px;
+                    color: var(--darkBlueColor);
+                }
+            }
+        }
+    }
+
+    .card-footer {
+        padding: 15px;
+        text-align: center;
+
+        .box-btn {
+            display: inline-block;
+            padding: 12px 40px;
+            background-color: var(--darkBlueColor);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+            border: 2px solid var(--darkBlueColor);
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--darkBlueColor);
+                z-index: -2;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: white;
+                transition: all 0.3s ease;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: var(--darkBlueColor);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                border: 2px solid var(--darkBlueColor);
+
+                &:after {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .formation-card {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+}
+
+.formation-content {
+    .container {
+        .row {
+            padding-top: 30px;
+        }
+    }
+}
