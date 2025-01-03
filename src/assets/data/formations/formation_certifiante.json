@@ -1,0 +1,18 @@
+{
+    "formations": [
+        {
+            "id": "sql-expert",
+            "title": "Expert en Bases de données SQL/NoSQL",
+            "type": "Formation certifiante",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 70,
+                "mois": 3
+            },
+            "prochaine_rentree": "Sur demande",
+            "description": "Devenez expert en bases de données et obtenez votre certification."
+        }
+    ]
+}

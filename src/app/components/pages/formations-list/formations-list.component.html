@@ -1,0 +1,94 @@
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Nos Formations</h2>
+            <h2>{{servicesData?.subtitle}}</h2>
+            <h3 style="color: white;">{{servicesData?.description}}</h3>
+        </div>
+    </div>
+
+    <div class="page-shape">
+        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
+        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape" /></div>
+        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape" /></div>
+        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
+        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
+    </div>
+</div>
+
+<section style="background-color: #f5faff;" class="formations-list pt-40 pb-40">
+    <div class="container">
+        <div class="section-title">
+            <div class="nav-tabset-wrapper">
+                <ul class="nav-tabset">
+                    <li class="nav-tab" *ngFor="let tab of servicesData?.tabs"
+                        [ngClass]="{'active': currentTab === tab.id}">
+                        <h3 (click)="switchTab($event, tab.id)">
+                            {{tab.label}}
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="case">
+            <div class="tabs-container">
+                <div class="loading" *ngIf="isLoading">
+                    <p>Chargement des formations...</p>
+                </div>
+                <div class="pane" [id]="currentTab" *ngIf="currentFormations.length > 0">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6" *ngFor="let formation of currentFormations">
+                            <div class="formation-card">
+                                <div class="formation-header">
+                                    <h3>{{formation.title}}</h3>
+                                    <div class="formation-subheader">
+                                        <span class="formation-type">{{formation.type}}</span>
+                                    </div>
+                                    <div class="formation-thumbnail" *ngIf="formation.thumbnail">
+                                        <img [src]="formation.thumbnail" [alt]="formation.title">
+                                    </div>
+                                </div>
+
+                                <div class="formation-body">
+                                    <div class="formation-info">
+                                        <div class="info-item">
+                                            <i class="bx bx-time"></i>
+                                            <span>{{formation.duree.heures}} heures / {{formation.duree.mois}} mois</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="bx bx-map"></i>
+                                            <span>{{formation.modalite}} - {{formation.localisation}}</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="bx bx-calendar"></i>
+                                            <span>Prochaine rentrée : {{formation.prochaine_rentree}}</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="formation-description">{{formation.description}}</p>
+
+                                    <div class="formation-footer">
+                                        <a [routerLink]="['/formation', formation.id]" class="line-bnt">
+                                            EN SAVOIR PLUS
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-formations" *ngIf="!isLoading && currentFormations.length === 0">
+                    <p>Aucune formation disponible pour cette catégorie.</p>
+                </div>
+            </div>
+        </div>
+        <div class="case-btn text-center">
+            <p>{{servicesData?.viewMoreText}} <a [routerLink]="servicesData?.viewMoreLink"></a></p>
+            <p class="mt-4">
+                {{servicesData?.contactText}}
+                <a [href]="servicesData?.contactLink">{{servicesData?.contactLinkText}}</a>
+                {{servicesData?.contactSuffix}}
+            </p>
+        </div>
+    </div>
+</section>

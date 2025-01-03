@@ -1,18 +1,17 @@
 {
     "formations": [
         {
-            "id": "developpeur-fullstack",
-            "title": "Développeur Full Stack",
-            "type": "Reconversion",
-            "modalite": "Présentiel",
+            "id": "sql-nosql",
+            "title": "Formation SQL/NoSQL & Bases de données",
+            "type": "Formation longue",
+            "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
             "duree": {
-                "heures": 800,
-                "mois": 6
+                "heures": 28,
+                "mois": 1
             },
-            "prochaine_rentree": "1 septembre 2025",
-            "niveau_requis": "Bac+2",
-            "description": "Formation complète au développement web full stack JavaScript."
+            "prochaine_rentree": "Sur demande",
+            "description": "Maîtrisez les bases de données SQL et NoSQL pour vos projets."
         }
     ]
 }

@@ -22,6 +22,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { FormationComponent } from './components/pages/formation/formation.component';
+import { FormationsListComponent } from './components/pages/formations-list/formations-list.component';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { HomeThreeComponent } from './components/pages/home-three/home-three.component';
@@ -64,7 +65,8 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     ContactComponent,
     SimilarArticlesComponent,
     SearchResultsComponent,
-    FormationComponent
+    FormationComponent,
+    FormationsListComponent
   ],
   imports: [
     BrowserModule,

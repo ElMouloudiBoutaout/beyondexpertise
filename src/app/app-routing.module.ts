@@ -9,6 +9,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { FormationComponent } from './components/pages/formation/formation.component';
+import { FormationsListComponent } from './components/pages/formations-list/formations-list.component';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { HomeThreeComponent } from './components/pages/home-three/home-three.component';
@@ -47,6 +48,7 @@ const routes: Routes = [
     {path: 'contact', component: ContactComponent},
     { path: 'formation/:id', component: FormationComponent },
     { path: 'formation', component: FormationComponent },
+    { path: 'formations-list', component: FormationsListComponent },
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list

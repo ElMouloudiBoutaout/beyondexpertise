@@ -1,0 +1,235 @@
+.formations-list {
+    .section-title {
+        text-align: center;
+        margin-bottom: 25px;
+
+        span {
+            color: var(--mainColor);
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: var(--blackColor);
+        }
+
+        p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: var(--paragraphColor);
+        }
+
+        .nav-tabset-wrapper {
+            margin-top: 20px;
+            margin-bottom: 25px;
+
+            .nav-tabset {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: inline-flex;
+                background: white;
+                padding: 5px;
+                border-radius: 40px;
+                box-shadow: 0 3px 15px rgba(29, 66, 217, 0.15);
+
+                .nav-tab {
+                    margin: 0;
+                    padding: 0;
+                    cursor: pointer;
+                    position: relative;
+
+                    h3 {
+                        color: #666;
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin: 0;
+                        padding: 15px 35px;
+                        background-color: white;
+                        border: none;
+                        border-radius: 0;
+                        transition: all 0.3s ease;
+                        position: relative;
+
+                        &:hover {
+                            color: var(--darkBlueColor);
+                            background-color: #f5f8ff;
+                        }
+                    }
+
+                    &:first-child h3 {
+                        border-radius: 35px 0 0 35px;
+                    }
+
+                    &:last-child h3 {
+                        border-radius: 0 35px 35px 0;
+                    }
+
+                    &.active {
+                        h3 {
+                            background-color: var(--darkBlueColor);
+                            color: white;
+                            box-shadow: 0 3px 10px rgba(29, 66, 217, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .formation-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        min-height: 420px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .formation-header {
+            padding: 25px;
+            border-bottom: 1px solid #f0f0f0;
+            background: var(--darkBlueColor);
+            border-radius: 15px 15px 0 0;
+
+            h3 {
+                margin: 0;
+                font-size: 20px;
+                color: white;
+                line-height: 1.4;
+            }
+
+            .formation-subheader {
+                margin-top: 15px;
+
+                .formation-type {
+                    display: inline-block;
+                    padding: 6px 15px;
+                    background: #1d42d9;
+                    color: white;
+                    border-radius: 20px;
+                    font-size: 13px;
+                }
+            }
+
+            .formation-thumbnail {
+                margin-top: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .formation-body {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .formation-info {
+                margin-bottom: 15px;
+                background: #f8f9fc;
+                padding: 15px;
+                border-radius: 10px;
+
+                .info-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+
+                    i {
+                        color: var(--mainColor);
+                        margin-right: 12px;
+                        font-size: 20px;
+                    }
+
+                    span {
+                        color: #666;
+                        font-size: 15px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .formation-description {
+                color: #666;
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                flex: 1;
+            }
+
+            .formation-footer {
+                text-align: center;
+                margin-top: auto;
+
+                .line-bnt {
+                    display: inline-block;
+                    padding: 10px 30px;
+                    color: white;
+                    background-color: var(--darkBlueColor);
+                    border: 2px solid var(--darkBlueColor);
+                    border-radius: 8px;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                    min-width: 200px;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                        background-color: #1d42d9;
+                        border-color: #1d42d9;
+                    }
+                }
+            }
+        }
+    }
+
+    .case-btn {
+        margin-top: 20px;
+
+        p {
+            color: var(--paragraphColor);
+
+            a {
+                color: var(--mainColor);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

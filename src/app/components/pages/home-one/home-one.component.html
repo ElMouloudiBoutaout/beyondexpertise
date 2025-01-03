@@ -11,7 +11,7 @@
                             </p>
                                 <p>Que vous soyez une entreprise ou un professionnel, nous vous accompagnons à chaque étape pour atteindre vos objectifs de transformation, d'innovation et de montée en compétences.</p>
                             <div class="banner-btn">
-                                <a routerLink="/" fragment="formations" class="box-btn">JE TROUVE MA FORMATION</a>
+                                <a routerLink="/formations-list" class="box-btn">JE TROUVE MA FORMATION</a>
                                 <a routerLink="/consultations" class="box-btn border-btn">JE DEMANDE UNE CONSULTATION</a>
                             </div>
                         </div>
@@ -91,81 +91,6 @@
         </div>
     </div>
 </section>
-
-<section style="background-color: #f5faff;" class="home-case pt-70 pb-70" id="formations">
-    <div class="container">
-        <div class="section-title">
-            <span>{{servicesData?.title}}</span>
-            <h2>{{servicesData?.subtitle}}</h2>
-            <p>{{servicesData?.description}}</p>
-            <div class="nav-tabset-wrapper">
-                <ul class="nav-tabset">
-                    <li class="nav-tab" *ngFor="let tab of servicesData?.tabs"
-                        [ngClass]="{'active': currentTab === tab.id}">
-                        <span (click)="switchTab($event, tab.id)">
-                            {{tab.label}}
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="case">
-            <div class="tabs-container">
-                <div class="pane" [id]="currentTab" *ngIf="currentFormations.length > 0">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6" *ngFor="let formation of currentFormations">
-                            <div class="formation-card">
-                                <div class="formation-header">
-                                    <h3>{{formation.title}}</h3>
-                                    <div class="formation-subheader">
-                                        <span class="formation-type">{{formation.type}}</span>
-                                    </div>
-                                </div>
-
-                                <div class="formation-body">
-                                    <div class="formation-info">
-                                        <div class="info-item">
-                                            <i class="bx bx-time"></i>
-                                            <span>{{formation.duree.heures}} heures / {{formation.duree.mois}} mois</span>
-                                        </div>
-                                        <div class="info-item">
-                                            <i class="bx bx-map"></i>
-                                            <span>{{formation.modalite}} - {{formation.localisation}}</span>
-                                        </div>
-                                        <div class="info-item">
-                                            <i class="bx bx-calendar"></i>
-                                            <span>Prochaine rentrée : {{formation.prochaine_rentree}}</span>
-                                        </div>
-                                    </div>
-
-                                    <p class="formation-description">{{formation.description}}</p>
-
-                                    <div class="formation-footer">
-                                        <a [routerLink]="['/formation', formation.id]" class="line-bnt">
-                                            EN SAVOIR PLUS
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="no-formations" *ngIf="currentFormations.length === 0">
-                    <p>Aucune formation disponible pour cette catégorie.</p>
-                </div>
-            </div>
-        </div>
-        <div class="case-btn text-center">
-            <p>{{servicesData?.viewMoreText}} <a [routerLink]="servicesData?.viewMoreLink"></a></p>
-            <p class="mt-4">
-                {{servicesData?.contactText}}
-                <a [href]="servicesData?.contactLink">{{servicesData?.contactLinkText}}</a>
-                {{servicesData?.contactSuffix}}
-            </p>
-        </div>
-    </div>
-</section>
-
 
 <section style="background-color: #ffffff;" class="home-company-area bg-color pt-70 pb-70" id="about">
     <div class="container">
