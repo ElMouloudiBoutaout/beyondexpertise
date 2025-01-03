@@ -206,6 +206,13 @@ Go Top Style*/
 	opacity: 0;
 	visibility: hidden;
     transition: .9s;
+
+	@media (max-width: 768px) {
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+	}
+
 	i {
 		position: absolute;
 		top: 50%;
@@ -279,8 +286,9 @@ Go Top Style*/
 	transform: translateY(0);
 	opacity: 1;
 	visibility: visible;
-	right: 3%;
+	right: 20px;
     top: 93%;
+	z-index: 9998; // Ensure it's below the contact button
 }
 
 /** Section tittle Css **/
