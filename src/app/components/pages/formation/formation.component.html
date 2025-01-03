@@ -40,22 +40,22 @@
                     <div class="formation-nav sticky-top">
                         <nav class="formation-tabs">
                             <ul>
-                                <li>
+                                <li [class.active]="activeSection === 'section-target'">
                                     <a (click)="scrollToSection('section-target')" [class.active]="activeSection === 'section-target'">
-                                       <h3> Public visé</h3>
+                                       <h3>Public visé</h3>
                                     </a>
                                 </li>
-                                <li>
+                                <li [class.active]="activeSection === 'section-prerequisites'">
                                     <a (click)="scrollToSection('section-prerequisites')" [class.active]="activeSection === 'section-prerequisites'">
                                         <h3>Prérequis</h3>
                                     </a>
                                 </li>
-                                <li>
+                                <li [class.active]="activeSection === 'section-objectives'">
                                     <a (click)="scrollToSection('section-objectives')" [class.active]="activeSection === 'section-objectives'">
                                         <h3>Objectifs</h3>
                                     </a>
                                 </li>
-                                <li>
+                                <li [class.active]="activeSection === 'section-program'">
                                     <a (click)="scrollToSection('section-program')" [class.active]="activeSection === 'section-program'">
                                         <h3>Programme</h3>
                                     </a>
@@ -71,7 +71,7 @@
                             [@sectionAnimation]="activeSection === 'section-target' ? 'in' : 'void'">
                             <ul>
                                 <li *ngFor="let item of formationData?.target?.audience">
-                                    <i class="flaticon-correct"></i>
+                                    <i class='bx bxs-check-circle'></i>
                                     <span>{{item}}</span>
                                 </li>
                             </ul>
@@ -83,7 +83,7 @@
                             [@sectionAnimation]="activeSection === 'section-prerequisites' ? 'in' : 'void'">
                             <ul>
                                 <li *ngFor="let item of formationData?.prerequisites?.requirements">
-                                    <i class="flaticon-correct"></i>
+                                    <i class='bx bxs-check-circle'></i>
                                     <span>{{item}}</span>
                                 </li>
                             </ul>
@@ -95,7 +95,7 @@
                             [@sectionAnimation]="activeSection === 'section-objectives' ? 'in' : 'void'">
                             <ul>
                                 <li *ngFor="let item of formationData?.objectives?.goals">
-                                    <i class="flaticon-correct"></i>
+                                    <i class='bx bxs-check-circle'></i>
                                     <span>{{item}}</span>
                                 </li>
                             </ul>
@@ -114,7 +114,7 @@
                                     <div class="module-content" [class.open]="module.isOpen">
                                         <ul>
                                             <li *ngFor="let topic of module.topics">
-                                                <i class="flaticon-correct"></i>
+                                                <i class='bx bxs-check-circle'></i>
                                                 <span>{{topic}}</span>
                                             </li>
                                         </ul>
