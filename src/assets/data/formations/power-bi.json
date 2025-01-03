@@ -1,0 +1,79 @@
+{
+    "formation": {
+        "id": "power-bi",
+        "title": "Formation Power BI",
+        "type": "Formation technique",
+        "modalite": "Distanciel/Présentiel",
+        "localisation": "À distance ou sur site",
+        "duree": {
+            "jours": 3,
+            "heures": 21
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Analystes de données",
+                "Développeurs",
+                "Toute personne souhaitant utiliser Power BI"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissance de base en Excel",
+                "Notions de bases en manipulation de données"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Créer des tableaux de bord interactifs",
+                "Analyser les données de manière visuelle",
+                "Maîtriser Power BI Service"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction à Power BI",
+                    "topics": [
+                        "Présentation de l'interface",
+                        "Connexions aux sources de données",
+                        "Création de rapports simples"
+                    ]
+                },
+                {
+                    "title": "Visualisation des données",
+                    "topics": [
+                        "Utilisation des visuels",
+                        "Formatage et personnalisation",
+                        "Mise en page des rapports"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance ou sur site",
+            "nextSession": "Consultez le calendrier",
+            "price": "1 500 HT",
+            "details": [
+                "Sessions disponibles en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 1 500 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}
+
+

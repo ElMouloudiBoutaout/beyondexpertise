@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {}
-    
+
     clientWrap: OwlOptions = {
 		loop:true,
 		margin:30,
@@ -52,6 +52,13 @@ export class AboutComponent implements OnInit {
     }
     closePopup(): void {
         this.isOpen = false;
+    }
+
+    scrollToSection(sectionId: string) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }
     }
 
 }

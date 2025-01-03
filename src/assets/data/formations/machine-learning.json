@@ -1,0 +1,121 @@
+{
+    "formation": {
+        "id": "machine-learning",
+        "title": "Formation Machine Learning",
+        "type": "Formation technique",
+        "modalite": "Distanciel/Présentiel",
+        "localisation": "À distance ou sur site",
+        "duree": {
+            "jours": 3,
+            "heures": 21
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Développeurs",
+                "Data Scientists",
+                "Analystes de données",
+                "Toute personne souhaitant acquérir des compétences en apprentissage automatique"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissances de base en programmation Python",
+                "Notions en statistiques et probabilités recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les concepts fondamentaux du Machine Learning",
+                "Maîtriser les principales techniques d'apprentissage supervisé et non supervisé",
+                "Savoir prétraiter et préparer des données pour le Machine Learning",
+                "Développer et évaluer des modèles prédictifs",
+                "Appliquer des algorithmes de Machine Learning à des cas concrets"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction au Machine Learning",
+                    "topics": [
+                        "Définition et concepts clés",
+                        "Différences entre apprentissage supervisé, non supervisé et semi-supervisé",
+                        "Applications et cas d'usage du Machine Learning"
+                    ]
+                },
+                {
+                    "title": "Préparation des données",
+                    "topics": [
+                        "Collecte et exploration des données",
+                        "Nettoyage des données : gestion des valeurs manquantes et des outliers",
+                        "Transformation des variables et normalisation",
+                        "Division des données en ensembles d'entraînement et de test"
+                    ]
+                },
+                {
+                    "title": "Apprentissage supervisé",
+                    "topics": [
+                        "Régression linéaire et polynomiale",
+                        "Méthodes de classification : k-NN, régression logistique, SVM",
+                        "Arbres de décision et forêts aléatoires",
+                        "Évaluation des modèles : métriques de performance et validation croisée"
+                    ]
+                },
+                {
+                    "title": "Apprentissage non supervisé",
+                    "topics": [
+                        "Algorithmes de clustering : k-means, DBSCAN",
+                        "Réduction de dimensionnalité : ACP, t-SNE",
+                        "Détection d'anomalies"
+                    ]
+                },
+                {
+                    "title": "Techniques d'amélioration des modèles",
+                    "topics": [
+                        "Sélection de caractéristiques",
+                        "Régularisation : L1, L2",
+                        "Méthodes d'ensemble : bagging, boosting"
+                    ]
+                },
+                {
+                    "title": "Introduction au Deep Learning",
+                    "topics": [
+                        "Présentation des réseaux de neurones",
+                        "Cas d'utilisation du Deep Learning"
+                    ]
+                },
+                {
+                    "title": "Mise en production des modèles",
+                    "topics": [
+                        "Entraînement et optimisation des modèles",
+                        "Déploiement des modèles",
+                        "Surveillance et maintenance des performances"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance ou sur site",
+            "nextSession": "Consultez le calendrier",
+            "price": "2 100 HT",
+            "details": [
+                "Sessions disponibles en présentiel et en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 2 100 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}

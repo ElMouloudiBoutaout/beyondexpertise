@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "title": "Formations certifiantes",
+            "id": "formation_certifiante",
+            "description": "Nos formations certifiantes vous permettent d'acquérir des compétences reconnues et validées par des certifications professionnelles. Idéales pour valoriser votre parcours et booster votre carrière."
+        },
+        {
+            "title": "Formations longues",
+            "id": "formation_longue",
+            "description": "Des parcours approfondis pour une montée en compétences significative. Nos formations longues vous offrent le temps nécessaire pour maîtriser pleinement votre domaine d'expertise."
+        },
+        {
+            "title": "Formations courtes",
+            "id": "formation_courte",
+            "description": "Des modules intensifs et ciblés pour répondre à des besoins spécifiques. Parfaites pour acquérir rapidement de nouvelles compétences ou mettre à jour vos connaissances."
+        }
+    ]
+}

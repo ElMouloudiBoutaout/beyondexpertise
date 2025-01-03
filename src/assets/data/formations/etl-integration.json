@@ -1,0 +1,114 @@
+{
+    "formation": {
+        "id": "integration-donnees-etl",
+        "title": "Formation Intégration des données (ETL)",
+        "type": "Formation technique",
+        "modalite": "Distanciel",
+        "localisation": "À distance",
+        "duree": {
+            "jours": 3,
+            "heures": 21
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Développeurs",
+                "Administrateurs de bases de données",
+                "Ingénieurs en Business Intelligence",
+                "Toute personne impliquée dans des projets d'intégration de données"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissances de base en bases de données et SQL",
+                "Notions en programmation recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les concepts fondamentaux de l'intégration de données et des processus ETL (Extract, Transform, Load)",
+                "Maîtriser l'utilisation d'outils ETL pour extraire, transformer et charger des données à partir de différentes sources",
+                "Savoir concevoir et implémenter des flux de données efficaces et fiables",
+                "Être capable de gérer les erreurs et optimiser les performances des processus ETL"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction à l'intégration de données et aux processus ETL",
+                    "topics": [
+                        "Définition et importance de l'intégration de données",
+                        "Présentation des processus ETL et de leur rôle en Business Intelligence",
+                        "Aperçu des principaux outils ETL du marché"
+                    ]
+                },
+                {
+                    "title": "Conception des processus ETL",
+                    "topics": [
+                        "Analyse des sources de données et des besoins en intégration",
+                        "Modélisation des flux de données",
+                        "Définition des transformations nécessaires",
+                        "Planification des chargements et des mises à jour"
+                    ]
+                },
+                {
+                    "title": "Utilisation d'un outil ETL : Talend",
+                    "topics": [
+                        "Présentation de l'environnement Talend et de ses fonctionnalités",
+                        "Création de projets et de jobs ETL",
+                        "Connexion aux différentes sources de données",
+                        "Implémentation des transformations de données",
+                        "Chargement des données dans des cibles variées"
+                    ]
+                },
+                {
+                    "title": "Gestion des erreurs et optimisation des performances",
+                    "topics": [
+                        "Identification et traitement des erreurs dans les processus ETL",
+                        "Mise en place de mécanismes de journalisation et de suivi",
+                        "Techniques d'optimisation des performances des flux de données"
+                    ]
+                },
+                {
+                    "title": "Intégration de données pour le Big Data",
+                    "topics": [
+                        "Spécificités de l'intégration de données dans des environnements Big Data",
+                        "Utilisation de Talend pour le Big Data",
+                        "Cas pratiques d'intégration de données volumineuses"
+                    ]
+                },
+                {
+                    "title": "Bonnes pratiques et stratégies d'intégration",
+                    "topics": [
+                        "Mise en place de standards et de conventions",
+                        "Gestion des métadonnées",
+                        "Stratégies de maintenance et d'évolution des processus ETL"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance",
+            "nextSession": "Consultez le calendrier",
+            "price": "2 100 HT",
+            "details": [
+                "Sessions disponibles en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 2 100 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}

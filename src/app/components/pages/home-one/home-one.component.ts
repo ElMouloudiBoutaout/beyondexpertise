@@ -43,11 +43,11 @@ export class HomeOneComponent implements OnInit {
     private loadAccordionItems(): void {
         this.http.get<any>('assets/data/formations/formations-index.json')
             .subscribe(data => {
-                // Transform the services array into accordion items
                 this.accordionItems = data.services.map(service => ({
                     title: service.title,
                     content: service.description,
-                    open: false // All items closed by default
+                    id: service.id,
+                    open: false
                 }));
             });
     }
@@ -169,17 +169,17 @@ export class HomeOneComponent implements OnInit {
     }
 
     // Accordion
+    // Accordion
     accordionItems: any[] = [];
-    selectedItem : any = null;
-    toggleAccordionItem(item: any) {
-        // Close previously opened item
-        if (this.selectedItem && this.selectedItem !== item) {
-            this.selectedItem.open = false;
-        }
 
-        // Toggle current item
+    selectedItem : any = null;
+    toggleAccordionItem(item: any): void {
+        // Close all other items
+        this.accordionItems.forEach(i => {
+            if (i !== item) i.open = false;
+        });
+        // Toggle the clicked item
         item.open = !item.open;
-        this.selectedItem = item.open ? item : null;
     }
 
     // Tabs

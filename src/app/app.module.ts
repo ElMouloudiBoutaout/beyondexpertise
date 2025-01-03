@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 
@@ -76,7 +77,8 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
     NgxScrollTopModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

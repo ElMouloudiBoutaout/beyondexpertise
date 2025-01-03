@@ -1,0 +1,100 @@
+{
+    "formation": {
+        "id": "intelligence-artificielle",
+        "title": "Formation Intelligence Artificielle",
+        "type": "Formation technique",
+        "modalite": "Distanciel",
+        "localisation": "À distance",
+        "duree": {
+            "jours": 3,
+            "heures": 21
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Professionnels souhaitant comprendre et appliquer les concepts de l'IA",
+                "Managers et décideurs impliqués dans des projets technologiques",
+                "Développeurs et ingénieurs intéressés par l'implémentation de solutions d'IA"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissances de base en informatique",
+                "Notions en programmation recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les concepts fondamentaux de l'Intelligence Artificielle",
+                "Identifier les différentes branches et applications de l'IA",
+                "Découvrir les technologies et outils utilisés en IA",
+                "Appréhender les enjeux éthiques et les implications de l'IA dans divers secteurs"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction à l'Intelligence Artificielle",
+                    "topics": [
+                        "Définition et historique de l'IA",
+                        "Les différentes branches de l'IA : Machine Learning, Deep Learning, etc.",
+                        "Applications actuelles de l'IA dans divers secteurs"
+                    ]
+                },
+                {
+                    "title": "Techniques fondamentales de l'IA",
+                    "topics": [
+                        "Machine Learning : principes et algorithmes de base",
+                        "Réseaux de neurones artificiels et Deep Learning",
+                        "Traitement du langage naturel (NLP)",
+                        "Vision par ordinateur"
+                    ]
+                },
+                {
+                    "title": "Outils et technologies de l'IA",
+                    "topics": [
+                        "Présentation des frameworks populaires : TensorFlow, Keras, PyTorch",
+                        "Introduction aux services cloud pour l'IA : Azure AI, AWS AI, Google AI"
+                    ]
+                },
+                {
+                    "title": "Enjeux éthiques et réglementaires",
+                    "topics": [
+                        "Considérations éthiques liées à l'utilisation de l'IA",
+                        "Réglementations en vigueur et protection des données"
+                    ]
+                },
+                {
+                    "title": "Études de cas et applications pratiques",
+                    "topics": [
+                        "Analyse de cas concrets d'implémentation de l'IA",
+                        "Ateliers pratiques pour développer une compréhension approfondie"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance",
+            "nextSession": "Consultez le calendrier",
+            "price": "1 800 HT",
+            "details": [
+                "Sessions disponibles en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 1 800 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}

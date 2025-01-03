@@ -34,34 +34,13 @@
                     </ul>
                 </div>
             </div>
-
-            <ng-container *ngFor="let section of footerData?.sections">
-                <div class="col-lg-4 col-md-6">
-                    <div class="content" [ngClass]="{'ml-15': section.title === 'Nos services'}">
-                        <h3>{{section.title}}</h3>
-                        <ul class="footer-list">
-                            <li *ngFor="let link of section.links">
-                                <a [routerLink]="link.url">{{link.text}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </ng-container>
         </div>
     </div>
 
     <div class="copy-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <ul class="menu">
-                        <li *ngFor="let item of footerData?.mainMenu">
-                            <a [routerLink]="item.url">{{item.text}}</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-6">
+                <div class="col-lg-12 text-center">
                     <p>{{footerData?.copyright.text}}</p>
                 </div>
             </div>

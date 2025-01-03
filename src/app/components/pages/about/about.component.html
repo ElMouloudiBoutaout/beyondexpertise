@@ -1,11 +1,8 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>About</h2>
-            <ul>
-                <li><a routerLink="/">Home </a></li>
-                <li class="active">About</li>
-            </ul>
+            <h2>Consulting</h2>
+            <h2 style="color: white;" >Accompagnement et conseil en transformation numérique</h2>
         </div>
     </div>
 
@@ -18,16 +15,55 @@
     </div>
 </div>
 
-<section class="home-company-area">
+<section class="feature-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="contnet">
+                    <div class="row mt-5">
+                        <div class="col-lg-4">
+                            <div class="single-feature text-center" (click)="scrollToSection('experts')">
+                                <i class='bx bx-analyse' style="font-size: 48px; color: var(--mainColor);"></i>
+                                <h3>Positionnement de consultants</h3>
+                                <p>Vos projets, nos experts.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single-feature text-center" (click)="scrollToSection('accompagnement')">
+                                <i class='bx bx-refresh' style="font-size: 48px; color: var(--mainColor);"></i>
+                                <h3>Accompagnement</h3>
+                                <p>Un accompagnement pour des résultats concrets.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single-feature text-center" (click)="scrollToSection('recrutement')">
+                                <i class='bx bx-group' style="font-size: 48px; color: var(--mainColor);"></i>
+                                <h3>Recrutement sur mesure.</h3>
+                                <p>Trouvez les talents qui transformeront votre entreprise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experts" class="home-company-area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="company-content">
                     <div class="company-tittle">
-                        <span>Our Company</span>
-                        <h2>Innovative It Helping Service Allover the World</h2>
-                        <p>It is a long established fact that a reader will be distracted by the rea dable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more or less normal distribution of letters, as opposed to using Content here,content here normal distribution looking at its.</p>
-                        <p>It is a long established fact that a reader will be distracted by the rea dable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more or less normal distribution of letters, as opposed to using Content here,content here normal distribution looking at its.</p>
+                        <h2>Vos projets, nos experts</h2>
+                        <p>Nous mettons à votre disposition des consultants expérimentés : Scrum Masters, Product Owners et Coachs Agile, pour gérer vos projets de transformation et optimiser vos processus. Nos experts s'intègrent parfaitement à vos équipes, garantissant une collaboration fluide et des résultats mesurables .</p>
+                        <ul>
+                            <li><i class='flaticon-correct'></i> Gestion de projets de transformation digitale</li>
+                            <li><i class='flaticon-correct'></i> Optimisation des processus Agile</li>
+                            <li><i class='flaticon-correct'></i> Accompagnement des équipes</li>
+                            <li><i class='flaticon-correct'></i> Formation et coaching</li>
+                            <li><i class='flaticon-correct'></i> Support technique et stratégique</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -41,7 +77,8 @@
     </div>
 </section>
 
-<section class="technology-area ptb-100 bg-color">
+
+<section id="accompagnement" class="technology-area ptb-100 bg-color">
     <div class="container">
         <div class="row align-items-center choose-c">
             <div class="col-lg-6">
@@ -58,10 +95,13 @@
 
             <div class="col-lg-6">
                 <div class="technology-content">
-                    <h2>Updated Technology</h2>
-                    <p>You need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with.</p>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going There are many variations of passages of Lorem Ipsum available, but the.</p>
-                    <a routerLink="/contact" class="box-btn">Contact Us</a>
+                    <h2>Un accompagnement pour des résultats concrets.</h2>
+                    <p>Nos experts vous fournissent à identifier vos besoins, définir vos priorités, et mettre en œuvre des solutions sur mesure pour accélérer vos transformations organisationnelles.</p>
+                    <ul>
+                        <li><i class='flaticon-correct'></i> Diagnostic des besoins et audit organisationnel.</li>
+                        <li><i class='flaticon-correct'></i> Formation et montée en compétence des équipes internes.</li>
+                        <li><i class='flaticon-correct'></i> Suivi et évaluation des performances post-projet.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -71,31 +111,28 @@
 <!-- Video Popup -->
 <div class="video-popup" *ngIf="isOpen">
     <div class="popup-inner">
-        <iframe src="https://www.youtube.com/embed/XNQk1qt__Vw" title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/watch?v=VCJW7GZEF50&ab_channel=YoussefELMOUTEE" title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <button (click)="closePopup()" type="button" class="close-btn">
             <i class='bx bx-x'></i>
         </button>
     </div>
 </div>
 
-<section class="feature-area ptb-100">
+<section id="recrutement" class="feature-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="contnet">
                     <div class="feature-tittle">
-                        <span>Features</span>
-                        <h2>We Have Also Some Features That Provided by Aiva</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consectetur, beatae quod eaque reprehenderit non ab quibusdam doloribus voluptatibus! Voluptatum aspernatur quasi id dolore doloremque quo vero</p>
+                        <h2>Trouvez les talents qui transformeront votre entreprise.</h2>
+                        <p>Nous accompagnons nos clients dans la recherche et la sélection des meilleurs profils. Que ce soit pour des missions courtes ou des recrutements long terme, nous identifions les talents parfaitement alignés avec vos besoins.</p>
                     </div>
                     <ul>
-                        <li><i class="flaticon-correct"></i> Freelancing Traning Course</li>
-                        <li><i class="flaticon-correct"></i> Technological Consultation</li>
-                        <li><i class="flaticon-correct"></i> Monthly Paid Workspace</li>
-                        <li><i class="flaticon-correct"></i> IT Learning Institute</li>
-                        <li><i class="flaticon-correct"></i> Digital Marketing</li>
+                        <li><i class="flaticon-correct"></i> Analyse des besoins de recrutement.</li>
+                        <li><i class="flaticon-correct"></i> Recherche, présélection et entretien des candidats.                        </li>
+                        <li><i class="flaticon-correct"></i> Intégration réussie grâce à un suivi personnalisé.</li>
                     </ul>
-                    <a routerLink="/contact" class="box-btn">Lets Talk!</a>
+                    <a routerLink="/" fragment="contact" class="box-btn">Contacter nous</a>
                 </div>
             </div>
 
@@ -104,36 +141,6 @@
                     <img src="assets/images/feature-img.png" alt="feature" />
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="client-area ptb-100 bg-color">
-    <div class="container">
-        <div class="section-title">
-            <span>Testimonials</span>
-            <h2>What Our Client’s Say</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
-        </div>
-        <div class="client-wrap">
-            <owl-carousel-o [options]="clientWrap">
-                <ng-template carouselSlide>
-                    <div class="single-client">
-                        <img src="assets/images/client/1.jpg" alt="img">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
-                        <h3>Steven Jony</h3>
-                        <span>CEO of Company</span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="single-client">
-                        <img src="assets/images/client/2.jpg" alt="img">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
-                        <h3>Omit Jacson</h3>
-                        <span>Company Founder</span>
-                    </div>
-                </ng-template>
-            </owl-carousel-o>
         </div>
     </div>
 </section>

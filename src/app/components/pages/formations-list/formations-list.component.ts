@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-formations-list',
@@ -13,27 +14,33 @@ export class FormationsListComponent implements OnInit {
         description: "Découvrez nos formations adaptées à vos besoins",
         tabs: [
             {
+                id: "formation_courte",
+                label: "Formations Courtes"
+            },
+            {
                 id: "formation_certifiante",
                 label: "Formations Certifiantes"
             },
             {
                 id: "formation_longue",
                 label: "Formations Longues"
-            },
-            {
-                id: "formation_courte",
-                label: "Formations Courtes"
             }
         ]
     };
-    currentTab: string = 'formation_certifiante';
+    currentTab: string = 'formation_courte';
     currentFormations: any[] = [];
     isLoading: boolean = false;
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
     ngOnInit(): void {
         this.loadFormations(this.currentTab);
+        this.route.queryParams.subscribe(params => {
+            if (params['type']) {
+                this.currentTab = params['type'];
+                this.switchTab(new Event('click'), params['type']);
+            }
+        });
     }
 
     switchTab(event: Event, tabId: string): void {

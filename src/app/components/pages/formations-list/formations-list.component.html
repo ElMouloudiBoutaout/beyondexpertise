@@ -37,41 +37,35 @@
                 </div>
                 <div class="pane" [id]="currentTab" *ngIf="currentFormations.length > 0">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6" *ngFor="let formation of currentFormations">
+                        <div class="col-lg-4 col-md-6 d-flex" *ngFor="let formation of currentFormations">
                             <div class="formation-card">
-                                <div class="formation-header">
+                                <div  class="card-header">
                                     <h3>{{formation.title}}</h3>
-                                    <div class="formation-subheader">
-                                        <span class="formation-type">{{formation.type}}</span>
-                                    </div>
-                                    <div class="formation-thumbnail" *ngIf="formation.thumbnail">
-                                        <img [src]="formation.thumbnail" [alt]="formation.title">
-                                    </div>
+                                    <hr style="border: 1px solid; margin: 0;color: darkblue;">
                                 </div>
 
-                                <div class="formation-body">
-                                    <div class="formation-info">
-                                        <div class="info-item">
+
+                                <div class="card-body">
+                                    <div class="description">
+                                        <p>{{formation.description}}</p>
+                                    </div>
+                                    <div class="details">
+                                        <div class="detail-item">
                                             <i class="bx bx-time"></i>
-                                            <span>{{formation.duree.heures}} heures / {{formation.duree.mois}} mois</span>
+                                            <strong style="color: var(--darkBlueColor);" >{{formation.duree.heures}} heures / {{formation.duree.mois}} mois</strong>
                                         </div>
-                                        <div class="info-item">
+                                        <div class="detail-item">
                                             <i class="bx bx-map"></i>
-                                            <span>{{formation.modalite}} - {{formation.localisation}}</span>
+                                            <strong style="color: var(--darkBlueColor);">{{formation.modalite}} - {{formation.localisation}}</strong>
                                         </div>
-                                        <div class="info-item">
+                                        <div class="detail-item">
                                             <i class="bx bx-calendar"></i>
-                                            <span>Prochaine rentrée : {{formation.prochaine_rentree}}</span>
+                                            <strong style="color: var(--darkBlueColor);">Prochaine rentrée : {{formation.prochaine_rentree}}</strong>
                                         </div>
                                     </div>
-
-                                    <p class="formation-description">{{formation.description}}</p>
-
-                                    <div class="formation-footer">
-                                        <a [routerLink]="['/formation', formation.id]" class="line-bnt">
-                                            EN SAVOIR PLUS
-                                        </a>
-                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a [routerLink]="['/formation', formation.id]" class="box-btn">En savoir plus</a>
                                 </div>
                             </div>
                         </div>

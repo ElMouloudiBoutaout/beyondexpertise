@@ -1,18 +1,32 @@
 {
     "formations": [
         {
-            "id": "sql-expert",
-            "title": "Expert en Bases de données SQL/NoSQL",
-            "type": "Formation certifiante",
+            "id": "cloud-azure",
+            "title": "Formation Cloud Azure",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Développez vos compétences pour gérer et déployer des solutions sur Microsoft Azure."
+        },
+        {
+            "id": "power-bi",
+            "title": "Formation Power BI",
+            "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
             "thumbnail": "",
             "duree": {
-                "heures": 70,
-                "mois": 3
+                "heures": 21,
+                "jours": 3
             },
-            "prochaine_rentree": "Sur demande",
-            "description": "Devenez expert en bases de données et obtenez votre certification."
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Maîtrisez Power BI pour analyser, visualiser et partager vos données de manière efficace."
         }
     ]
 }

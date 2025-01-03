@@ -6,6 +6,7 @@ import { BlogComponent } from './components/pages/blog/blog.component';
 import { CaseStudiesDetailsComponent } from './components/pages/case-studies-details/case-studies-details.component';
 import { CaseStudiesComponent } from './components/pages/case-studies/case-studies.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { DevelopmentComponent } from './components/pages/development/development.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { FormationComponent } from './components/pages/formation/formation.component';
@@ -28,7 +29,7 @@ const routes: Routes = [
     {path: '', component: HomeOneComponent},
     {path: 'home-two', component: HomeTwoComponent},
     {path: 'home-three', component: HomeThreeComponent},
-    {path: 'about', component: AboutComponent},
+    {path: 'consulting', component: AboutComponent},
     {path: 'solutions', component: SolutionsComponent},
     {path: 'solutions-details', component: SolutionsDetailsComponent},
     {path: 'case-studies', component: CaseStudiesComponent},
@@ -49,6 +50,7 @@ const routes: Routes = [
     { path: 'formation/:id', component: FormationComponent },
     { path: 'formation', component: FormationComponent },
     { path: 'formations-list', component: FormationsListComponent },
+    {path: 'development', component: DevelopmentComponent},
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
@@ -58,7 +60,8 @@ const routes: Routes = [
 const routerOptions: ExtraOptions = {
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
-    scrollOffset: [0, 64] // Adjust this value based on your header height
+    scrollOffset: [0, 64],
+    onSameUrlNavigation: 'reload'
 };
 
 @NgModule({

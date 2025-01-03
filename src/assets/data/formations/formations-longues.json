@@ -1,17 +1,18 @@
 {
     "formations": [
         {
-            "id": "sql-nosql",
-            "title": "Formation SQL/NoSQL & Bases de données",
-            "type": "Formation longue",
+            "id": "data-analyst",
+            "title": "Data Analyst",
+            "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
+            "thumbnail": "",
             "duree": {
-                "heures": 28,
-                "mois": 1
+                "heures": 306,
+                "mois": 2
             },
-            "prochaine_rentree": "Sur demande",
-            "description": "Maîtrisez les bases de données SQL et NoSQL pour vos projets."
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Devenez un expert en analyse de données grâce à une formation complète couvrant Python, SQL, Power BI, et bien plus."
         }
     ]
 }

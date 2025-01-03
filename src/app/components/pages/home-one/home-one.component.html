@@ -11,8 +11,8 @@
                             </p>
                                 <p>Que vous soyez une entreprise ou un professionnel, nous vous accompagnons à chaque étape pour atteindre vos objectifs de transformation, d'innovation et de montée en compétences.</p>
                             <div class="banner-btn">
-                                <a routerLink="/formations-list" class="box-btn">JE TROUVE MA FORMATION</a>
-                                <a routerLink="/consultations" class="box-btn border-btn">JE DEMANDE UNE CONSULTATION</a>
+                                <a routerLink="/formations-list" class="box-btn border-btn">JE TROUVE MA FORMATION</a>
+                                <a routerLink="/consulting" class="box-btn border-btn">JE DEMANDE UNE CONSULTATION</a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,9 @@
                     <div class="service-content">
                         <h3>Consulting</h3>
                         <p>Nous offrons un accompagnement stratégique pour optimiser vos projets et garantir leur succès. Bénéficiez de solutions adaptées à vos besoins pour relever vos défis professionnels.</p>
-                        <a class="line-bnt" (click)="scrollToServiceTab('consulting')">EN SAVOIR PLUS</a>
+                        <div class="text-center">
+                            <a class="box-btn mt-4" routerLink="/consulting" style="width: fit-content; display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 14px;">EN SAVOIR PLUS</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,7 +71,9 @@
                     <div class="service-content">
                         <h3>Formation</h3>
                         <p>Nous proposons des formations sur mesure pour développer les compétences de vos équipes. Bénéficiez d'un accompagnement pédagogique et d'un contenu adapté à vos enjeux professionnels.</p>
-                        <a class="line-bnt" (click)="scrollToServiceTab('formation_certifiante')">EN SAVOIR PLUS</a>
+                        <div class="text-center">
+                            <a class="box-btn mt-4" routerLink="/formations-list" style="width: fit-content; display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 14px;">EN SAVOIR PLUS</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,7 +87,9 @@
                     <div class="service-content">
                         <h3>Dévelopment</h3>
                         <p>Nous concevons et développons des solutions technologiques performantes et innovantes. De la conception à la maintenance, nous sommes votre partenaire pour vos projets numériques.</p>
-                        <a class="line-bnt" (click)="scrollToServiceTab('development')">EN SAVOIR PLUS</a>
+                        <div class="text-center">
+                            <a class="box-btn mt-4" routerLink="/development" style="width: fit-content; display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 14px;">EN SAVOIR PLUS</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,6 +97,52 @@
         </div>
     </div>
 </section>
+
+
+
+<section style="background-color: #f5faff;" class="choose-area ptb-100">
+    <div class="container" style="max-width: 1000px;">
+        <div class="section-title">
+            <h2>Nos formations</h2>
+            <p>Nous avons gagné la confiance de nos clients grâce à la qualité de nos services et de nos formations professionnelles.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="choose-img">
+                    <img src="assets/images/choose-img.png" alt="choose" />
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="choose-content">
+                    <div class="faq-accordion">
+                        <div class="faq-item" *ngFor="let item of accordionItems; let i = index;">
+                            <div class="faq-header" (click)="toggleAccordionItem(item)">
+                                {{item.title}}
+                                <i class='bx' [ngClass]="{'bx-plus': !item.open, 'bx-x': item.open}"></i>
+                            </div>
+                            <div class="faq-content" [hidden]="!item.open">
+                                <p>{{item.content}}</p>
+                                <div class="text-center mt-3">
+                                    <a class="box-btn"
+                                       [routerLink]="['/formations-list']"
+                                       [queryParams]="{type: item.id}"
+                                       style="width: fit-content; display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 14px;">
+                                        EN SAVOIR PLUS
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
 <section style="background-color: #ffffff;" class="home-company-area bg-color pt-70 pb-70" id="about">
     <div class="container">

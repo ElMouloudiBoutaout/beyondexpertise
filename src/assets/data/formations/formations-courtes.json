@@ -1,17 +1,116 @@
 {
     "formations": [
         {
-            "id": "sql-basics",
-            "title": "Introduction aux bases de données SQL",
+            "id": "sql-nosql",
+            "title": "Expert en Bases de données SQL/NoSQL",
             "type": "Formation courte",
-            "modalite": "Distanciel",
-            "localisation": "En ligne",
+            "modalite": "Distanciel/Présentiel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
             "duree": {
-                "heures": 14,
-                "mois": 0.5
+                "heures": 70,
+                "mois": 3
             },
             "prochaine_rentree": "Sur demande",
-            "description": "Apprenez les fondamentaux des bases de données SQL."
+            "description": "Devenez expert en bases de données et obtenez votre certification."
+        },
+        {
+            "id": "python-data-visualisation",
+            "title": "Formation Python – Data Visualisation",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Maîtrisez la visualisation de données avec Python pour des projets informatifs et interactifs."
+        },
+        {
+            "id": "etl-integration",
+            "title": "Formation Intégration des données (ETL)",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Apprenez les concepts fondamentaux et les outils d'intégration de données pour concevoir et optimiser des processus ETL."
+        },
+        {
+            "id": "deep-learning",
+            "title": "Formation Deep Learning",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Apprenez les bases et les architectures avancées du Deep Learning avec des frameworks populaires."
+        },
+        {
+            "id": "machine-learning",
+            "title": "Formation Machine Learning",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Acquérez les compétences nécessaires pour développer et appliquer des modèles de Machine Learning à des cas concrets."
+        },
+        {
+            "id": "cloud-azure",
+            "title": "Formation Cloud Azure",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Développez vos compétences pour gérer et déployer des solutions sur Microsoft Azure."
+        },
+        {
+            "id": "jira-atlassian",
+            "title": "Formation ATLASSIAN - JIRA",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Maîtrisez les fonctionnalités de JIRA pour une gestion efficace des projets Agile et traditionnels."
+        },
+        {
+            "id": "intelligence-artificielle",
+            "title": "Formation Intelligence Artificielle",
+            "type": "Formation professionnelle",
+            "modalite": "Distanciel/Présentiel",
+            "localisation": "Paris",
+            "thumbnail": "",
+            "duree": {
+                "heures": 21,
+                "jours": 3
+            },
+            "prochaine_rentree": "Consultez notre calendrier pour les prochaines dates",
+            "description": "Explorez les concepts fondamentaux, les outils, et les applications pratiques de l'Intelligence Artificielle."
         }
     ]
 }

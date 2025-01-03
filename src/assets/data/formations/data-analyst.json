@@ -1,0 +1,126 @@
+{
+    "formation": {
+        "id": "data-analyst",
+        "title": "Parcours Data Analyst",
+        "type": "Formation technique",
+        "modalite": "Distanciel/Présentiel",
+        "localisation": "À distance ou sur site",
+        "duree": {
+            "jours": 38,
+            "heures": 306
+        },
+        "certification": "Certification reconnue",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Toute personne souhaitant se reconvertir ou approfondir ses compétences en analyse de données"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Notions en manipulation de données",
+                "Connaissances en Python et SQL recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les fondamentaux de la data et Big Data",
+                "Collecter, organiser, et préparer les données pour l'analyse",
+                "Créer des visualisations claires et dynamiques",
+                "Appliquer les bases du Machine Learning",
+                "Maîtriser des outils comme Python, SQL, Power BI, Tableau, et Jira"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Initiation et maîtrise de Python",
+                    "topics": [
+                        "Introduction au langage Python",
+                        "Analyse des données avec Pandas et NumPy",
+                        "Visualisation de données avec Matplotlib et Seaborn",
+                        "Bases du Machine Learning"
+                    ]
+                },
+                {
+                    "title": "Introduction et perfectionnement en SQL",
+                    "topics": [
+                        "Création et gestion de bases de données relationnelles",
+                        "Rédaction et optimisation des requêtes SQL",
+                        "Manipulation des données massives"
+                    ]
+                },
+                {
+                    "title": "Introduction au NoSQL",
+                    "topics": [
+                        "Principes fondamentaux des bases NoSQL",
+                        "Modélisation des données dans MongoDB",
+                        "Requêtes avancées et optimisation des performances"
+                    ]
+                },
+                {
+                    "title": "Gestion de Projet Scrum avec Jira",
+                    "topics": [
+                        "Introduction à la gestion de projet Agile",
+                        "Utilisation avancée de Jira pour les sprints et les workflows",
+                        "Collaboration et reporting avec Jira"
+                    ]
+                },
+                {
+                    "title": "Introduction et perfectionnement en ETL",
+                    "topics": [
+                        "Création et automatisation de workflows ETL avec Talend et KNIME",
+                        "Transformation et nettoyage des données",
+                        "Optimisation des pipelines ETL"
+                    ]
+                },
+                {
+                    "title": "Introduction au Cloud Computing",
+                    "topics": [
+                        "Concepts fondamentaux des services Cloud",
+                        "Stockage et traitement des données dans le Cloud",
+                        "Sécurité et optimisation des coûts"
+                    ]
+                },
+                {
+                    "title": "Anglais professionnel et communication",
+                    "topics": [
+                        "Communication écrite et orale dans un cadre professionnel",
+                        "Acquisition du vocabulaire technique pour les données et les outils",
+                        "Simulation de présentations et échanges professionnels"
+                    ]
+                },
+                {
+                    "title": "Data Visualisation avec Power BI et Tableau",
+                    "topics": [
+                        "Création de tableaux de bord interactifs",
+                        "Publication et partage des insights",
+                        "Utilisation avancée des mesures DAX"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance ou sur site",
+            "nextSession": "Consultez le calendrier",
+            "price": "Sur demande",
+            "details": [
+                "Sessions disponibles en présentiel et en distanciel",
+                "Inclus : accès aux outils, supports pédagogiques et certifications",
+                "Tarif : Sur demande"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}

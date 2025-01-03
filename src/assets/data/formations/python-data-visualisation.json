@@ -1,0 +1,110 @@
+{
+    "formation": {
+        "id": "python-data-visualisation",
+        "title": "Formation Python – Data Visualisation",
+        "type": "Formation technique",
+        "modalite": "Distanciel",
+        "localisation": "À distance",
+        "duree": {
+            "jours": 3,
+            "heures": 21
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Analystes de données",
+                "Scientifiques de données",
+                "Développeurs",
+                "Toute personne souhaitant maîtriser la visualisation de données avec Python"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissance de base du langage Python",
+                "Notions en manipulation de données recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les concepts fondamentaux de la visualisation de données",
+                "Maîtriser les bibliothèques Python dédiées à la datavisualisation",
+                "Créer des visualisations interactives et informatives",
+                "Adapter les visualisations aux besoins spécifiques des projets"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction à la Data Visualisation",
+                    "topics": [
+                        "Importance et objectifs de la visualisation de données",
+                        "Bonnes pratiques et principes de conception",
+                        "Types de visualisations et leurs usages"
+                    ]
+                },
+                {
+                    "title": "Environnement Python pour la Data Visualisation",
+                    "topics": [
+                        "Installation et configuration des outils nécessaires",
+                        "Présentation des bibliothèques principales : Matplotlib, Seaborn, Plotly"
+                    ]
+                },
+                {
+                    "title": "Création de visualisations avec Matplotlib",
+                    "topics": [
+                        "Structure d'une figure Matplotlib",
+                        "Création de graphiques de base : lignes, barres, histogrammes",
+                        "Personnalisation des graphiques : titres, légendes, axes"
+                    ]
+                },
+                {
+                    "title": "Visualisations avancées avec Seaborn",
+                    "topics": [
+                        "Création de graphiques statistiques",
+                        "Visualisation de distributions et de relations entre variables",
+                        "Personnalisation et thèmes"
+                    ]
+                },
+                {
+                    "title": "Visualisations interactives avec Plotly",
+                    "topics": [
+                        "Introduction à Plotly et ses fonctionnalités",
+                        "Création de graphiques interactifs",
+                        "Intégration dans des applications web"
+                    ]
+                },
+                {
+                    "title": "Manipulation et préparation des données",
+                    "topics": [
+                        "Utilisation de Pandas pour le nettoyage des données",
+                        "Gestion des données manquantes",
+                        "Agrégation et transformation des données"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance",
+            "nextSession": "Consultez le calendrier",
+            "price": "1 800 HT",
+            "details": [
+                "Sessions disponibles en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 1 800 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}

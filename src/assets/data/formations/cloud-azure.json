@@ -1,0 +1,113 @@
+{
+    "formation": {
+        "id": "cloud-azure",
+        "title": "Formation Cloud Azure",
+        "type": "Formation technique",
+        "modalite": "Distanciel/Présentiel",
+        "localisation": "À distance ou sur site",
+        "duree": {
+            "jours": 3,
+            "heures": 21
+        },
+        "certification": "Attestation de formation",
+        "format": "Hybride",
+        "target": {
+            "title": "Public visé",
+            "audience": [
+                "Administrateurs système",
+                "Ingénieurs cloud",
+                "Développeurs",
+                "Toute personne souhaitant acquérir des compétences en gestion et déploiement de solutions sur Microsoft Azure"
+            ]
+        },
+        "prerequisites": {
+            "title": "Prérequis",
+            "requirements": [
+                "Connaissances de base en administration système",
+                "Notions en réseaux et virtualisation recommandées"
+            ]
+        },
+        "objectives": {
+            "title": "Objectifs de la formation",
+            "goals": [
+                "Comprendre les concepts fondamentaux du cloud computing et les services offerts par Microsoft Azure",
+                "Apprendre à créer et gérer des machines virtuelles et des services applicatifs sur Azure",
+                "Maîtriser la configuration des réseaux virtuels et des solutions de stockage Azure",
+                "Savoir implémenter des solutions de sécurité et de surveillance sur Azure",
+                "Être capable de gérer les identités et la gouvernance dans un environnement Azure"
+            ]
+        },
+        "program": {
+            "title": "Programme détaillé",
+            "modules": [
+                {
+                    "title": "Introduction à Microsoft Azure",
+                    "topics": [
+                        "Concepts clés du cloud computing",
+                        "Présentation des services Azure",
+                        "Modèles de déploiement : IaaS, PaaS, SaaS"
+                    ]
+                },
+                {
+                    "title": "Gestion des identités et de la gouvernance",
+                    "topics": [
+                        "Configuration de Microsoft Entra ID",
+                        "Gestion des utilisateurs et des groupes",
+                        "Mise en place des abonnements et des comptes",
+                        "Application des politiques Azure et du contrôle d'accès basé sur les rôles (RBAC)"
+                    ]
+                },
+                {
+                    "title": "Implémentation et gestion du stockage",
+                    "topics": [
+                        "Création et configuration des comptes de stockage",
+                        "Gestion des blobs, des fichiers et des disques",
+                        "Sécurisation et surveillance du stockage"
+                    ]
+                },
+                {
+                    "title": "Déploiement et gestion des ressources de calcul",
+                    "topics": [
+                        "Création et configuration des machines virtuelles",
+                        "Gestion de la disponibilité et de l'extensibilité des VM",
+                        "Déploiement des applications avec Azure App Service"
+                    ]
+                },
+                {
+                    "title": "Configuration et gestion des réseaux virtuels",
+                    "topics": [
+                        "Mise en place des réseaux virtuels et des sous-réseaux",
+                        "Configuration des groupes de sécurité réseau et des pare-feu",
+                        "Implémentation des solutions de connectivité inter-sites"
+                    ]
+                },
+                {
+                    "title": "Surveillance et sauvegarde des ressources Azure",
+                    "topics": [
+                        "Utilisation d'Azure Monitor pour la supervision",
+                        "Configuration des alertes et des journaux",
+                        "Mise en place des solutions de sauvegarde et de restauration"
+                    ]
+                }
+            ]
+        },
+        "practical": {
+            "title": "Informations pratiques",
+            "location": "À distance ou sur site",
+            "nextSession": "Consultez le calendrier",
+            "price": "2 100 HT",
+            "details": [
+                "Sessions disponibles en présentiel et en distanciel",
+                "Consultez notre calendrier pour les prochaines dates",
+                "Tarif : 2 100 € HT"
+            ]
+        },
+        "registration": {
+            "title": "Inscription",
+            "methods": [
+                "Contactez-nous via notre formulaire en ligne",
+                "Par téléphone au [numéro de contact]"
+            ]
+        }
+    }
+}
