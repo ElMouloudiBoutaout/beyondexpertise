@@ -3,8 +3,9 @@
         {
             "id": "sql-nosql",
             "title": "Expert en Bases de données SQL/NoSQL",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.5j2sJlj8kMSeQCjWZcySXAHaEz&pid=Api",
             "type": "Formation courte",
-            "modalite": "Distanciel/Présentiel/Présentiel",
+            "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
             "thumbnail": "",
             "duree": {
@@ -17,6 +18,7 @@
         {
             "id": "python-data-visualisation",
             "title": "Formation Python – Data Visualisation",
+            "image": "https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-data-visualization2.png",
             "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
@@ -31,6 +33,7 @@
         {
             "id": "etl-integration",
             "title": "Formation Intégration des données (ETL)",
+            "image": "https://www.informatica.com/content/dam/informatica-com/en/images/misc/etl-process-explained-diagram.png",
             "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
@@ -45,6 +48,7 @@
         {
             "id": "deep-learning",
             "title": "Formation Deep Learning",
+            "image": "https://cdn.futura-sciences.com/cdn-cgi/image/width=1920,quality=50,format=auto/sources/Deep_Learning_cc_VIGE.co_-_Fotolia.com.jpg",
             "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
@@ -59,8 +63,9 @@
         {
             "id": "machine-learning",
             "title": "Formation Machine Learning",
+            "image": "https://db0dce98.rocketcdn.me/wp-content/uploads/2020/11/Machine-learning-def-.png",
             "type": "Formation professionnelle",
-            "modalite": "Distanciel/Présentiel/Présentiel",
+            "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
             "thumbnail": "",
             "duree": {
@@ -73,8 +78,9 @@
         {
             "id": "cloud-azure",
             "title": "Formation Cloud Azure",
+            "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/free-hero?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3840&hei=930&qlt=95&fmt=png-alpha&fit=constrain",
             "type": "Formation professionnelle",
-            "modalite": "Distanciel/Présentiel/Présentiel",
+            "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
             "thumbnail": "",
             "duree": {
@@ -87,6 +93,7 @@
         {
             "id": "jira-atlassian",
             "title": "Formation ATLASSIAN - JIRA",
+            "image": "https://azara.ma/wp-content/uploads/2021/02/Pourquoi-utiliser-Jira-software-azara-consulting-980x517.png",
             "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
@@ -101,6 +108,7 @@
         {
             "id": "intelligence-artificielle",
             "title": "Formation Intelligence Artificielle",
+            "image": "https://bigmedia.bpifrance.fr/sites/default/files/styles/bigmedia_article/public/2024-03/IA%20G%C3%A9n%C3%A9rative%20dans%20les%20entreprises.png?itok=BvBpxTk5",
             "type": "Formation professionnelle",
             "modalite": "Distanciel/Présentiel",
             "localisation": "Paris",
