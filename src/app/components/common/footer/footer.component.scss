@@ -22,3 +22,66 @@
         }
     }
 }
+
+.footer-area {
+    padding: 40px 0 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #04102B;
+
+    .single-widget {
+        margin-bottom: 20px;
+
+        h3 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .footer-quick-links {
+            li {
+                margin-bottom: 8px;
+                a {
+                    color: #ffffff;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .footer-info-contact {
+            li {
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 40px;
+                color: #ffffff;
+                i {
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .footer-shape {
+        .shape1, .shape2, .shape3, .shape4 {
+            img {
+                width: 80px;
+            }
+        }
+    }
+}
+
+.copyright-text {
+    padding: 15px 0;
+    text-align: center;
+    background-color: #04102B;
+    p {
+        color: #ffffff;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+}

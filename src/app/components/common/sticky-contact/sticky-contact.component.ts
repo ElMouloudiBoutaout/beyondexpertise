@@ -15,11 +15,13 @@ import { Router } from '@angular/router';
                 transform: 'translate(0)'
             })),
             transition('start <=> end', [
-                animate('0.3s', style({ transform: 'translate(-3px, 0)' })),
-                animate('0.3s', style({ transform: 'translate(3px, 0)' })),
-                animate('0.3s', style({ transform: 'translate(-2px, 0)' })),
-                animate('0.3s', style({ transform: 'translate(2px, 0)' })),
-                animate('0.3s', style({ transform: 'translate(0)' }))
+                animate('0.1s', style({ transform: 'translate(-4px, -2px)' })),
+                animate('0.1s', style({ transform: 'translate(4px, 2px)' })),
+                animate('0.1s', style({ transform: 'translate(-3px, -1px)' })),
+                animate('0.1s', style({ transform: 'translate(3px, 1px)' })),
+                animate('0.1s', style({ transform: 'translate(-2px, -1px)' })),
+                animate('0.1s', style({ transform: 'translate(2px, 1px)' })),
+                animate('0.1s', style({ transform: 'translate(0)' }))
             ])
         ])
     ]
@@ -30,7 +32,7 @@ export class StickyContactComponent {
     constructor(private router: Router) {
         setInterval(() => {
             this.vibrateState = this.vibrateState === 'start' ? 'end' : 'start';
-        }, 5000);
+        }, 3000);
     }
 
     navigateToContact() {
