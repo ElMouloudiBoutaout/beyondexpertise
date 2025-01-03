@@ -2,21 +2,24 @@
     "blogs": [
         {
             "id": "blog1",
-            "title": "Temperature App UX Studies & Development Case",
-            "image": "assets/images/blog/1.jpg",
+            "title": "Optimizing SQL Queries for Performance",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.5j2sJlj8kMSeQCjWZcySXAHaEz&pid=Api",
             "meta": {
-                "date": "April 10, 2024",
-                "author": "John Anderson"
+                "date": "January 1, 2025",
+                "author": "Youssef"
             },
-            "excerpt": "Creating a user-friendly temperature monitoring app requires a deep understanding of user behavior, needs, and challenges."        },
+            "excerpt": "Learn how to write efficient SQL queries to enhance database performance and reduce execution times."
+        },
         {
             "id": "blog2",
-            "title": "Restaurant Management System Development",
-            "image": "assets/images/blog/2.jpg",
+            "title": "TThe Transformative Power of Data Science",
+            "image": "https://db0dce98.rocketcdn.me/wp-content/uploads/2020/11/Machine-learning-def-.png",
             "meta": {
-                "date": "April 15, 2024",
-                "author": "Sarah Miller"
+                "date": "January 3, 2025",
+                "author": "Youssef"
             },
-            "excerpt": "How we developed a comprehensive restaurant management system that streamlines operations and improves efficiency."        }
+            "excerpt": "Discover the transformative role of SQL in managing and unlocking insights from structured data."
+        }
     ]
 }
+

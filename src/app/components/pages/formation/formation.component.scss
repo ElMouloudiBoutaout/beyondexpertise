@@ -207,27 +207,47 @@
 
                 li {
                     display: flex;
-                    align-items: center;
-                    gap: 10px;
+                    align-items: flex-start;
+                    gap: 15px;
                     margin-bottom: 15px;
                     color: #333;
+                    transform: translateX(-20px);
+                    opacity: 0;
+                    animation: slideIn 0.5s ease forwards;
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    transition: all 0.3s ease;
 
                     i.bxs-check-circle {
                         color: var(--darkBlueColor);
-                        font-size: 20px;
+                        font-size: 24px;
                         flex-shrink: 0;
                         opacity: 0.9;
+                        margin-top: 3px;
                     }
 
                     span {
                         color: #333;
-                        font-size: 15px;
+                        font-size: 16px;
+                        font-weight: 500;
                         line-height: 1.6;
                         padding-top: 2px;
                     }
 
+                    &:hover {
+                        background-color: #f8f9ff;
+                        transform: translateX(5px);
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                    }
+
                     &:last-child {
                         margin-bottom: 0;
+                    }
+
+                    @for $i from 1 through 10 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: #{$i * 0.1}s;
+                        }
                     }
                 }
             }
@@ -437,27 +457,47 @@
 
         li {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 15px;
             margin-bottom: 15px;
             color: #333;
+            transform: translateX(-20px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
 
             i.bxs-check-circle {
                 color: var(--darkBlueColor);
-                font-size: 20px;
+                font-size: 24px;
                 flex-shrink: 0;
                 opacity: 0.9;
+                margin-top: 3px;
             }
 
             span {
                 color: #333;
-                font-size: 15px;
+                font-size: 16px;
+                font-weight: 500;
                 line-height: 1.6;
                 padding-top: 2px;
             }
 
+            &:hover {
+                background-color: #f8f9ff;
+                transform: translateX(5px);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+
             &:last-child {
                 margin-bottom: 0;
+            }
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * 0.1}s;
+                }
             }
         }
     }
@@ -466,4 +506,35 @@
 .formation-sections {
     position: relative;
     min-height: 300px; // Adjust based on your content
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// Add a subtle pulse animation for the check icons
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+// Apply the pulse animation to check icons on hover
+.content-section ul li:hover {
+    i.bxs-check-circle {
+        animation: iconPulse 0.6s ease;
+    }
 }
