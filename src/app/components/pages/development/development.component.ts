@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,10 +6,18 @@ import { Router } from '@angular/router';
     templateUrl: './development.component.html',
     styleUrls: ['./development.component.scss']
 })
-export class DevelopmentComponent implements OnInit {
-    constructor(private router: Router) { }
+export class DevelopmentComponent {
+    isOpen: boolean = false;
 
-    ngOnInit(): void {}
+    constructor(private router: Router) {}
+
+    openPopup() {
+        this.isOpen = true;
+    }
+
+    closePopup() {
+        this.isOpen = false;
+    }
 
     scrollToSection(sectionId: string) {
         const element = document.getElementById(sectionId);

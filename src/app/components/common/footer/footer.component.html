@@ -1,6 +1,7 @@
 <footer class="footer-area pt-100">
     <div class="container">
         <div class="row">
+            <!-- Company Info Column -->
             <div class="col-lg-4 col-md-6">
                 <div class="content">
                     <div class="logo">
@@ -10,6 +11,49 @@
                     </div>
                     <p>{{footerData?.logo.description}}</p>
                     <p class="slogan">{{footerData?.logo.slogan}}</p>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="col-lg-3 col-md-6">
+                <div class="content">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a routerLink="/">Accueil</a></li>
+                        <li><a routerLink="/formations-list">Formations</a></li>
+                        <li><a routerLink="/consulting">Consulting</a></li>
+                        <li><a routerLink="/development">Développement</a></li>
+                        <li><a routerLink="/" fragment="about">À propos</a></li>
+                        <li><a routerLink="/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="col-lg-3 col-md-6">
+                <div class="content">
+                    <h3>Nous contacter</h3>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class='bx bx-phone'></i>
+                            <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-envelope'></i>
+                            <a href="mailto:contact&#64;beyondexpertise.com">contact&#64;beyondexpertise.com</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-map'></i>
+                            <span>123 Rue de la Formation<br>75000 Paris, France</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="col-lg-2 col-md-6">
+                <div class="content">
+                    <h3>Suivez-nous</h3>
                     <ul class="social">
                         <li *ngIf="footerData?.social.facebook">
                             <a [href]="footerData?.social.facebook" target="_blank">

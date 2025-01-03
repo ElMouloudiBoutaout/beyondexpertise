@@ -48,6 +48,12 @@
             <div class="col-lg-6">
                 <div class="choose-img">
                     <img src="assets/images/choose-img1.jpg" alt="choose" />
+
+                    <div class="technology-video">
+                        <button type="button" class="video-btn p-0 border-0" (click)="openPopup()">
+                            <i class='bx bx-play'></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -201,3 +207,22 @@
 </section>
 
 <app-sticky-contact></app-sticky-contact>
+
+<!-- Video Popup -->
+<div class="video-popup" *ngIf="isOpen">
+    <div class="popup-inner">
+        <iframe
+            width="853"
+            height="480"
+            src="https://www.youtube.com/embed/VCJW7GZEF50"
+            title="Les services de Beyond Expertise"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+        <button (click)="closePopup()" type="button" class="close-btn">
+            <i class='bx bx-x'></i>
+        </button>
+    </div>
+</div>

@@ -73,6 +73,73 @@
             }
         }
     }
+
+    .content {
+        h3 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 12px;
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: var(--mainColor);
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .footer-contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                color: #ffffff;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: flex-start;
+
+                i {
+                    color: var(--mainColor);
+                    font-size: 20px;
+                    margin-right: 10px;
+                    margin-top: 3px;
+                }
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: var(--mainColor);
+                    }
+                }
+
+                span {
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .social {
+            // ... existing social media styles ...
+        }
+    }
 }
 
 .copyright-text {
