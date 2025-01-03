@@ -39,11 +39,28 @@
                 border-radius: 40px;
                 box-shadow: 0 3px 15px rgba(29, 66, 217, 0.15);
 
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    width: 100%;
+                    border-radius: 10px;
+                    padding: 0;
+                    max-width: 100%;
+                }
+
                 .nav-tab {
                     margin: 0;
                     padding: 0;
                     cursor: pointer;
                     position: relative;
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        border-bottom: 1px solid rgba(0,0,0,0.1);
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
 
                     h3 {
                         color: #666;
@@ -57,6 +74,12 @@
                         transition: all 0.3s ease;
                         position: relative;
 
+                        @media (max-width: 768px) {
+                            text-align: left;
+                            padding: 15px 20px;
+                            font-size: 16px;
+                        }
+
                         &:hover {
                             color: var(--darkBlueColor);
                             background-color: #f5f8ff;
@@ -65,10 +88,18 @@
 
                     &:first-child h3 {
                         border-radius: 35px 0 0 35px;
+
+                        @media (max-width: 768px) {
+                            border-radius: 10px 10px 0 0;
+                        }
                     }
 
                     &:last-child h3 {
                         border-radius: 0 35px 35px 0;
+
+                        @media (max-width: 768px) {
+                            border-radius: 0 0 10px 10px;
+                        }
                     }
 
                     &.active {
@@ -76,6 +107,10 @@
                             background-color: var(--darkBlueColor);
                             color: white;
                             box-shadow: 0 3px 10px rgba(29, 66, 217, 0.2);
+
+                            @media (max-width: 768px) {
+                                border-left: 4px solid var(--mainColor);
+                            }
                         }
                     }
                 }
@@ -161,6 +196,25 @@
 
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        .section-title {
+            margin-bottom: 15px;
+
+            .nav-tabset-wrapper {
+                margin: 15px -15px;
+
+                .nav-tabset {
+                    border-radius: 0;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                 }
             }
         }

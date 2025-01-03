@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: './formations-list.component.html',
     styleUrls: ['./formations-list.component.scss']
 })
-export class FormationsListComponent implements OnInit {
+export class FormationsListComponent implements OnInit, OnDestroy {
     servicesData: any = {
         title: "Nos formations",
         subtitle: "Développez vos compétences",
@@ -27,11 +27,14 @@ export class FormationsListComponent implements OnInit {
             }
         ]
     };
-    currentTab: string = 'formation_courte';
+    currentTab: string = 'formations-courtes';
     currentFormations: any[] = [];
-    isLoading: boolean = false;
+    isLoading: boolean = true;
+    isMobile: boolean = false;
 
-    constructor(private http: HttpClient, private route: ActivatedRoute) { }
+    constructor(private http: HttpClient, private route: ActivatedRoute) {
+        this.checkScreenSize();
+    }
 
     ngOnInit(): void {
         this.loadFormations(this.currentTab);
@@ -41,6 +44,15 @@ export class FormationsListComponent implements OnInit {
                 this.switchTab(new Event('click'), params['type']);
             }
         });
+        window.addEventListener('resize', this.checkScreenSize.bind(this));
+    }
+
+    ngOnDestroy(): void {
+        window.removeEventListener('resize', this.checkScreenSize.bind(this));
+    }
+
+    private checkScreenSize(): void {
+        this.isMobile = window.innerWidth <= 768;
     }
 
     switchTab(event: Event, tabId: string): void {
