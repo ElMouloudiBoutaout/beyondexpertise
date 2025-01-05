@@ -1,4 +1,4 @@
-<header class="header-area">
+<!--<header class="header-area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12 col-sm-12">
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-</header>
+</header>-->
 
 <div class="{{navbarClass}}">
     <div
@@ -19,62 +19,83 @@
     >
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light" [class.active]="classApplied">
-                <a class="navbar-brand d-none" routerLink="/">
-                    <img src="assets/images/logo2.jpeg" alt="logo" class="navbar-logo-sticky" />
-                </a>
-                <button class="navbar-toggler" type="button" (click)="toggleClass()">
-                    <span class="burger-menu">
-                        <span class="top-bar"></span>
-                        <span class="middle-bar"></span>
-                        <span class="bottom-bar"></span>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                <div class="nav-top-bar">
+                    <button class="navbar-toggler" type="button" (click)="toggleClass()"
+                            data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="burger-menu">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </span>
+                    </button>
+                    <div class="navbar-brand-mobile">
+                        <a routerLink="/">
+                            <img src="assets/images/logo.png" alt="logo" class="navbar-logo-sticky" />
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse mean-menu"
+                     id="navbarSupportedContent"
+                     [class.show]="classApplied">
                     <ul class="navbar-nav text-left">
                         <li class="nav-item">
                             <a routerLink="/"
                                class="nav-link"
                                routerLinkActive="active"
                                [routerLinkActiveOptions]="{exact: true}"
-                               [routerLinkActive]="['active']">Accueil</a>
+                               [routerLinkActive]="['active']"
+                               (click)="onNavLinkClick()">Accueil</a>
                         </li>
 
                         <li class="nav-item">
                             <a routerLink="/formations-list"
                                class="nav-link"
-                               routerLinkActive="active">Formations</a>
+                               routerLinkActive="active"
+                               (click)="onNavLinkClick()">Formations</a>
                         </li>
 
                         <li class="nav-item">
                             <a routerLink="/consulting"
                                class="nav-link"
-                               routerLinkActive="active">Consulting</a>
+                               routerLinkActive="active"
+                               (click)="onNavLinkClick()">Consulting</a>
                         </li>
 
                         <li class="nav-item">
                             <a routerLink="/development"
                                class="nav-link"
-                               routerLinkActive="active">Développement</a>
+                               routerLinkActive="active"
+                               (click)="onNavLinkClick()">Développement</a>
                         </li>
 
                         <li class="nav-item">
                             <a routerLink="/"
                                [fragment]="'about'"
-                               class="nav-link">À propos</a>
+                               class="nav-link"
+                               (click)="onNavLinkClick()">À propos</a>
                         </li>
 
                         <li class="nav-item">
                             <a routerLink="/"
                                [fragment]="'contact'"
-                               class="nav-link">Nous contacter</a>
+                               class="nav-link"
+                               (click)="onNavLinkClick()">Nous contacter</a>
                         </li>
 
                         <li class="nav-item">
                             <a routerLink="/blog"
                                class="nav-link"
-                               routerLinkActive="active">Blog</a>
+                               routerLinkActive="active"
+                               (click)="onNavLinkClick()">Blog</a>
                         </li>
                     </ul>
+                    <div class="navbar-brand navbar-brand-desktop">
+                        <a routerLink="/">
+                            <img src="assets/images/logo.png" alt="logo" class="navbar-logo-sticky" />
+                        </a>
+                    </div>
                 </div>
             </nav>
         </div>

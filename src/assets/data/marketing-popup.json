@@ -1,0 +1,10 @@
+{
+    "enabled": true,
+    "title": "Formation Deep Learning",
+    "description": "Découvrez notre formation complète en Deep Learning et Intelligence Artificielle. Places limitées !",
+    "image": "assets/images/marketing.jpeg",
+    "ctaText": "En savoir plus",
+    "formationId": "deep-learning",
+    "displayDelay": 3000,
+    "displayDuration": 800000
+}

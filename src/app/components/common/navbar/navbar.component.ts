@@ -72,4 +72,10 @@ export class NavbarComponent implements OnInit {
         }
     }
 
+    onNavLinkClick() {
+        if (window.innerWidth <= 991) {  // Only collapse on mobile/tablet
+            this.classApplied = false;
+        }
+    }
+
 }

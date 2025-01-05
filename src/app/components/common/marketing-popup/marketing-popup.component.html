@@ -1,0 +1,22 @@
+<div class="marketing-popup" *ngIf="showPopup && popupData">
+    <div class="popup-content" [@slideIn]>
+        <button class="close-btn" (click)="closePopup()">
+            <i class='bx bx-x'></i>
+        </button>
+
+        <div class="popup-image">
+            <img [src]="popupData.image" [alt]="popupData.title">
+        </div>
+
+        <div class="popup-text">
+            <h3>{{popupData.title}}</h3>
+            <p>{{popupData.description}}</p>
+
+            <div class="popup-cta">
+                <button class="box-btn" (click)="navigateToFormation()">
+                    {{popupData.ctaText}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

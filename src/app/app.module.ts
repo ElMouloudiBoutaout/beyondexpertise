@@ -40,6 +40,7 @@ import { TeamComponent } from './components/pages/team/team.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
 import { ContactModalComponent } from './components/common/contact-modal/contact-modal.component';
+import { MarketingPopupComponent } from './components/common/marketing-popup/marketing-popup.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { ContactModalComponent } from './components/common/contact-modal/contact
     FormationsListComponent,
     StickyContactComponent,
     DevelopmentComponent,
-    ContactModalComponent
+    ContactModalComponent,
+    MarketingPopupComponent
   ],
   imports: [
     BrowserModule,
