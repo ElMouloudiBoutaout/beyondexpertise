@@ -5,6 +5,6 @@
     "image": "assets/images/marketing.jpeg",
     "ctaText": "En savoir plus",
     "formationId": "deep-learning",
-    "displayDelay": 3000,
+    "displayDelay": 300,
     "displayDuration": 800000
 }
