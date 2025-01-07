@@ -1,0 +1,71 @@
+{
+    "items": [
+        {
+            "id": "target",
+            "title": "Public visé",
+            "content": [
+                "Chefs de projet",
+                "Développeurs",
+                "Testeurs",
+                "Membres d'équipes Agile",
+                "Toute personne impliquée dans la gestion de projets"
+            ]
+        },
+        {
+            "id": "prerequisites",
+            "title": "Prérequis",
+            "content": [
+                "Connaissance des méthodologies de développement, notamment Agile"
+            ]
+        },
+        {
+            "id": "objectives",
+            "title": "Objectifs de la formation",
+            "content": [
+                "Utiliser les fonctionnalités de base et avancées de JIRA",
+                "Gérer les utilisateurs, projets et workflows",
+                "Générer des rapports et personnaliser des tableaux de bord",
+                "Automatiser des actions et intégrer JIRA avec d'autres outils",
+                "Appliquer les méthodologies Agile avec JIRA",
+                "Configurer et utiliser JIRA Service Management"
+            ]
+        },
+        {
+            "id": "program",
+            "title": "Programme détaillé",
+            "isProgram": true,
+            "modules": [
+                {
+                    "title": "Module 1: Introduction à JIRA",
+                    "description": "Découverte de l'environnement JIRA et ses fonctionnalités de base",
+                    "topics": [
+                        "Historique et vue d'ensemble des fonctionnalités",
+                        "Navigation dans l'interface utilisateur",
+                        "Configuration de base et accès"
+                    ],
+                    "open": false
+                },
+                {
+                    "title": "Module 2: Gestion des projets et des tickets",
+                    "description": "Maîtrise des fonctionnalités essentielles de gestion de projet",
+                    "topics": [
+                        "Création et configuration de projets",
+                        "Création, édition et recherche de tickets",
+                        "Utilisation des filtres et des tableaux de bord"
+                    ],
+                    "open": false
+                },
+                {
+                    "title": "Module 3: Personnalisation et automatisation",
+                    "description": "Optimisation et personnalisation avancée de JIRA",
+                    "topics": [
+                        "Personnalisation des workflows",
+                        "Automatisation des actions répétitives",
+                        "Configuration des notifications"
+                    ],
+                    "open": false
+                }
+            ]
+        }
+    ]
+}

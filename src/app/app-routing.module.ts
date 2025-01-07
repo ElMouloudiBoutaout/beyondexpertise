@@ -24,6 +24,7 @@ import { SolutionsComponent } from './components/pages/solutions/solutions.compo
 import { TeamComponent } from './components/pages/team/team.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
+import { HomeTemplateComponent } from './components/pages/home-template/home-template.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -51,6 +52,7 @@ const routes: Routes = [
     { path: 'formation', component: FormationComponent },
     { path: 'formations-list', component: FormationsListComponent },
     {path: 'development', component: DevelopmentComponent},
+    { path: 'landing/:formationName', component: HomeTemplateComponent },
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list

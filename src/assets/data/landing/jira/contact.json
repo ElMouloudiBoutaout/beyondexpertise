@@ -1,0 +1,24 @@
+{
+    "title": "Contact",
+    "subtitle": "Contactez-nous",
+    "description": "Intéressé par notre formation JIRA ? Contactez-nous pour plus d'informations",
+    "formTitle": "Demande d'information Formation JIRA",
+    "form": {
+        "name": {
+            "placeholder": "Votre nom"
+        },
+        "email": {
+            "placeholder": "Votre email"
+        },
+        "phone": {
+            "placeholder": "Votre téléphone"
+        },
+        "subject": {
+            "placeholder": "Votre sujet"
+        },
+        "message": {
+            "placeholder": "Votre message"
+        },
+        "submitButton": "Envoyer"
+    }
+}

@@ -41,6 +41,7 @@ import { TermsConditionsComponent } from './components/pages/terms-conditions/te
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
 import { ContactModalComponent } from './components/common/contact-modal/contact-modal.component';
 import { MarketingPopupComponent } from './components/common/marketing-popup/marketing-popup.component';
+import { HomeTemplateComponent } from './components/pages/home-template/home-template.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { MarketingPopupComponent } from './components/common/marketing-popup/mar
     StickyContactComponent,
     DevelopmentComponent,
     ContactModalComponent,
-    MarketingPopupComponent
+    MarketingPopupComponent,
+    HomeTemplateComponent
   ],
   imports: [
     BrowserModule,

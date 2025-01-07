@@ -1,0 +1,41 @@
+{
+    "title": "Formation JIRA",
+    "description": "Maîtrisez JIRA pour une gestion de projet Agile efficace",
+    "slogan": "Your satisfaction is our starting point",
+    "subDescription": "Formation complète pour devenir expert en gestion de projet avec JIRA",
+    "bannerImage": "assets/images/home-bg-1-img.png",
+    "primaryButton": {
+        "text": "JE M'INSCRIS",
+        "link": "/formation/jira"
+    },
+    "secondaryButton": {
+        "text": "EN SAVOIR PLUS",
+        "link": "/formations-list"
+    },
+    "servicesTitle": "Notre Formation JIRA",
+    "servicesSubtitle": "Ce que vous apprendrez",
+    "servicesDescription": "Une formation complète pour maîtriser JIRA",
+    "services": [
+        {
+            "title": "Fondamentaux JIRA",
+            "description": "Maîtrisez les bases de JIRA",
+            "image": "assets/images/formations/jira/basics.png",
+            "link": "/formation/jira",
+            "buttonText": "Découvrir"
+        },
+        {
+            "title": "Configuration Avancée",
+            "description": "Personnalisez JIRA pour votre équipe",
+            "image": "assets/images/formations/jira/advanced.png",
+            "link": "/formation/jira",
+            "buttonText": "Découvrir"
+        },
+        {
+            "title": "Gestion Agile",
+            "description": "Appliquez les méthodes Agiles avec JIRA",
+            "image": "assets/images/formations/jira/agile.png",
+            "link": "/formation/jira",
+            "buttonText": "Découvrir"
+        }
+    ]
+}

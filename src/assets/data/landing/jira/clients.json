@@ -1,0 +1,72 @@
+{
+    "clientsSection": {
+        "title": "",
+        "subtitle": "Ils nous font confiance",
+        "description": "Des entreprises de toutes tailles nous font confiance pour leurs projets de transformation et de formation.",
+        "clients": [
+            {
+                "id": 1,
+                "name": "Dexia",
+                "logo": "https://image.pitchbook.com/1kg75ar4DI31VnAtvcCxoBw6upA1722585736151_200x200",
+                "description": "Groupe bancaire spécialisé dans le financement des services publics locaux",
+                "link": "https://www.dexia.com/fr"
+            },
+            {
+                "id": 2,
+                "name": "LVMH",
+                "logo": "https://logos-world.net/wp-content/uploads/2023/08/LVMH-Logo.png",
+                "description": "Leader mondial dans le domaine du luxe",
+                "link": "https://www.lvmh.com/fr"
+            },
+            {
+                "id": 3,
+                "name": "Louis Vuitton",
+                "logo": "https://logos-world.net/wp-content/uploads/2020/04/Louis-Vuitton-Logo.png",
+                "description": "Marque emblématique du luxe et de la mode",
+                "link": "https://fr.louisvuitton.com/fra-fr/homepage"
+            },
+            {
+                "id": 4,
+                "name": "M2i Formation",
+                "logo": "https://campusnumerique.auvergnerhonealpes.fr/app/uploads/2021/10/logo_m2iformation.jpg",
+                "description": "Spécialiste de la formation professionnelle",
+                "link": "https://www.m2iformation.fr/"
+            },
+            {
+                "id": 5,
+                "name": "PLB Formation",
+                "logo": "https://www.plb.fr/app/images/logo-plb/officiel/logo-plb-Consultant-Avenir.svg",
+                "description": "Centre de formation en informatique et management",
+                "link": "https://www.plb.fr/"
+            },
+            {
+                "id": 6,
+                "name": "AJC Formation",
+                "logo": "https://www.ajc-formation.fr/wp-content/uploads/2024/10/cropped-Logotype_AJC_Formation_bleu.png",
+                "description": "Expert en formations professionnelles pour entreprises",
+                "link": "https://www.ajc-formation.fr/"
+            },
+            {
+                "id": 7,
+                "name": "Alyf Pro",
+                "logo": "https://www.alyfpro.fr/wp-content/uploads/2022/04/unnamed-1-1.png",
+                "description": "Prestataire de formations certifiantes et sur-mesure",
+                "link": "https://www.alyfpro.fr/"
+            },
+            {
+                "id": 8,
+                "name": "Mercedes-Benz Maroc",
+                "logo": "https://d2638j3z8ek976.cloudfront.net/081b0198065eaa5388de4f74e0391e2787ff8621/1734531262/images/mb-star-svg.svg",
+                "description": "Constructeur automobile de renom",
+                "link": "https://www.mercedes-benz.ma/"
+            },
+            {
+                "id": 9,
+                "name": "Ministère de la Santé Maroc",
+                "logo": "https://www.sante.gov.ma/_layouts/15/images/santeSQLI/logo-ministere-sante.png",
+                "description": "Institution publique dédiée à la santé et au bien-être",
+                "link": "https://www.sante.gov.ma/Pages/Accueil.aspx"
+            }
+        ]
+    }
+}

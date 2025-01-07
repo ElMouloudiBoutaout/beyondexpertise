@@ -1,0 +1,351 @@
+<div class="main-banner-area">
+    <section class="banner-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-content">
+                                <h1>{{servicesData?.title}}</h1>
+                                <p>{{servicesData?.description}}
+                                    <strong>{{servicesData?.slogan}}</strong>
+                                </p>
+                                <p>{{servicesData?.subDescription}}</p>
+                                <div class="banner-btn">
+                                    <a routerLink="/" fragment="contact"
+                                       class="box-btn border-btn">
+                                        JE DEMANDE UNE CONSULTATION
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="banner-img">
+                                <img [src]="servicesData?.bannerImage" alt="banner-img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-shape">
+            <div class="shape1"><img src="assets/images/shape/1.png" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape/3.png" alt="shape"></div>
+            <div class="shape4"><img src="assets/images/shape/4.png" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape/5.png" alt="shape"></div>
+            <div class="shape6"><img src="assets/images/shape/6.png" alt="shape"></div>
+        </div>
+    </section>
+</div>
+
+<section style="background-color: #f5faff;" class="choose-area ptb-100">
+    <div class="container" style="max-width: 1000px;">
+        <div class="section-title">
+            <h2>Détails de la Formation</h2>
+            <p>Découvrez le contenu détaillé de notre formation</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="choose-img">
+                    <img src="assets/images/choose-img.png" alt="choose" />
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="choose-content">
+                    <div class="faq-accordion">
+                        <div class="faq-item" *ngFor="let item of accordionItems">
+                            <div class="faq-header" (click)="toggleAccordionItem(item)">
+                                {{item.title}}
+                                <i class='bx' [ngClass]="{'bx-plus': !item.open, 'bx-x': item.open}"></i>
+                            </div>
+                            <div class="faq-content" [hidden]="!item.open">
+                                <!-- For simple list content -->
+                                <ul *ngIf="item.contentList.length > 0">
+                                    <li *ngFor="let point of item.contentList">
+                                        <i class='bx bxs-check-circle'></i>
+                                        <span>{{point}}</span>
+                                    </li>
+                                </ul>
+
+                                <!-- For program modules -->
+                                <div *ngIf="item.isProgram" class="program-modules">
+                                    <div *ngFor="let module of item.modules" class="module-item">
+                                        <div class="module-header" (click)="toggleModule(module)">
+                                            <div class="module-title">
+                                                <h4>{{module.title}}</h4>
+                                                <p>{{module.description}}</p>
+                                            </div>
+                                            <i class='bx' [ngClass]="{'bx-chevron-down': !module.open, 'bx-chevron-up': module.open}"></i>
+                                        </div>
+                                        <div class="module-content" [class.open]="module.open">
+                                            <ul>
+                                                <li *ngFor="let topic of module.topics">
+                                                    <i class='bx bxs-check-circle'></i>
+                                                    <span>{{topic}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="home-process-area pt-70 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{processData?.subtitle}}</h2>
+            <p>{{processData?.description}}</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6" *ngFor="let step of processData?.steps">
+                <div class="single-process">
+                    <div class="icon">
+                        <img [src]="step.icon" alt="process" />
+                        <span *ngIf="step.hasNext">
+                            <img src="assets/images/process/next.png" alt="shape" />
+                        </span>
+                    </div>
+                    <div class="content">
+                        <h3>{{step.title}}</h3>
+                        <p>{{step.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="feature-area bg-color pt-70 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="contnet">
+                    <div class="feature-tittle">
+                        <span>{{featuresData?.title}}</span>
+                        <h2>{{featuresData?.subtitle}}</h2>
+                        <p>{{featuresData?.description}}</p>
+                    </div>
+                    <ul>
+                        <li *ngFor="let feature of featuresData?.features">
+                            <i [class]="feature.icon"></i>
+                            <strong>{{feature.title}}</strong>
+                            <p>{{feature.description}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-img">
+                    <img src="assets/images/feature-img.png" alt="feature" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-team-area pt-70 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>{{teamData?.title}}</span>
+            <h2>{{teamData?.subtitle}}</h2>
+            <p>{{teamData?.description}}</p>
+        </div>
+
+        <!-- Carousel for 4 or more members -->
+        <div class="home-team-slider" *ngIf="shouldEnableTeamCarousel">
+            <owl-carousel-o [options]="teamSlides">
+                <ng-template carouselSlide *ngFor="let member of teamData?.members">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img [src]="member.image" [alt]="member.name" />
+                            <ul class="social">
+                                <li *ngIf="member.social?.linkedin">
+                                    <a [href]="member.social.linkedin" target="_blank">
+                                        <i class='bx bxl-linkedin'></i>
+                                    </a>
+                                </li>
+                                <li *ngIf="member.social?.email">
+                                    <a [href]="'mailto:' + member.social.email">
+                                        <i class="bx bxs-envelope"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content text-center">
+                            <h3>{{member.name}}</h3>
+                            <p>{{member.role}}</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+
+        <!-- Grid for less than 4 members -->
+        <div class="row justify-content-center" *ngIf="!shouldEnableTeamCarousel">
+            <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let member of teamData?.members">
+                <div class="single-team">
+                    <div class="team-img">
+                        <img [src]="member.image" [alt]="member.name" />
+                        <ul class="social">
+                            <li *ngIf="member.social?.linkedin">
+                                <a [href]="member.social.linkedin" target="_blank">
+                                    <i class='bx bxl-linkedin'></i>
+                                </a>
+                            </li>
+                            <li *ngIf="member.social?.email">
+                                <a [href]="'mailto:' + member.social.email">
+                                    <i class="bx bxs-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content text-center">
+                        <h3>{{member.name}}</h3>
+                        <p>{{member.role}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section -->
+<section class="client-area pt-70 pb-70 bg-color">
+    <div class="container">
+        <div class="section-title">
+            <span>{{clientsData?.clientsSection?.title}}</span>
+            <h2>{{clientsData?.clientsSection?.subtitle}}</h2>
+            <p>{{clientsData?.clientsSection?.description}}</p>
+        </div>
+        <div class="client-wrap">
+            <owl-carousel-o [options]="clientSlides">
+                <ng-template carouselSlide *ngFor="let client of clientsData?.clientsSection?.clients">
+                    <div class="single-client">
+                        <a [href]="client.link" [title]="client.description" target="_blank">
+                            <img [src]="client.logo" [alt]="client.name" />
+                        </a>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section  style="background-color: #ffffff;" class="home-contact-area bg-color pt-70 pb-70" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <span>{{contactData?.title}}</span>
+            <h2>{{contactData?.subtitle}}</h2>
+            <p>{{contactData?.description}}</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-img">
+                    <img src="assets/images/contact-img.png" alt="contact">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <form id="contactForm" (ngSubmit)="onSubmit($event)">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        class="form-control"
+                                        required
+                                        [(ngModel)]="formData.name"
+                                        [placeholder]="contactData?.form?.name?.placeholder"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        class="form-control"
+                                        required
+                                        [(ngModel)]="formData.email"
+                                        [placeholder]="contactData?.form?.email?.placeholder"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        name="phone_number"
+                                        class="form-control"
+                                        required
+                                        [(ngModel)]="formData.phone_number"
+                                        [placeholder]="contactData?.form?.phone?.placeholder"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        name="msg_subject"
+                                        class="form-control"
+                                        required
+                                        [(ngModel)]="formData.msg_subject"
+                                        [placeholder]="contactData?.form?.subject?.placeholder"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea
+                                        name="message"
+                                        class="form-control"
+                                        cols="30"
+                                        rows="5"
+                                        required
+                                        [(ngModel)]="formData.message"
+                                        [placeholder]="contactData?.form?.message?.placeholder"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <button
+                                    type="submit"
+                                    class="default-btn page-btn box-btn"
+                                    [disabled]="isSubmitting"
+                                >
+                                    {{isSubmitting ? 'Envoi en cours...' : contactData?.form?.submitButton}}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sticky-contact></app-sticky-contact>

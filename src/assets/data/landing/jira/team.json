@@ -1,0 +1,28 @@
+{
+    "title": "Notre Équipe",
+    "subtitle": "Experts JIRA",
+    "description": "Une équipe de professionnels certifiés pour vous accompagner",
+    "members": [
+        {
+            "name": "Sophie Martin",
+            "role": "Expert JIRA & Scrum Master",
+            "image": "assets/images/team/t3.jpg",
+            "social": {
+                "linkedin": "https://linkedin.com",
+                "email": "sophie@example.com"
+            }
+        },
+        {
+            "name": "Thomas Dubois",
+            "role": "Consultant Agile & JIRA",
+            "image": "assets/images/team/t4.jpg",
+            "social": {
+                "linkedin": "https://linkedin.com",
+                "email": "thomas@example.com"
+            }
+        }
+
+    ]
+}
+
+

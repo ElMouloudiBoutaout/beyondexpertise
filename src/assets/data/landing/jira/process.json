@@ -1,0 +1,30 @@
+{
+    "subtitle": "Notre Processus d'Apprentissage",
+    "description": "Une approche structurée pour maîtriser JIRA",
+    "steps": [
+        {
+            "icon": "assets/images/process/p1.png",
+            "title": "Évaluation",
+            "content": "Évaluation de vos besoins",
+            "hasNext": true
+        },
+        {
+            "icon": "assets/images/process/p2.png",
+            "title": "Formation",
+            "content": "Formation intensive",
+            "hasNext": true
+        },
+        {
+            "icon": "assets/images/process/p3.png",
+            "title": "Pratique",
+            "content": "Exercices pratiques",
+            "hasNext": true
+        },
+        {
+            "icon": "assets/images/process/p4.png",
+            "title": "Certification",
+            "content": "Préparation certification",
+            "hasNext": false
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Pourquoi choisir notre formation",
+    "subtitle": "Les avantages de notre formation JIRA",
+    "description": "Une formation pratique et complète pour maîtriser JIRA",
+    "features": [
+        {
+            "icon": "bx bx-check-circle",
+            "title": "Formation Pratique",
+            "description": "Exercices pratiques sur des cas réels"
+        },
+        {
+            "icon": "bx bx-certification",
+            "title": "Certification",
+            "description": "Préparation à la certification Atlassian"
+        },
+        {
+            "icon": "bx bx-support",
+            "title": "Support Continu",
+            "description": "Accompagnement post-formation"
+        }
+    ],
+    "ctaText": "Vous souhaitez en savoir plus ?",
+    "ctaLink": "/contact",
+    "ctaLinkText": "Contactez-nous"
+}
