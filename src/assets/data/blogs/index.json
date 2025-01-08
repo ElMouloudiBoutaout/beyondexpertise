@@ -11,6 +11,16 @@
             "excerpt": "Learn how to write efficient SQL queries to enhance database performance and reduce execution times."
         },
         {
+            "id": "blog1",
+            "title": "Optimizing SQL Queries for Performance",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.5j2sJlj8kMSeQCjWZcySXAHaEz&pid=Api",
+            "meta": {
+                "date": "January 1, 2025",
+                "author": "Youssef"
+            },
+            "excerpt": "Learn how to write efficient SQL queries to enhance database performance and reduce execution times."
+        },
+        {
             "id": "blog2",
             "title": "TThe Transformative Power of Data Science",
             "image": "https://db0dce98.rocketcdn.me/wp-content/uploads/2020/11/Machine-learning-def-.png",

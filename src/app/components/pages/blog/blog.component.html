@@ -3,7 +3,7 @@
         <div class="page-title-content">
             <h2>Notre blog</h2>
         </div>
-</div>
+    </div>
 
     <div class="page-shape">
         <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
@@ -13,6 +13,7 @@
         <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
     </div>
 </div>
+
 <section class="blog-area ptb-100">
     <div class="container">
         <div class="section-title">
@@ -22,33 +23,29 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-6" *ngFor="let blog of blogs">
-                <div class="single-blog">
-                    <div class="blog-img">
+                <div class="formation-card">
+                    <div class="card-img">
                         <a [routerLink]="['/blog-details', blog.id]">
                             <img [src]="blog.image" [alt]="blog.title">
                         </a>
                     </div>
-
-                    <div class="blog-content">
-                        <ul class="blog-meta">
-                            <li>
+                    <div class="card-content">
+                        <div class="meta-info">
+                            <span class="date">
                                 <i class="bx bx-calendar"></i>
                                 {{blog.meta.date}}
-                            </li>
-                            <li>
+                            </span>
+                            <span class="author">
                                 <i class="bx bx-user"></i>
                                 {{blog.meta.author}}
-                            </li>
-                        </ul>
-
-                        <h3>
+                            </span>
+                        </div>
+                        <h3 class="card-title">
                             <a [routerLink]="['/blog-details', blog.id]">{{blog.title}}</a>
                         </h3>
-                        <p>{{blog.excerpt}}</p>
-
+                        <p class="card-description">{{blog.excerpt}}</p>
                         <a [routerLink]="['/blog-details', blog.id]" class="read-more">
-                            Lire la suite
-                            <i class="bx bx-right-arrow-alt"></i>
+                            Lire la suite <i class="bx bx-right-arrow-alt"></i>
                         </a>
                     </div>
                 </div>
